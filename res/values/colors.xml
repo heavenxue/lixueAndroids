@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="theme">#e33b3d</color>
+    <color name="mylinkman_gray">#fff3f3f3</color>
+    <color name="mylinkman_green">#ff75c73f</color>
+    <color name="classify">#fffefefe</color>
+</resources>

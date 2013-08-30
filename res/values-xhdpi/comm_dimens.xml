@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 公共的尺寸 -->
+<resources>
+    <dimen name="comm_layout_listItem_minHeight">48dp</dimen><!-- 布局 - 列表项 - 最小高度 -->
+    <dimen name="comm_layout_titlebar_height">50dp</dimen><!-- 标题栏 - 高度 -->
+
+	<dimen name="comm_button_minWidth">80dp</dimen><!--  按钮 - 最小宽度 -->
+    <dimen name="comm_button_height">50dp</dimen><!-- 按钮 - 最小高度 -->
+    <dimen name="comm_button_small_height">40dp</dimen><!-- 按钮 - 小的 - 高度 -->
+	<dimen name="comm_button_small_minWidth">70dp</dimen><!--  按钮 - 小的 - 最小宽度 -->
+    <dimen name="comm_button_titleBar_width">50dp</dimen><!-- 按钮 - 标题栏 - 宽度 -->
+    <dimen name="comm_button_titleBar_height">35dp</dimen><!-- 按钮 - 标题栏 - 高度 -->
+    
+    <dimen name="comm_edit_height">50dp</dimen><!-- 编辑器 - 最小高度 -->
+    <dimen name="comm_edit_small_height">40dp</dimen><!-- 编辑器 - 小的 - 高度 -->
+</resources>

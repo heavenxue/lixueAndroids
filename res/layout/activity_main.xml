@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match_vertical" >
+<LinearLayout style="@style/base_match_match_vertical">
+	<Button style="@style/button_match" android:text="@string/button_mycustombutton" android:id="@+id/button_mycoustom_button"/>   
+	<Button style="@style/button_match" android:text="@string/button_mytouchtab" android:id="@+id/button_mytouch_tab"/>    
+	<Button style="@style/button_match" android:text="@string/button_mp3player" android:id="@+id/button_mp3_player"/>
+	<Button style="@style/button_match" android:text="@string/button_yaoyiyao" android:id="@+id/button_yaoyiyao"/>
+	<Button style="@style/button_match" android:text="@string/button_viewflipper" android:id="@+id/button_viewflipper"/>
+	<Button style="@style/button_match" android:text="@string/button_screenshot" android:id="@+id/button_screenshot"/>
+	<Button style="@style/button_match" android:text="@string/button_animationdrawable" android:id="@+id/button_animationdrawable"/>
+	<Button style="@style/button_match" android:text="@string/button_animation" android:id="@+id/button_animation"/>
+	<Button style="@style/button_match" android:text="@string/button_json" android:id="@+id/button_json"/>
+	<Button style="@style/button_match" android:text="@string/button_barcodescanner" android:id="@+id/button_barcodescanner"/>
+</LinearLayout>   
+</ScrollView>

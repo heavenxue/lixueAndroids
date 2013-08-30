@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_height">8dp</dimen><!-- 空格线 - 高度 -->
+    <dimen name="spacing_small_height">4dp</dimen><!-- 空格线 - 小的 - 高度 -->
+    <dimen name="spacing_large_height">16dp</dimen><!-- 空格线 - 大的 - 高度 -->
+    
+    <dimen name="shadow_height">2dp</dimen><!-- 阴影 - 高度 -->
+    
+    <dimen name="layout_listItem_minHeight">52dp</dimen><!-- 布局 - 列表项 - 最小高度 -->
+    <dimen name="layout_titlebar_height">52dp</dimen><!-- 标题栏 - 高度 -->
+	
+	<dimen name="button_minWidth">80dp</dimen><!--  按钮 - 最小宽度 -->
+    <dimen name="button_height">45dp</dimen><!-- 按钮 - 最小高度 -->
+    <dimen name="button_small_height">40dp</dimen><!-- 按钮 - 小的 - 高度 -->
+	<dimen name="button_small_minWidth">70dp</dimen><!--  按钮 - 小的 - 最小宽度 -->
+    <dimen name="button_titleBar_width">60dp</dimen><!-- 按钮 - 标题栏 - 宽度 -->
+    <dimen name="button_titleBar_height">35dp</dimen><!-- 按钮 - 标题栏 - 高度 -->
+	<dimen name="button_home_icon_size">60dp</dimen>
+    
+    <dimen name="edit_height">45dp</dimen><!-- 编辑器 - 最小高度 -->
+    <dimen name="panel_minHeight">50dp</dimen>
+</resources>

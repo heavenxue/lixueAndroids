@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_body">
+    <SurfaceView style="@style/base_match_match" android:id="@+id/surface_barcodeScanner"/>
+    
+    <LinearLayout style="@style/base_match_match_vertical" android:baselineAligned="false">
+        <!-- 功能区 -->
+        <LinearLayout style="@style/base_match_weight" android:background="@color/base_black_translucent" android:gravity="right" android:padding="@dimen/base_padding_specialLarge">
+       	    <!-- 闪光灯控制按钮 -->
+       	    <ToggleButton 
+       	        style="@style/base_wrap_wrap" 
+       	        android:id="@+id/checkBox_barcodeScanner_flash"
+       	        android:button="@null"
+       	        android:drawableLeft="@drawable/selector_button_flash"
+       	        android:drawablePadding="@dimen/base_padding_small"
+       	        android:textOn="@string/base_open"
+       	        android:textOff="@string/base_close"
+       	        android:checked="false"
+       	        android:background="@drawable/button_flashlight_normal"/>
+        </LinearLayout>
+        
+        <!-- 扫描框区 -->
+        <LinearLayout style="@style/base_match_weight" android:layout_weight="0.9">
+            <LinearLayout style="@style/base_weight_match" android:background="@color/base_black_translucent"/>
+            <me.xiaopan.easyandroid.util.barcode.ScanFrameView android:id="@+id/scanningFrame_barcodeScanner" style="@style/base_weight_match" android:background="@drawable/shape_scan_frame" android:layout_weight="4" />
+            <LinearLayout style="@style/base_weight_match" android:background="@color/base_black_translucent"/>
+        </LinearLayout>
+        
+        <!-- 提示区 -->
+        <LinearLayout style="@style/base_match_weight" android:background="@color/base_black_translucent" android:gravity="center" android:padding="@dimen/base_padding_specialLarge">
+            <TextView style="@style/text" android:textColor="@color/base_white" android:gravity="center" android:text="@string/hint_barcodeScanner"/> 
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

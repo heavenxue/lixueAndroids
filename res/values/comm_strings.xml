@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="comm_hint_exitHint">再按一次退出程序！</string>
+    <string name="comm_hint_checkUpdateing">正在检查更新，请稍后…</string>
+    
+    <string name="comm_hint_network_connectionTimeout">网络连接超时！</string>
+    <string name="comm_hint_network_connectException">网络连接异常！</string>
+    <string name="comm_hint_network_fileNotFoundException">网络连接失败！</string>
+    <string name="comm_hint_network_unknownException">网络连接失败！</string>
+    
+    <string name="comm_hint_cameraOpenFailed">打开摄像头失败，请确保其他程序没有占用您的摄像头！</string>
+    <string name="comm_hint_dowloadFailed">下载失败！</string>
+    <string name="comm_hint_cannot_little">%1$s 不能少于 %2$s 位！</string>
+    <string name="comm_hint_cannot_much">%1$s 不能多于 %2$s 位！</string>
+    <string name="comm_hint_reloadIn">正在重新加载！</string>
+    <string name="comm_hint_emailFormatError">邮箱格式错误！</string>
+    <string name="comm_hint_verifyCodeError">验证码输入错误，请重新输入！</string>
+    <string name="comm_hint_idNumberFormatError">身份证号格式错误！</string>
+    <string name="comm_hint_passwordNotConsistent">两次输入的密码不一致，请重新输入！</string>
+    <string name="comm_hint_sendSuccess">验证码发送成功，请注意查收您的短信！</string>
+    
+    <string name="comm_editHint_name">请输入姓名</string>
+    <string name="comm_editHint_account">请输入胸卡号或手机号</string>
+    <string name="comm_editHint_password"></string>
+    <string name="comm_editHint_phone">请输入电话</string>
+    <string name="comm_editHint_fax">请输入传真</string>
+    <string name="comm_editHint_oldPassword">请输入旧密码</string>
+    <string name="comm_editHint_newPassword">请输入新密码</string>
+    <string name="comm_editHint_confirmPassword">请重复您的密码</string>
+    <string name="comm_editHint_confirmNewPassword">请重复您的新密码</string>
+    <string name="comm_editHint_mobileNumber">请输入11位手机号码</string>
+    <string name="comm_editHint_verifyCode">请输入验证码</string>
+    <string name="comm_editHint_email">请输入邮箱</string>
+	<string name="comm_editHint_qq">请输入QQ号</string>
+	<string name="comm_editHint_certificateType">请输入证件类型</string>
+	<string name="comm_editHint_certificateNumber">请输入证件号码</string>
+	<string name="comm_editHint_idNumber">请输入身份证号</string>
+	<string name="comm_editHint_officerNumber">请输入军官号</string>
+    <string name="comm_editHint_zipcode">请输入邮编</string>
+    <string name="comm_editHint_address">请输入地址</string>
+    <string name="comm_editHint_area">请输入地区</string>
+    <string name="comm_editHint_dept">请输入部门</string>
+	<string name="comm_editHint_post">请输入职务</string>
+    <string name="comm_editHint_companyName">请输入单位名称</string>
+    <string name="comm_editHint_companyNameEN">请输入单位英文名称</string>
+	<string name="comm_editHint_companyAddress">请输入公司地址</string>
+	<string name="comm_editHint_companyEmail">请输入公司邮箱</string>
+	<string name="comm_editHint_companyPhoneNumber">请输入公司电话</string>
+	<string name="comm_editHint_companyFax">请输入公司传真</string>
+	<string name="comm_editHint_companyWebHomeUrl">请输入公司网站</string>
+    <string name="comm_editHint_keyword">请输入关键字</string>
+    <string name="comm_editHint_search">请输入搜索关键字</string>
+    <string name="comm_editHint_required">必填</string>
+    
+	<string name="comm_key_name">姓名</string>
+	<string name="comm_key_account">账号</string>
+	<string name="comm_key_password">设置密码</string>
+    <string name="comm_key_oldPassword">旧密码</string>
+    <string name="comm_key_newPassword">新密码</string>
+    <string name="comm_key_confirmPassword">确认密码</string>
+    <string name="comm_key_confirmNewPassword">确认新密码</string>
+	<string name="comm_key_mobileNumber">手机号码</string>
+	<string name="comm_key_verifyCode">验证码</string>
+	<string name="comm_key_email">电子邮箱</string>
+	<string name="comm_key_qqNumber">QQ</string>
+	<string name="comm_key_certificateType">证件类型</string>
+	<string name="comm_key_certificateNumber">证件号码</string>
+	<string name="comm_key_idNumber">身份证号</string>
+	<string name="comm_key_officerNumber">军官号</string>
+	<string name="comm_key_zipcode">邮编</string>
+	<string name="comm_key_address">地址</string>
+	<string name="comm_key_area">地区</string>
+	<string name="comm_key_companyName">单位名称</string>
+	<string name="comm_key_companyNameEN">单位英文名称</string>
+	<string name="comm_key_dept">部门</string>
+	<string name="comm_key_post">职务</string>
+	<string name="comm_key_companyAddress">公司地址</string>
+	<string name="comm_key_companyEmail">公司邮箱</string>
+	<string name="comm_key_companyPhoneNumber">公司电话</string>
+	<string name="comm_key_companyFax">公司传真</string>
+	<string name="comm_key_companyWebHomeUrl">公司网站</string>
+	<string name="comm_key_keyword">关键字</string>
+    
+	<string name="comm_formKey_name">姓名：</string>
+	<string name="comm_formKey_account">账号：</string>
+	<string name="comm_formKey_password">设置密码：</string>
+    <string name="comm_formKey_oldPassword">旧密码：</string>
+    <string name="comm_formKey_newPassword">新密码：</string>
+    <string name="comm_formKey_confirmPassword">确认密码：</string>
+    <string name="comm_formKey_confirmNewPassword">确认新密码：</string>
+	<string name="comm_formKey_mobileNumber">手机号：</string>
+	<string name="comm_formKey_verifyCode">验证码：</string>
+	<string name="comm_formKey_email">邮箱：</string>
+	<string name="comm_formKey_qqNumber">QQ：</string>
+	<string name="comm_formKey_certificateType">证件类型：</string>
+	<string name="comm_formKey_certificateNumber">证件号码：</string>
+	<string name="comm_formKey_idNumber">身份证号：</string>
+	<string name="comm_formKey_officerNumber">军官号：</string>
+	<string name="comm_formKey_zipcode">邮编：</string>
+	<string name="comm_formKey_address">地址：</string>
+	<string name="comm_formKey_area">地区：</string>
+	<string name="comm_formKey_companyName">单位名称：</string>
+	<string name="comm_formKey_dept">部门：</string>
+	<string name="comm_formKey_post">职务：</string>
+	<string name="comm_formKey_companyAddress">公司地址：</string>
+	<string name="comm_formKey_companyEmail">公司邮箱：</string>
+	<string name="comm_formKey_companyPhoneNumber">公司电话：</string>
+	<string name="comm_formKey_companyFax">公司传真：</string>
+	<string name="comm_formKey_companyWebHomeUrl">公司网站：</string>
+	<string name="comm_formKey_keyword">关键字：</string>
+    
+    <string name="comm_clickLoadMore">点击加载更多</string>
+    <string name="comm_pullUpLoadMore">上拉加载更多</string>
+    <string name="comm_firstLoad">首次加载</string>
+    <string name="comm_pullDownRefersh">下拉刷新</string>
+    <string name="comm_firstRefersh">首次刷新</string>
+    
+    <string name="comm_button_settingWifiNetwork">设置WIFI</string>
+    <string name="comm_button_settingMobileNetwork">设置2G/3G</string>
+    <string name="comm_button_getVerifyCode">获取验证码</string>
+    <string name="comm_button_getVerifyCodeCountdown">%s秒后再次获取验证码</string>
+    <string name="comm_button_submit">提交</string>
+    
+    <string name="comm_verifyingLater">正在验证，请稍后…</string>
+    <string name="comm_space">"    %s"</string>
+</resources>

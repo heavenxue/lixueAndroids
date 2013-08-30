@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match_vertical">
+    <TextView android:id="@+id/text_json" style="@style/base_match_wrap" android:textColor="@color/base_blue" />
+    <TextView android:id="@+id/text_resolve_json" style="@style/base_match_wrap" android:textColor="@color/base_red"></TextView>
+</LinearLayout>
