@@ -35,6 +35,11 @@ Windows 8是微软围绕扁平化UI设计的一个全新的系统，其中大部
 <string name="button_json">json解析实例</string>
 <string name="button_barcodescanner">扫描二维码</string>
 <string name="button_scanner">开始扫描</string>
+<string name="button_refresh_listview">ListView上拉下拉演示</string>
+<string name="button_refresh_gridview">GridView上拉下拉演示</string>
+<string name="button_refresh_scrollview">ScrollView上拉下拉演示</string>
+
+
 <string name="hint_barcodeScanner">将观众胸卡二维码对准红线处调整条码和镜头距离，软件将自动扫描观众胸卡二维码</string>
 
 

@@ -41,6 +41,9 @@
         <activity android:name="com.lixueandroid.activity.JsonActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.BarcodeScannerActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.StartScanBarcodeActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.TestGridViewActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.TestListViewActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.TestScrollViewActivity" android:label="@string/app_name"></activity>
         
         <service android:name="com.lixueandroid.activity.service.DownLoadService"></service>
     </application>

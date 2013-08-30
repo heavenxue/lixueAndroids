@@ -25,6 +25,9 @@ public class MainActivity extends BaseActivity {
 	private Button animation;
 	private Button jsonButton;
 	private Button barcodescannerButton;
+	private Button listRefresh;
+	private Button gridRefresh;
+	private Button scrollRefresh;
 	
 	
 	@Override
@@ -40,6 +43,9 @@ public class MainActivity extends BaseActivity {
 		animation=(Button) findViewById(R.id.button_animation);
 		jsonButton=(Button) findViewById(R.id.button_json);
 		barcodescannerButton=(Button) findViewById(R.id.button_barcodescanner);
+		listRefresh=(Button) findViewById(R.id.button_refresh_listview);
+		gridRefresh=(Button) findViewById(R.id.button_refresh_gridview);
+		scrollRefresh=(Button) findViewById(R.id.button_refresh_scrollview);
 	}
 
 	@Override
@@ -112,6 +118,27 @@ public class MainActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(StartScanBarcodeActivity.class);
+			}
+		});
+		listRefresh.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(TestListViewActivity.class);
+			}
+		});
+		gridRefresh.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(TestGridViewActivity.class);	
+			}
+		});
+		scrollRefresh.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(TestScrollViewActivity.class);	
 			}
 		});
 	}

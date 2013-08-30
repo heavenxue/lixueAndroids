@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen" >
+    <LinearLayout style="@style/base_match_wrap">
     <ImageView  
-        android:id="@+id/imageView1"  
-        android:layout_width="wrap_content"  
-        android:layout_height="wrap_content"  
+        android:id="@+id/imageView1" style="@style/base_wrap_wrap"
         android:layout_gravity="center_vertical"  
         android:paddingBottom="5dip"  
         android:paddingLeft="40dip"  
@@ -21,5 +17,5 @@
         android:layout_marginLeft="8dip"  
         android:text="确定"  
         android:textColor="#000000" />  
-
+    </LinearLayout>
 </LinearLayout>

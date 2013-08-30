@@ -11,5 +11,8 @@
 	<Button style="@style/button_match" android:text="@string/button_animation" android:id="@+id/button_animation"/>
 	<Button style="@style/button_match" android:text="@string/button_json" android:id="@+id/button_json"/>
 	<Button style="@style/button_match" android:text="@string/button_barcodescanner" android:id="@+id/button_barcodescanner"/>
+	<Button style="@style/button_match" android:text="@string/button_refresh_listview" android:id="@+id/button_refresh_listview"/>
+	<Button style="@style/button_match" android:text="@string/button_refresh_gridview" android:id="@+id/button_refresh_gridview"/>
+	<Button style="@style/button_match" android:text="@string/button_refresh_scrollview" android:id="@+id/button_refresh_scrollview"/>
 </LinearLayout>   
 </ScrollView>
