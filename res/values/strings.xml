@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="activityTitle_nfc">NFC功能测试</string>
+    
     <string name="app_name">李雪Android</string>
     <string name="toast_network_connectionTimeout">网络超时</string>
     <string name="toast_network_connectException">网络连接异常</string>
