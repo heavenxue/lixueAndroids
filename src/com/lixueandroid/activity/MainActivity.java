@@ -7,6 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.activity.nfc.NfcMainActivity;
 
 /**
  * 李雪Android主界面
@@ -28,6 +29,8 @@ public class MainActivity extends BaseActivity {
 	private Button listRefresh;
 	private Button gridRefresh;
 	private Button scrollRefresh;
+	private Button nfcButton;
+	private Button listimgButton;
 	
 	
 	@Override
@@ -46,6 +49,8 @@ public class MainActivity extends BaseActivity {
 		listRefresh=(Button) findViewById(R.id.button_refresh_listview);
 		gridRefresh=(Button) findViewById(R.id.button_refresh_gridview);
 		scrollRefresh=(Button) findViewById(R.id.button_refresh_scrollview);
+		nfcButton=(Button) findViewById(R.id.button_Nfc);
+		listimgButton=(Button) findViewById(R.id.button_listImageLoader);
 	}
 
 	@Override
@@ -139,6 +144,20 @@ public class MainActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(TestScrollViewActivity.class);	
+			}
+		});
+		nfcButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(NfcMainActivity.class);
+			}
+		});
+		listimgButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(ListImgLoaderActivity.class);
 			}
 		});
 	}

@@ -23,7 +23,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.util.HttpApacheFac;
@@ -59,7 +58,7 @@ public class JsonActivity extends BaseActivity {
 		ipRequestButton=(Button) findViewById(R.id.button_ip_request);
 		serveletRequestButton=(Button) findViewById(R.id.button_servlet_request);
 		serveletArrayButton=(Button) findViewById(R.id.button_servletarray_request);
-//					HttpPost post = new HttpPost("http://m.weather.com.cn/data/101110101.html");
+//		HttpPost post = new HttpPost("http://m.weather.com.cn/data/101110101.html");
 		try {
 			post = new HttpPost("http://192.168.2.254:8016/MobileCode.ashx");
 			resp = HttpApacheFac.getHttpClient().execute(post);

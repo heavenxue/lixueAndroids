@@ -29,6 +29,10 @@
         
         <!-- 相关Activity -->
         <activity android:name="com.lixueandroid.activity.MainActivity" android:label="@string/app_name" >
+             <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+           	 </intent-filter>
         </activity>
         <activity android:name="com.lixueandroid.activity.MyCustomerImgButtonActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.MyTouchTabActivity" android:label="@string/app_name"></activity>
@@ -41,8 +45,7 @@
         <activity android:name="com.lixueandroid.activity.ScreenShotActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.AnimationDrawableActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.AnimationActivity" android:label="@string/app_name"></activity>
-        <activity android:name="com.lixueandroid.activity.JsonActivity" android:label="@string/app_name">
-        </activity>
+        <activity android:name="com.lixueandroid.activity.JsonActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.BarcodeScannerActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.StartScanBarcodeActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.TestGridViewActivity" android:label="@string/app_name"></activity>
@@ -50,10 +53,7 @@
         <activity android:name="com.lixueandroid.activity.TestScrollViewActivity" android:label="@string/app_name"></activity>
         
         <activity android:name="com.lixueandroid.activity.nfc.NfcMainActivity" android:label="@string/app_name">
-           <intent-filter>
-              <action android:name="android.intent.action.MAIN" />
-              <category android:name="android.intent.category.LAUNCHER" />
-           </intent-filter>
+          
         <!-- NFC相关 -->
 			 <intent-filter>
 				<action android:name="android.nfc.action.NDEF_DISCOVERED"/>
@@ -73,6 +73,7 @@
 			<meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/filter_nfc"/>
             
         </activity>
+        <activity android:name="com.lixueandroid.activity.ListImgLoaderActivity" android:label="@string/app_name"></activity>
         
         <!-- 相关服务 -->
         <service android:name="com.lixueandroid.activity.service.DownLoadService"></service>
