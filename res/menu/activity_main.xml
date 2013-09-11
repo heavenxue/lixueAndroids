@@ -1,7 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/menu_settings"
-        android:orderInCategory="100"/>
+        android:id="@+id/item_clear_memory_cache"
+        android:title="清除缓存"/>
+    <item
+        android:id="@+id/item_clear_disc_cache"
+        android:title="清除sd卡缓存"/>
+    <item
+        android:id="@+id/item_pause_on_scroll"
+        android:checkable="true"
+        android:title="当滚动时暂停"
+        android:visible="false"/>
+    <item
+        android:id="@+id/item_pause_on_fling"
+        android:checkable="true"
+        android:title="当滑屏时暂停"
+        android:visible="false"/>
 
 </menu>

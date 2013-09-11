@@ -16,5 +16,6 @@
 	<Button style="@style/button_match" android:text="@string/button_refresh_scrollview" android:id="@+id/button_refresh_scrollview"/>
 	<Button style="@style/button_match" android:text="@string/button_Nfc" android:id="@+id/button_Nfc"/>
 	<Button style="@style/button_match" android:text="@string/button_listImageLoader" android:id="@+id/button_listImageLoader"/>
+	<Button style="@style/button_match" android:text="@string/button_listImageLoaderp" android:id="@+id/button_listImageLoaderp"/>
 </LinearLayout>   
 </ScrollView>

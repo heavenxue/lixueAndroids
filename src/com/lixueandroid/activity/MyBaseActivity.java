@@ -6,14 +6,38 @@ import me.xiaopan.easyandroid.app.BaseActivity;
 import me.xiaopan.easynetwork.android.http.EasyHttpClient;
 import me.xiaopan.easynetwork.android.http.Request;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.imgloader.ImageLoader;
 import com.lixueandroid.net.AccessNetworkListener;
 import com.lixueandroid.net.MyJsonReponseHandler;
 
 public abstract class MyBaseActivity extends BaseActivity{
+	protected ImageLoader imageLoader = ImageLoader.getInstance();
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.item_clear_memory_cache:
+				imageLoader.clearMemoryCache();
+				return true;
+			case R.id.item_clear_disc_cache:
+				imageLoader.clearDiscCache();
+				return true;
+			default:
+				return false;
+		}
+	}
 
 	@Override
 	public void onPreInit(Bundle savedInstanceState) {
