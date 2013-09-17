@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.imgloader.DisplayImageOptions;
@@ -35,7 +34,6 @@ public class imgAdapter extends BaseAdapter {
 		this.imageLoader=imageLoader;
 	}
 	private class ViewHolder {
-		public TextView text;
 		public ImageView image;
 	}
 	@Override
@@ -60,14 +58,11 @@ public class imgAdapter extends BaseAdapter {
 		if (convertView == null) {
 			view=LayoutInflater.from(context).inflate(R.layout.item_list_image, null);
 			holder = new ViewHolder();
-			holder.text = (TextView) view.findViewById(R.id.text);
 			holder.image = (ImageView) view.findViewById(R.id.image);
 			view.setTag(holder);
 		} else {
 			holder = (ViewHolder) view.getTag();
 		}
-
-		holder.text.setText("Item " + (position + 1));
 
 		imageLoader.displayImage(imgurls[position], holder.image, options, animateFirstListener);
 

@@ -74,11 +74,25 @@
             
         </activity>
         <activity android:name="com.lixueandroid.activity.ListImgLoaderActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.GridImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.ShowDetailImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.GalleryImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.SocketActivity" android:label="@string/app_name"></activity>
 
         
         <!-- 相关服务 -->
         <service android:name="com.lixueandroid.activity.service.DownLoadService"></service>
-
+        <service android:name="com.lixueandroid.activity.service.TcpClientService"></service>
+ 		<receiver android:name="com.lixueandroid.activity.broadcast.DemoReceiver">
+	      	<intent-filter >
+	        <!-- com.neter.broadcast.receiver.DEMO_ACTION为自定义广播标记
+	           	当MainActivtiy中发出com.neter.broadcast.receiver.DEMO_ACTION　Intent时
+	           DemoRecevicer会起相应　执行DemoRecevicer类的onReceive方法
+	          -->
+	        	<action android:name="com.lixueandroid.broadcast.receiver.DEMO_ACTION"></action>
+	      	</intent-filter>
+    	</receiver>
+        
         
     </application>
 </manifest>

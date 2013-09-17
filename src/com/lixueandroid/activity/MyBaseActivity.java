@@ -13,12 +13,28 @@ import android.widget.TextView;
 
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.imgloader.ImageLoader;
+import com.lixueandroid.imgloader.ImageLoaderConfiguration;
+import com.lixueandroid.imgloader.Md5FileNameGenerator;
+import com.lixueandroid.imgloader.QueueProcessingType;
 import com.lixueandroid.net.AccessNetworkListener;
 import com.lixueandroid.net.MyJsonReponseHandler;
 
 public abstract class MyBaseActivity extends BaseActivity{
 	protected ImageLoader imageLoader = ImageLoader.getInstance();
 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getBaseContext())
+		.threadPriority(Thread.NORM_PRIORITY - 2)
+		.denyCacheImageMultipleSizesInMemory()
+		.discCacheFileNameGenerator(new Md5FileNameGenerator())
+		.tasksProcessingOrder(QueueProcessingType.LIFO)
+		.enableLogging() // Not necessary in common
+		.build();
+		imageLoader.init(config);
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
@@ -47,7 +63,6 @@ public abstract class MyBaseActivity extends BaseActivity{
 	public boolean isRemoveTitleBar() {
 		return true;
 	}
-	
 
 	/**
 	 * 显示消息对话框

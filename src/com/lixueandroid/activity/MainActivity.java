@@ -1,6 +1,7 @@
 package com.lixueandroid.activity;
 
 import me.xiaopan.easyandroid.app.BaseActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -8,6 +9,7 @@ import android.widget.Button;
 
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.activity.nfc.NfcMainActivity;
+import com.lixueandroid.activity.service.TcpClientService;
 
 /**
  * 李雪Android主界面
@@ -31,6 +33,9 @@ public class MainActivity extends BaseActivity {
 	private Button scrollRefresh;
 	private Button nfcButton;
 	private Button listimgButton;
+	private Button gridimgButton;
+	private Button galleryButton;
+	private Button socketButton;
 	
 	
 	@Override
@@ -51,6 +56,9 @@ public class MainActivity extends BaseActivity {
 		scrollRefresh=(Button) findViewById(R.id.button_refresh_scrollview);
 		nfcButton=(Button) findViewById(R.id.button_Nfc);
 		listimgButton=(Button) findViewById(R.id.button_listImageLoader);
+		gridimgButton=(Button) findViewById(R.id.button_gridImageLoader);
+		socketButton=(Button) findViewById(R.id.button_Socket);
+		galleryButton=(Button) findViewById(R.id.button_galleryimgloader);
 	}
 
 	@Override
@@ -158,6 +166,30 @@ public class MainActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(ListImgLoaderActivity.class);
+			}
+		});
+		gridimgButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(GridImgActivity.class);
+			}
+		});
+		socketButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+//				startActivity(SocketActivity.class);
+				Intent intent=new Intent();
+				intent.setClass(getBaseContext(),TcpClientService.class);
+				startService(intent);
+			}
+		});
+		galleryButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(GalleryImgActivity.class);
 			}
 		});
 	}

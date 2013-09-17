@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="activityTitle_nfc">NFC功能测试</string>
-    <string name="activityTitle_listview_imgloader">listview加载图片</string>
+    <string name="activityTitle_listview_imgloader">ListView加载图片</string>
+    <string name="activityTitle_gridview_imgloader">GridView加载图片</string>
+    <string name="activityTitle_gallery_imgloader">Gallery加载图片</string>
+    <string name="activityTitle_Socket">Socket编程</string>
     
     <string name="app_name">李雪Android</string>
     <string name="toast_network_connectionTimeout">网络超时</string>

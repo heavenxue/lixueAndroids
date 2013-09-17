@@ -1,6 +1,9 @@
 package com.lixueandroid.activity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.lixue.lixueandroid.R;
@@ -27,12 +30,19 @@ public class ListImgLoaderActivity extends MyBaseActivity{
 
 	@Override
 	public void onInitListener(Bundle savedInstanceState) {
-		
+		imgListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
+				Bundle bundle=new Bundle();
+				bundle.putString(ShowDetailImgActivity.PRAM_REQUESTED_STRING_URL, imageUrls[arg2]);
+				startActivity(ShowDetailImgActivity.class,bundle);
+			}
+		});
 	}
 
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
-		UILApplication.initImageLoader(getBaseContext());
 		imageUrls=ImageUrls.getImageUrls();
 		options = new DisplayImageOptions.Builder()
 		.showStubImage(R.drawable.ic_stub)

@@ -32,14 +32,6 @@ public class NfcMainActivity extends MyBaseActivity{
 		setContentView(R.layout.activity_nfcmain);
 		nfcShowText=(TextView) findViewById(R.id.text_nfc_show);
 		//context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_NFC)
-		if(getBaseContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_NFC)){
-			nfcShowText.setText("Scan a tag");
-			toastL("此手机支持NFC功能！");
-		}else{
-			toastL("此手机不支持NFC功能！");
-			becauseExceptionFinishActivity();
-		}
-		 
 		mAdapter = NfcAdapter.getDefaultAdapter(this);
 		 
 //		 Create a generic PendingIntent that will be deliver
@@ -67,7 +59,15 @@ public class NfcMainActivity extends MyBaseActivity{
 	@Override
 	protected void onResume() {
 		super.onResume();
-		mAdapter.enableForegroundDispatch(this,mPendingIntent, mFilters, mTechLists);//启用前景调度给定的活动
+		if(getBaseContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_NFC)){
+			nfcShowText.setText("Scan a tag");
+			toastL("此手机支持NFC功能！");
+			mAdapter.enableForegroundDispatch(this,mPendingIntent, mFilters, mTechLists);//启用前景调度给定的活动
+		}else{
+			toastL("此手机不支持NFC功能！");
+			becauseExceptionFinishActivity();
+			return;
+		}
 
 	}
 
@@ -81,7 +81,11 @@ public class NfcMainActivity extends MyBaseActivity{
 	@Override
 	protected void onPause() {
 		super.onPause();
-		mAdapter.disableForegroundDispatch(this);
+		if(getBaseContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_NFC)){
+			mAdapter.disableForegroundDispatch(this);
+		}else{
+			return;
+		}
 	}
 
 	@Override
