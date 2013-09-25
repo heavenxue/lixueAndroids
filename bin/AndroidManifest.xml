@@ -21,11 +21,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="18" />
       
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+    <application android:allowBackup="true" android:icon="@drawable/ic_mylauncher" android:label="@string/app_name" android:theme="@style/AppTheme" android:name="com.lixueandroid.activity.MyApplication">
         
         <!-- 相关Activity -->
         <activity android:name="com.lixueandroid.activity.MainActivity" android:label="@string/app_name" >
@@ -93,6 +89,47 @@
 	      	</intent-filter>
     	</receiver>
         
+           	<!-- 极光推送需要模块 - 开始 -->
+        <activity android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|keyboardHidden" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="cn.com.intertextilehome" />
+            </intent-filter>
+        </activity>
         
+        <service android:name="cn.jpush.android.service.PushService" android:enabled="true" android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        
+        <service android:name="cn.jpush.android.service.DownloadService" android:enabled="true" android:exported="false"/>
+         
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+          	<intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <category android:name="cn.com.intertextilehome" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        
+        <meta-data android:name="JPUSH_APPKEY" android:value="e0f08f310158070a06081c56"/>
+        <!-- 极光推送需要模块 - 结束 --> 
     </application>
 </manifest>

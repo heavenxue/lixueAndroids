@@ -1,6 +1,7 @@
 package com.lixueandroid.activity;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -51,6 +52,7 @@ public class GalleryImgActivity extends MyBaseActivity {
 		.cacheOnDisc()
 		.displayer(new RoundedBitmapDisplayer(20))
 		.build();
-		galleryImgLoader.setAdapter(new galleryImgAdapter(getBaseContext(), imageUrls, options, imageLoader));
+		galleryImgLoader.setAdapter(new galleryImgAdapter(getBaseContext(), imageUrls, options, getMyApplication().getImageLoader()));
+		
 	}
 }

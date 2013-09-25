@@ -1,7 +1,6 @@
 package com.lixueandroid.activity;
 
 import me.xiaopan.easyandroid.app.BaseActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -9,7 +8,6 @@ import android.widget.Button;
 
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.activity.nfc.NfcMainActivity;
-import com.lixueandroid.activity.service.TcpClientService;
 
 /**
  * 李雪Android主界面
@@ -179,10 +177,10 @@ public class MainActivity extends BaseActivity {
 			
 			@Override
 			public void onClick(View v) {
-//				startActivity(SocketActivity.class);
-				Intent intent=new Intent();
-				intent.setClass(getBaseContext(),TcpClientService.class);
-				startService(intent);
+				startActivity(SocketActivity.class);
+//				Intent intent=new Intent();
+//				intent.setClass(getBaseContext(),TcpClientService.class);
+//				startService(intent);
 			}
 		});
 		galleryButton.setOnClickListener(new OnClickListener() {

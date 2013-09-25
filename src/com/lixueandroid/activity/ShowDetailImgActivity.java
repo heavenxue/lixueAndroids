@@ -25,7 +25,8 @@ public class ShowDetailImgActivity extends MyBaseActivity{
 	public void onInitData(Bundle savedInstanceState) {
 		
 		if(StringUtils.isNotNullAndEmpty(getIntent().getStringExtra(PRAM_REQUESTED_STRING_URL))){
-			imageLoader.displayImage(getIntent().getStringExtra(PRAM_REQUESTED_STRING_URL),imgview);
+			//imageLoader.displayImage(getIntent().getStringExtra(PRAM_REQUESTED_STRING_URL),imgview);
+			getMyApplication().getImageLoader().displayImage(getIntent().getStringExtra(PRAM_REQUESTED_STRING_URL),imgview);
 		}
 	}
 

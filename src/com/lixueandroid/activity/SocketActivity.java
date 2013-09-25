@@ -27,8 +27,8 @@ public class SocketActivity extends MyBaseActivity implements Runnable {
 	private TextView tv_msg = null;
 	private EditText ed_msg = null;
 	private Button btn_send = null;
-	private static final String HOST = "192.168.2.15"; // 主机地址（服务端所在pc的ip地址）
-	private static final int PORT = 9999; // 端口号
+	private static final String HOST = "192.168.2.106"; // 主机地址（服务端所在pc的ip地址）
+	private static final int PORT = 8058; // 端口号
 	private Socket socket = null; // 套接字
 	private BufferedReader in = null;
 	private PrintWriter out = null;
@@ -53,6 +53,7 @@ public class SocketActivity extends MyBaseActivity implements Runnable {
 				if (socket.isConnected()) {
 					if (!socket.isOutputShutdown()) {
 						out.println(msg);
+						toastL("发送成功："+msg);
 					}
 				} else {
 					// 如果没有连接上，那么要重试连接
@@ -76,7 +77,7 @@ public class SocketActivity extends MyBaseActivity implements Runnable {
 		try {
 			socket = new Socket();
 			socketAddress = new InetSocketAddress(HOST, PORT);
-			socket.connect(socketAddress, 100);
+			socket.connect(socketAddress, 1000);
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
 			while (true) {

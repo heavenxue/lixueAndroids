@@ -52,6 +52,6 @@ public class GridImgActivity extends MyBaseActivity{
 		.cacheOnDisc()
 		.displayer(new RoundedBitmapDisplayer(20))
 		.build();
-		gridviewImgLoader.setAdapter(new imgAdapter(getBaseContext(), imageUrls, options, imageLoader));
+		gridviewImgLoader.setAdapter(new imgAdapter(getBaseContext(), imageUrls, options, getMyApplication().getImageLoader()));
 	}
 }
