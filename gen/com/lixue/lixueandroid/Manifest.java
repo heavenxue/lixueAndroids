@@ -10,5 +10,8 @@ package com.lixue.lixueandroid;
 public final class Manifest {
     public static final class permission {
         public static final String ACCESS_DOWNLOAD_MANAGER="android.permission.ACCESS_DOWNLOAD_MANAGER";
+        /**  极光推送权限 
+         */
+        public static final String JPUSH_MESSAGE="com.lixue.lixueandroid.permission.JPUSH_MESSAGE";
     }
 }

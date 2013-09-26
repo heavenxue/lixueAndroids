@@ -14,7 +14,7 @@ import com.lixueandroid.activity.nfc.NfcMainActivity;
  * @author lixue
  *
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends MyBaseActivity {
 
 	private Button btnMyCustomButton;
 	private Button btnMyTouchTab;
@@ -194,6 +194,6 @@ public class MainActivity extends BaseActivity {
 
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
-
+		getMyApplication().getTheme();
 	}
 }
