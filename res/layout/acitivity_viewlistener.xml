@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen" >
+    <LinearLayout style="@style/layout_titlebar" android:gravity="center">
+        <TextView style="@style/text_title_activity" android:text="@string/activityTitle_listener"/>
+    </LinearLayout>
+    <TextView style="@style/base_match_match" android:text="哈哈"/>
+    <FrameLayout style="@style/layout_body">
+            <com.lixueandroid.activity.view.MyView style="@style/base_match_match" android:id="@+id/myview"/>
+    </FrameLayout>
+</LinearLayout>

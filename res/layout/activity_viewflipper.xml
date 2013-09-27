@@ -1,65 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#ffffff"
-    android:orientation="vertical"
-    android:padding="15dp" >
-
-    <ViewFlipper
-        android:id="@+id/flipper"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
-
-        <!-- 第一个页面 -->
-
-        <LinearLayout
-            android:id="@+id/layout1"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical" >
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/mytext"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:ellipsize="marquee"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:lines="1"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                android:text="您 看一下我是不是一直在动呢，是不是呢？"
-                android:textColor="#000000"
-                android:textSize="20dp" />
-        </LinearLayout>
-        <!-- 第二个页面 -->
-
-        <SlidingDrawer
-            android:id="@+id/drawer"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:content="@+id/content"
-            android:handle="@+id/handle" >
-
-            <ImageView
-                android:id="@id/handle"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/button_home_agency_pressed" />
-
-            <ImageView
-                android:id="@id/content"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:src="@drawable/button_home_find_agent_pressed" />
-        </SlidingDrawer>
-    </ViewFlipper>
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match" android:orientation="vertical">
+	<!-- <com.lixueandroid.activity.view.FilpperView style="@style/base_match_match" android:gravity="center"/> -->
+	<FrameLayout style="@style/base_match_match">
+		<!-- <ViewFlipper style="@style/base_match_match" android:id="@+id/myfilpper" android:focusable="true"></ViewFlipper> -->
+		<com.lixueandroid.activity.view.slidingEventsView style="@style/base_match_match" android:id="@+id/myview"/>
+		<LinearLayout style="@style/base_match_match" android:orientation="vertical">
+		    <LinearLayout style="@style/base_match_wrap" android:id="@+id/imgLinearlayout">
+		    <ImageView style="@style/base_match_wrap" android:src="@drawable/liduohai14" android:id="@+id/myimg" android:focusable="true" android:clickable="true" />
+		    </LinearLayout>
+		    <ListView style="@style/list" android:layout_height="200dp" android:id="@+id/mylist"></ListView>
+		    <Button style="@style/button_match" android:text="看看" />
+		</LinearLayout>
+	</FrameLayout>
 </LinearLayout>

@@ -1,6 +1,5 @@
 package com.lixueandroid.activity;
 
-import me.xiaopan.easyandroid.app.BaseActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,6 +33,7 @@ public class MainActivity extends MyBaseActivity {
 	private Button gridimgButton;
 	private Button galleryButton;
 	private Button socketButton;
+	private Button listenerButton;
 	
 	
 	@Override
@@ -57,6 +57,7 @@ public class MainActivity extends MyBaseActivity {
 		gridimgButton=(Button) findViewById(R.id.button_gridImageLoader);
 		socketButton=(Button) findViewById(R.id.button_Socket);
 		galleryButton=(Button) findViewById(R.id.button_galleryimgloader);
+		listenerButton=(Button) findViewById(R.id.button_listener);
 	}
 
 	@Override
@@ -188,6 +189,13 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(GalleryImgActivity.class);
+			}
+		});
+		listenerButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(ListenerActivity.class);
 			}
 		});
 	}

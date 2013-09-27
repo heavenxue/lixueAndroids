@@ -65,6 +65,7 @@
         <activity android:name="com.lixueandroid.activity.TestGridViewActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.TestListViewActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.TestScrollViewActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.ListenerActivity" android:label="@string/app_name"></activity>
         
         <activity android:name="com.lixueandroid.activity.nfc.NfcMainActivity" android:label="@string/app_name">
           

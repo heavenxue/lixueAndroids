@@ -5,6 +5,7 @@
     <string name="activityTitle_gridview_imgloader">GridView加载图片</string>
     <string name="activityTitle_gallery_imgloader">Gallery加载图片</string>
     <string name="activityTitle_Socket">Socket编程</string>
+    <string name="activityTitle_listener">view事件不被覆盖</string>
     
     <string name="app_name">李雪Android</string>
     <string name="toast_network_connectionTimeout">网络超时</string>

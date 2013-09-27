@@ -8,6 +8,7 @@ import android.widget.ListView;
 
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.activity.adapter.imgAdapter;
+import com.lixueandroid.mydata.ImageUrls;
 
 /**
  * listview图片加载页面
@@ -39,6 +40,7 @@ public class ListImgLoaderActivity extends MyBaseActivity{
 
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
+		imageUrls=ImageUrls.getImageUrls();
 		imgListView.setAdapter(new imgAdapter(getBaseContext(),imageUrls,getMyApplication().getOptions(),getMyApplication().getImageLoader()));
 	}
 

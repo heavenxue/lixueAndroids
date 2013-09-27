@@ -19,5 +19,6 @@
 	<Button style="@style/button_match" android:text="@string/activityTitle_gridview_imgloader" android:id="@+id/button_gridImageLoader"/>
 	<Button style="@style/button_match" android:text="@string/activityTitle_gallery_imgloader" android:id="@+id/button_galleryimgloader"/>
 	<Button style="@style/button_match" android:text="@string/activityTitle_Socket" android:id="@+id/button_Socket"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_listener" android:id="@+id/button_listener"/>
 </LinearLayout>   
 </ScrollView>

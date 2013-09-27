@@ -9,7 +9,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.ImageView;
-
 import cn.jpush.android.api.JPushInterface;
 
 import com.lixue.lixueandroid.R;
