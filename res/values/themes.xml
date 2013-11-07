@@ -12,7 +12,7 @@
    </style>
    
     <!-- 应用主题 -->
-    <style name="AppTheme" parent="android:Theme.Light">
+    <style name="AppTheme" parent="@android:style/Theme.Light">
         <item name="android:windowNoTitle">true</item>
     </style>
     

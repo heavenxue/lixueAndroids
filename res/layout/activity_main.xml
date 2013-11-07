@@ -20,5 +20,14 @@
 	<Button style="@style/button_match" android:text="@string/activityTitle_gallery_imgloader" android:id="@+id/button_galleryimgloader"/>
 	<Button style="@style/button_match" android:text="@string/activityTitle_Socket" android:id="@+id/button_Socket"/>
 	<Button style="@style/button_match" android:text="@string/activityTitle_listener" android:id="@+id/button_listener"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_setlight" android:id="@+id/button_setlight"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_photo" android:id="@+id/button_photo"/> 
+	<Button style="@style/button_match" android:text="@string/activityTitle_actionbar" android:id="@+id/button_actionbar"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_share" android:id="@+id/button_share"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_draw" android:id="@+id/button_draw"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_pageturn" android:id="@+id/button_pageturn"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_myshare" android:id="@+id/button_toshare"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_animation" android:id="@+id/button_myanimation"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_liubianxing" android:id="@+id/button_liubianxing"/>  
 </LinearLayout>   
 </ScrollView>

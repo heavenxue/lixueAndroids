@@ -39,11 +39,8 @@ public class MyApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		imageLoader=ImageLoader.getInstance();
-		
 		setAnimateImageLoadingListener(new AnimateFirstDisplayListener());
-		
 		initImageLoader(getApplicationContext());
-		
 		options = new DisplayImageOptions.Builder()
 		.showStubImage(R.drawable.ic_stub)
 		.showImageForEmptyUri(R.drawable.ic_empty)
@@ -56,6 +53,7 @@ public class MyApplication extends Application {
 		/* 极光推动初始化模块 */
 		JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
+        
 	}
 
 	public static void initImageLoader(Context context) {

@@ -6,8 +6,17 @@
     <string name="activityTitle_gallery_imgloader">Gallery加载图片</string>
     <string name="activityTitle_Socket">Socket编程</string>
     <string name="activityTitle_listener">view事件不被覆盖</string>
+    <string name="activityTitle_setlight">设置屏幕亮度</string>
+    <string name="activityTitle_photo">相机相关</string>
+    <string name="activityTitle_actionbar">ActionBar相关</string>
+    <string name="activityTitle_share">水波纹效果</string>
+    <string name="activityTitle_pageturn">翻页效果</string>
+    <string name="activityTitle_draw">各种画</string>
+    <string name="activityTitle_myshare">各种分享</string>
+    <string name="activityTitle_animation">activity动画</string>
+    <string name="activityTitle_liubianxing">画正六边形海报</string>
     
-    <string name="app_name">李雪Android</string>
+    <string name="app_name">LixueAndroid</string>
     <string name="toast_network_connectionTimeout">网络超时</string>
     <string name="toast_network_connectException">网络连接异常</string>
     <string name="toast_network_fileNotFoundException">网络文件异常</string>
@@ -54,13 +63,16 @@ Windows 8是微软围绕扁平化UI设计的一个全新的系统，其中大部
 
 
 <string name="tab_title">前天 昨天 今天 明天 后天</string>
-<string name="pull_to_refresh_pull_label">下拉刷新</string>
-    <string name="pull_to_refresh_release_label">松开后刷新</string>
-    <string name="pull_to_refresh_refreshing_label">正在刷新\u2026</string>
-    
-    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
-    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
-    <string name="pull_to_refresh_footer_refreshing_label">正在加载中\u2026</string>
 
+<!-- <string name="pull_to_refresh_pull_label">下拉刷新</string>
+<string name="pull_to_refresh_release_label">松开后刷新</string>
+<string name="pull_to_refresh_refreshing_label">正在刷新\u2026</string> -->
+
+<string name="pull_to_refresh_footer_release_label">松开后加载</string>
+<string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+<string name="pull_to_refresh_footer_refreshing_label">正在加载中\u2026</string>
+
+<string name="action_search">搜索</string>
+<string name="action_settings">设置</string>
 
 </resources>

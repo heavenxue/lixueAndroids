@@ -15,7 +15,8 @@ import com.lixueandroid.net.AccessNetworkListener;
 import com.lixueandroid.net.MyJsonReponseHandler;
 
 public abstract class MyBaseActivity extends BaseActivity{
-
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_main, menu);

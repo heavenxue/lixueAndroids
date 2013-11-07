@@ -42,7 +42,7 @@ public class JsonUtils {
 	public static String getObject(String jsonData,User user){
 		Gson gson=new Gson();
 		user=gson.fromJson(jsonData,User.class);
-		return user.getName()+":"+user.getAge();
+		return user.getName()+":";
 	}
 	
 	public static User getMultiyObject(String jsonData){

@@ -10,10 +10,17 @@
     <uses-permission android:name="com.lixue.lixueandroid.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 微信权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	
+    <!-- 写入系统权限 -->  
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <!-- Optional for location -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
@@ -22,13 +29,11 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 相机权限 -->
     <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
     <permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
     <!-- NFC相关权限 -->
     <uses-permission android:name="android.permission.NFC" />
@@ -37,7 +42,8 @@
     <uses-feature android:name="android.hardware.nfc" android:required="true" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="18" />
+    
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17" />
       
     <application android:allowBackup="true" android:icon="@drawable/ic_mylauncher" android:label="@string/app_name" android:theme="@style/AppTheme" android:name="com.lixueandroid.activity.MyApplication">
         
@@ -66,10 +72,22 @@
         <activity android:name="com.lixueandroid.activity.TestListViewActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.TestScrollViewActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.ListenerActivity" android:label="@string/app_name"></activity>
-        
-        <activity android:name="com.lixueandroid.activity.nfc.NfcMainActivity" android:label="@string/app_name">
-          
+        <activity android:name="com.lixueandroid.activity.ListImgLoaderActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.GridImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.ShowDetailImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.GalleryImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.SocketActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.PhotoActivity" android:label="@string/app_name" android:screenOrientation="landscape"></activity>
+		<activity android:name="com.lixueandroid.activity.myActionBarActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.WaterWaveActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.PageTurnActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.AllDrawActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.ShareActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.myAnimationActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.LiuBianXingActivity" android:label="@string/app_name"></activity>
+		
         <!-- NFC相关 -->
+        <activity android:name="com.lixueandroid.activity.nfc.NfcMainActivity" android:label="@string/app_name">
 			 <intent-filter>
 				<action android:name="android.nfc.action.NDEF_DISCOVERED"/>
 				<data android:mimeType="text/plain" />
@@ -88,12 +106,6 @@
 			<meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/filter_nfc"/>
             
         </activity>
-        <activity android:name="com.lixueandroid.activity.ListImgLoaderActivity" android:label="@string/app_name"></activity>
-        <activity android:name="com.lixueandroid.activity.GridImgActivity" android:label="@string/app_name"></activity>
-        <activity android:name="com.lixueandroid.activity.ShowDetailImgActivity" android:label="@string/app_name"></activity>
-        <activity android:name="com.lixueandroid.activity.GalleryImgActivity" android:label="@string/app_name"></activity>
-        <activity android:name="com.lixueandroid.activity.SocketActivity" android:label="@string/app_name"></activity>
-
         
         <!-- 相关服务 -->
         <service android:name="com.lixueandroid.activity.service.DownLoadService"></service>
@@ -127,7 +139,7 @@
         </service>
         
         <service android:name="cn.jpush.android.service.DownloadService" android:enabled="true" android:exported="false"/>
-         
+        
         <receiver
             android:name="cn.jpush.android.service.PushReceiver"
             android:enabled="true" >
@@ -149,6 +161,28 @@
         <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
         
         <meta-data android:name="JPUSH_APPKEY" android:value="e0f08f310158070a06081c56"/>
-        <!-- 极光推送需要模块 - 结束 --> 
+        <!-- 极光推送需要模块 - 结束 -->
+        
+		<!-- Socialize Activitys Start -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity android:name="com.tencent.tauth.AuthActivity" />
+        <!-- Socialize Activitys End -->
+        
+		<!-- ###################添加UmengAppkey（分享开始）###################### -->
+         <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5265e3ac56240b0b630735b0" >
+        </meta-data>
+        <meta-data android:name="UMENG_CHANNEL" android:value="LixueAndroid" ></meta-data>
+        <!-- ###################添加UmengAppkey（分享结束）###################### -->
+        
     </application>
 </manifest>

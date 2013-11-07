@@ -37,7 +37,7 @@ public class Utils {
 		}
 		return result;
 	}
-	
+
 	/**
 	 * 获取本地上所有的mp3文件
 	 * @return
@@ -112,4 +112,43 @@ public class Utils {
         }    
         return filename;    
     }    
+    /**
+     * 
+     * @param str  要截取的字符串 如输入：测试testing嘻嘻
+     * @param length 截取的字符串位数   :12
+     * 结果：测试testing...
+     * @return
+     */
+    public String subStringByBytes(String str, int length) {
+        String result = "";
+        int i = 0;
+        int j = 0;
+
+        StringBuffer buff = new StringBuffer(str);
+        String stmp;
+        int len = buff.length();
+        for (i = 0; i < len; i++) {
+            if (j < length) {
+            stmp = buff.substring(i, i + 1);
+            try {
+                stmp = new String(stmp.getBytes("utf-8"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (stmp.getBytes().length > 1) {
+                j += 2;
+            } else {
+                j += 1;
+            }
+            result += stmp;
+            }else{
+                break;
+            }
+        }
+        if (j > length) {
+            result = result.substring(0, result.length() - 1);
+        }
+        result += "...";
+        return result;
+        }
 }

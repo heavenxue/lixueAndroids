@@ -35,7 +35,6 @@ public class AnimationActivity extends BaseActivity{
 	public void onInitData(Bundle savedInstanceState) {
 		//代码实现方式 
 		AnimationSet animationSet=new AnimationSet(false);
-		
 		RotateAnimation rotateAnimation=new RotateAnimation(0f, 360f, Animation.RELATIVE_TO_PARENT, 0.5f, Animation.RELATIVE_TO_PARENT, 0.5f);
 		rotateAnimation.setDuration(1000);
 		rotateAnimation.setFillAfter(true);

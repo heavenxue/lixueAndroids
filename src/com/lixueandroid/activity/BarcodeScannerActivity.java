@@ -9,6 +9,7 @@ import me.xiaopan.easyandroid.util.barcode.Decoder.DecodeListener;
 import me.xiaopan.easyandroid.util.barcode.ScanFrameView;
 import android.graphics.Bitmap;
 import android.hardware.Camera;
+import android.hardware.Camera.Parameters;
 import android.hardware.Camera.PreviewCallback;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -80,7 +81,7 @@ public class BarcodeScannerActivity extends BaseActivity implements  CameraCallb
 			flashLight.setChecked(savedInstanceState.getBoolean(STATE_FLASH_CHECKED));
 		}
 		//初始化相机 
-		cameraManager=new CameraManager(barcodeSurfaceView.getHolder(), this); 
+		cameraManager=new CameraManager(this, barcodeSurfaceView.getHolder(), this); 
 		cameraManager.setFocusIntervalTime(3000);
 		cameraManager.setDisplayOrientation(90);
 		
@@ -161,20 +162,6 @@ public class BarcodeScannerActivity extends BaseActivity implements  CameraCallb
 				}
 	}
 
-	/* 
-	 * 初始化相机 
-	 */
-	@Override
-	public void onInitCamera(Camera camera) {
-		//设置相机回调
-		camera.setPreviewCallback(this);
-		//如果解码器尚未创建的话，就创建解码器并设置其监听器
-		if(decoder==null){
-			decoder=new Decoder(getBaseContext(), camera.getParameters(), scanFrameView);
-			 decoder.setDecodeListener(this);//设置解码监听器回调
-			 decoder.setResultPointCallback(this);//设置可疑点回调
-		}
-	}
 
 	/*
 	 *  当自动对焦时
@@ -308,4 +295,31 @@ public class BarcodeScannerActivity extends BaseActivity implements  CameraCallb
 			}
 		}
 	}
+
+	@Override
+	public void onInitCamera(Camera camera, Parameters cameraParameters) {
+		//设置预览回调
+		camera.setPreviewCallback(this);
+		
+		//如果解码器尚未创建的话，就创建解码器并设置其监听器
+		if(decoder == null){
+			decoder = new Decoder(getBaseContext(), camera.getParameters(), scanFrameView);
+			decoder.setResultPointCallback(this);	//设置可疑点回调
+			decoder.setDecodeListener(this);	//设置解码监听器
+		}		
+	}
+//	/* 
+//	 * 初始化相机 
+//	 */
+//	@Override
+//	public void onInitCamera(Camera camera) {
+//		//设置相机回调
+//		camera.setPreviewCallback(this);
+//		//如果解码器尚未创建的话，就创建解码器并设置其监听器
+//		if(decoder==null){
+//			decoder=new Decoder(getBaseContext(), camera.getParameters(), scanFrameView);
+//			 decoder.setDecodeListener(this);//设置解码监听器回调
+//			 decoder.setResultPointCallback(this);//设置可疑点回调
+//		}
+//	}
 }

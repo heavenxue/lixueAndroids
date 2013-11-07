@@ -43,14 +43,14 @@ public class NfcMainActivity extends MyBaseActivity{
 		mPendingIntent = PendingIntent.getActivity(this, 0,new Intent(this,getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
 		 
 		// Setup an intent filter for all MIME based dispatches intent开始活动时，标记被发现标签上登记的具体技术和活动。
-		IntentFilter ndef = new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED);
+//		IntentFilter ndef = new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED);
+		IntentFilter ndef = new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED );
 		try {
 			ndef.addDataType("*/*");
 		} catch (MalformedMimeTypeException e) {
 		throw new RuntimeException("fail", e);
 		}
-		mFilters = new IntentFilter[] {ndef,};
-		 
+		mFilters = new IntentFilter[] {ndef,new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED),new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED)};
 		// Setup a tech list for all MifareClassic tags
 		mTechLists = new String[][] { new String[] { MifareClassic.class.getName() } };
 
