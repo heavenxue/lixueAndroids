@@ -60,8 +60,6 @@ public class RegularHexagonView extends ImageView implements OnClickListener
 				mPath.lineTo(getWidth()/4, getHeight());
 				mPath.lineTo(getWidth()*3/4, getHeight());
 				mPath.close();
-				
-				
 			}
 		});
 //		getViewTreeObserver().addOnPreDrawListener(new OnPreDrawListener() {

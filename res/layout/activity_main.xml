@@ -29,5 +29,6 @@
 	<Button style="@style/button_match" android:text="@string/activityTitle_myshare" android:id="@+id/button_toshare"/>  
 	<Button style="@style/button_match" android:text="@string/activityTitle_animation" android:id="@+id/button_myanimation"/>  
 	<Button style="@style/button_match" android:text="@string/activityTitle_liubianxing" android:id="@+id/button_liubianxing"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_exibitionGuid" android:id="@+id/button_exibitionGuid"/>  
 </LinearLayout>   
 </ScrollView>

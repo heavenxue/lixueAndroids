@@ -15,6 +15,7 @@
     <string name="activityTitle_myshare">各种分享</string>
     <string name="activityTitle_animation">activity动画</string>
     <string name="activityTitle_liubianxing">画正六边形海报</string>
+    <string name="activityTitle_exibitionGuid">展会导览</string>
     
     <string name="app_name">LixueAndroid</string>
     <string name="toast_network_connectionTimeout">网络超时</string>

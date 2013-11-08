@@ -85,6 +85,7 @@
 		<activity android:name="com.lixueandroid.activity.ShareActivity" android:label="@string/app_name"></activity>
 		<activity android:name="com.lixueandroid.activity.myAnimationActivity" android:label="@string/app_name"></activity>
 		<activity android:name="com.lixueandroid.activity.LiuBianXingActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.GuidActivity" android:label="@string/app_name"></activity>
 		
         <!-- NFC相关 -->
         <activity android:name="com.lixueandroid.activity.nfc.NfcMainActivity" android:label="@string/app_name">

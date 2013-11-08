@@ -45,6 +45,7 @@ public class MainActivity extends MyBaseActivity {
 	private Button toshareButton;
 	private Button animationButton;
 	private Button liubianxingButton;
+	private Button daolanButton;
 
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
@@ -77,6 +78,7 @@ public class MainActivity extends MyBaseActivity {
 		toshareButton=(Button) findViewById(R.id.button_toshare);
 		animationButton=(Button) findViewById(R.id.button_myanimation);
 		liubianxingButton=(Button) findViewById(R.id.button_liubianxing);
+		daolanButton=(Button) findViewById(R.id.button_exibitionGuid);
 	}
 
 	@Override
@@ -280,6 +282,13 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 			startActivity(LiuBianXingActivity.class);	
+			}
+		});
+		daolanButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(GuidActivity.class);
 			}
 		});
 	}
