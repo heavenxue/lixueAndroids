@@ -1,6 +1,5 @@
 package com.lixueandroid.imgloader;
 
-import android.annotation.TargetApi;
 import android.graphics.BitmapFactory.Options;
 import android.os.Build;
 
@@ -56,12 +55,10 @@ public class ImageDecodingInfo {
 		if (Build.VERSION.SDK_INT >= 11) copyOptions11(srcOptions, destOptions);
 	}
 
-	@TargetApi(10)
 	private void copyOptions10(Options srcOptions, Options destOptions) {
 		destOptions.inPreferQualityOverSpeed = srcOptions.inPreferQualityOverSpeed;
 	}
 
-	@TargetApi(11)
 	private void copyOptions11(Options srcOptions, Options destOptions) {
 		destOptions.inBitmap = srcOptions.inBitmap;
 		destOptions.inMutable = srcOptions.inMutable;

@@ -9,11 +9,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.adapter.imgAdapter;
-import com.lixueandroid.activity.view.OnDownFlingListener;
-import com.lixueandroid.activity.view.OnUpFlingListener;
-import com.lixueandroid.activity.view.slidingEventsView;
+import com.lixueandroid.adapter.imgAdapter;
 import com.lixueandroid.mydata.ImageUrls;
+import com.lixueandroid.view.OnDownFlingListener;
+import com.lixueandroid.view.OnUpFlingListener;
+import com.lixueandroid.view.slidingEventsView;
 
 /**
  * 屏幕切换动画效果

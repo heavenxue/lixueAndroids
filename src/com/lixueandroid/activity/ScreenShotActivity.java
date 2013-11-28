@@ -11,8 +11,8 @@ import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.myinterface.OnScreenShotListener;
-import com.lixueandroid.activity.view.ScreenShotView;
+import com.lixueandroid.myinterface.OnScreenShotListener;
+import com.lixueandroid.view.ScreenShotView;
 
 /**
  * 截图实例

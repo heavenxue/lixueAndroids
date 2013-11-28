@@ -10,7 +10,6 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -22,7 +21,6 @@ import android.widget.TextView;
 
 import com.lixue.lixueandroid.R;
 
-@SuppressLint("HandlerLeak")
 public class SocketActivity extends MyBaseActivity implements Runnable {
 	private TextView tv_msg = null;
 	private EditText ed_msg = null;

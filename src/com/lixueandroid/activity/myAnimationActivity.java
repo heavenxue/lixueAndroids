@@ -12,7 +12,7 @@ import android.view.animation.Transformation;
 import android.widget.Button;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.adapter.DataAdapter;
+import com.lixueandroid.adapter.DataAdapter;
 
 /**
  * 一些动画的实例

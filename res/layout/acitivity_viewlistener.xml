@@ -5,6 +5,6 @@
     </LinearLayout>
     <TextView style="@style/base_match_match" android:text="哈哈"/>
     <FrameLayout style="@style/layout_body">
-            <com.lixueandroid.activity.view.MyView style="@style/base_match_match" android:id="@+id/myview"/>
+            <com.lixueandroid.view.MyView style="@style/base_match_match" android:id="@+id/myview"/>
     </FrameLayout>
 </LinearLayout>

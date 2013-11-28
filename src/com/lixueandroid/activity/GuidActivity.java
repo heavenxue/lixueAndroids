@@ -4,20 +4,22 @@ import java.io.InputStream;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.graphics.Rect;
 import android.graphics.Bitmap.Config;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewTreeObserver;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.view.ScaleImageView;
-import com.lixueandroid.util.BitmapUtils;
+import com.lixueandroid.view.ScaleImageView;
 
 public class GuidActivity extends MyBaseActivity{
 	private ScaleImageView guidImageView;
@@ -35,6 +37,18 @@ public class GuidActivity extends MyBaseActivity{
 		window_height = manager.getDefaultDisplay().getHeight();
 		guidImageView=(ScaleImageView) findViewById(R.id.img_myimg);
 		Bitmap bmp = ReadBitmapById(this,R.drawable.hall1,window_width, window_height);
+		 Canvas canvas = new Canvas(bmp);
+		  Paint paint = new Paint();
+		  paint.setAntiAlias(true);//设置画笔无锯齿(如果不设置可以看到效果很差)
+		  /*设置paint的　style　为STROKE：空心*/
+		  paint.setStyle(Paint.Style.FILL);
+		  paint.setColor(Color.RED);
+		  paint.setAlpha(125);
+		  canvas.drawRect(100, 100, 50, 50, paint);
+		  
+		  canvas.save(Canvas.ALL_SAVE_FLAG);
+		  // 存储新合成的图片
+		  canvas.restore();
 		// 设置图像
 		guidImageView.setImageBitmap(bmp);
 		guidImageView.setmActivity(GuidActivity.this);//设置activity.
@@ -63,8 +77,16 @@ public class GuidActivity extends MyBaseActivity{
 
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
-
+//		Canvas canvas=new Canvas();
+//		Paint paint=new Paint();
+//		paint.setColor(Color.BLUE);
+//		paint.setAntiAlias(true);
+//		paint.setStyle(Style.FILL);
+//		canvas.drawCircle(100, 100, 50, paint);
+//		canvas.restore();
+//		guidImageView.draw(canvas);
 	}
+	
 	public static Bitmap ReadBitmapById(Context context, int drawableId,int screenWidth, int screenHight) {
 		BitmapFactory.Options options = new BitmapFactory.Options();
 		options.inPreferredConfig = Config.ARGB_8888;

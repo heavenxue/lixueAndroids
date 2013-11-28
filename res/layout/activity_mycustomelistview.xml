@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout style="@style/base_match_wrap">
+        <Button style="@style/button_small" android:id="@+id/button1" android:text="关闭下拉刷新"/>
+        <Button style="@style/button_small" android:id="@+id/button2" android:text="关闭加载更多"/>
+    </LinearLayout>
+	<LinearLayout style="@style/base_match_wrap">
+        <Button style="@style/button_small" android:id="@+id/button3" android:text="关闭自动加载更多"/>
+        <Button style="@style/button_small" android:id="@+id/button4" android:text="关闭移动到第一条Item"/>
+	</LinearLayout>        
+    <com.lixueandroid.view.CustomListView style="@style/list_weight" android:id="@+id/listView"/>
+</LinearLayout>

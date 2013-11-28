@@ -16,6 +16,8 @@
     <string name="activityTitle_animation">activity动画</string>
     <string name="activityTitle_liubianxing">画正六边形海报</string>
     <string name="activityTitle_exibitionGuid">展会导览</string>
+    <string name="activityTitle_clearEditText">自定义清除按钮</string>
+    <string name="activityTitle_showView">自定义视图</string>
     
     <string name="app_name">LixueAndroid</string>
     <string name="toast_network_connectionTimeout">网络超时</string>
@@ -75,5 +77,14 @@ Windows 8是微软围绕扁平化UI设计的一个全新的系统，其中大部
 
 <string name="action_search">搜索</string>
 <string name="action_settings">设置</string>
+
+<string name="p2refresh_head_load_more">加载更多</string>
+    <string name="p2refresh_end_load_more">更    多</string>
+    <string name="p2refresh_end_click_load_more">点击加载</string>
+    <string name="p2refresh_release_refresh">松开刷新</string>
+    <string name="p2refresh_pull_to_refresh">下拉刷新</string>
+    <string name="p2refresh_doing_head_refresh">正在刷新&#8230;</string>
+    <string name="p2refresh_doing_end_refresh">加载中&#8230;</string>
+    <string name="p2refresh_refresh_lasttime">最近更新&#160;&#058;&#160;</string>
 
 </resources>

@@ -21,10 +21,10 @@ import android.widget.ListView;
 
 import com.fileuplaod.unity.DownLoadUnity;
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.adapter.Mp3PlayerAdapter;
-import com.lixueandroid.activity.domain.Mp3Info;
-import com.lixueandroid.activity.handler.Mp3ListContentHandler;
-import com.lixueandroid.activity.service.DownLoadService;
+import com.lixueandroid.adapter.Mp3PlayerAdapter;
+import com.lixueandroid.domain.Mp3Info;
+import com.lixueandroid.service.DownLoadService;
+import com.lixueandroidhandler.Mp3ListContentHandler;
 
 /**
  * Mp3播放器（在服务器下载mp3文件）

@@ -6,7 +6,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.nfc.NfcMainActivity;
+import com.lixueandroid.nfc.NfcMainActivity;
 import com.lixueandroid.util.ScreenLightManager;
 
 /**
@@ -46,6 +46,10 @@ public class MainActivity extends MyBaseActivity {
 	private Button animationButton;
 	private Button liubianxingButton;
 	private Button daolanButton;
+	private Button clearEditTextButton;
+	private Button testHeaderButton;
+	private Button showViewButton;
+	private Button mylistviewButton;
 
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
@@ -79,6 +83,10 @@ public class MainActivity extends MyBaseActivity {
 		animationButton=(Button) findViewById(R.id.button_myanimation);
 		liubianxingButton=(Button) findViewById(R.id.button_liubianxing);
 		daolanButton=(Button) findViewById(R.id.button_exibitionGuid);
+		clearEditTextButton=(Button) findViewById(R.id.button_clearEditText);
+		testHeaderButton=(Button) findViewById(R.id.button_testheaderview);
+		showViewButton=(Button) findViewById(R.id.button_showView);
+		mylistviewButton=(Button) findViewById(R.id.button_mylistview);
 	}
 
 	@Override
@@ -289,6 +297,34 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(GuidActivity.class);
+			}
+		});
+		clearEditTextButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+			startActivity(ClearEditTextActivity.class);	
+			}
+		});
+		testHeaderButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(TestActivity.class);
+			}
+		});
+		showViewButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(ShowView.class);
+			}
+		});
+		mylistviewButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(MyCustomListView.class);
 			}
 		});
 	}

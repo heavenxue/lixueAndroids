@@ -13,7 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.domain.Mp3Info;
+import com.lixueandroid.domain.Mp3Info;
 
 /**
  * mp3播放器控制页面

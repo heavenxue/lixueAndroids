@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 
 
@@ -16,7 +15,6 @@ import android.graphics.Bitmap;
  * @author lixue
  * @since 1.8.1
  */
-@SuppressLint("DefaultLocale")
 public class LruMemoryCache implements MemoryCacheAware<String, Bitmap> {
 
 	private final LinkedHashMap<String, Bitmap> map;
@@ -136,7 +134,6 @@ public class LruMemoryCache implements MemoryCacheAware<String, Bitmap> {
 		return value.getRowBytes() * value.getHeight();
 	}
 
-	@SuppressLint("DefaultLocale")
 	@Override
 	public synchronized final String toString() {
 		return String.format("LruCache[maxSize=%d]", maxSize);

@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.widget.GridView;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.adapter.DataAdapter;
-import com.lixueandroid.activity.view.PullToRefreshView;
-import com.lixueandroid.activity.view.PullToRefreshView.OnFooterRefreshListener;
-import com.lixueandroid.activity.view.PullToRefreshView.OnHeaderRefreshListener;
+import com.lixueandroid.adapter.DataAdapter;
+import com.lixueandroid.view.PullToRefreshView;
+import com.lixueandroid.view.PullToRefreshView.OnFooterRefreshListener;
+import com.lixueandroid.view.PullToRefreshView.OnHeaderRefreshListener;
 
 public class TestGridViewActivity extends Activity implements OnHeaderRefreshListener, OnFooterRefreshListener {
 	PullToRefreshView mPullToRefreshView;

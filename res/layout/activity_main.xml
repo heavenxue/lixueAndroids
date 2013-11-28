@@ -30,5 +30,9 @@
 	<Button style="@style/button_match" android:text="@string/activityTitle_animation" android:id="@+id/button_myanimation"/>  
 	<Button style="@style/button_match" android:text="@string/activityTitle_liubianxing" android:id="@+id/button_liubianxing"/>  
 	<Button style="@style/button_match" android:text="@string/activityTitle_exibitionGuid" android:id="@+id/button_exibitionGuid"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_clearEditText" android:id="@+id/button_clearEditText"/>  
+	<Button style="@style/button_match" android:text="测试headerview" android:id="@+id/button_testheaderview"/>  
+	<Button style="@style/button_match" android:text="showView" android:id="@+id/button_showView"/>  
+	<Button style="@style/button_match" android:text="自定义listview" android:id="@+id/button_mylistview"/>  
 </LinearLayout>   
 </ScrollView>

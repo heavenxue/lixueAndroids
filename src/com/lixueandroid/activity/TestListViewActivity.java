@@ -10,10 +10,10 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.adapter.DataAdapter;
-import com.lixueandroid.activity.view.PullToRefreshView;
-import com.lixueandroid.activity.view.PullToRefreshView.OnFooterRefreshListener;
-import com.lixueandroid.activity.view.PullToRefreshView.OnHeaderRefreshListener;
+import com.lixueandroid.adapter.DataAdapter;
+import com.lixueandroid.view.PullToRefreshView;
+import com.lixueandroid.view.PullToRefreshView.OnFooterRefreshListener;
+import com.lixueandroid.view.PullToRefreshView.OnHeaderRefreshListener;
 
 /**
  * 实现OnHeaderRefreshListener,OnFooterRefreshListener接口

@@ -3,7 +3,7 @@
    <LinearLayout style="@style/layout_body">
       <LinearLayout style="@style/base_match_match">
           <!-- <Button style="@style/base_wrap_wrap" android:text="画圆" android:id="@+id/draw_button"/> -->
-          <com.lixueandroid.activity.view.CanvasView style="@style/base_match_match" android:id="@+id/canvasView"/>
+          <com.lixueandroid.view.CanvasView style="@style/base_match_match" android:id="@+id/canvasView"/>
       </LinearLayout> 
    </LinearLayout> 
 </LinearLayout>

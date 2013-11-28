@@ -3,7 +3,7 @@
 	<!-- <com.lixueandroid.activity.view.FilpperView style="@style/base_match_match" android:gravity="center"/> -->
 	<FrameLayout style="@style/base_match_match">
 		<!-- <ViewFlipper style="@style/base_match_match" android:id="@+id/myfilpper" android:focusable="true"></ViewFlipper> -->
-		<com.lixueandroid.activity.view.slidingEventsView style="@style/base_match_match" android:id="@+id/myview"/>
+		<com.lixueandroid.view.slidingEventsView style="@style/base_match_match" android:id="@+id/myview"/>
 		<LinearLayout style="@style/base_match_match" android:orientation="vertical">
 		    <LinearLayout style="@style/base_match_wrap" android:id="@+id/imgLinearlayout">
 		    <ImageView style="@style/base_match_wrap" android:src="@drawable/liduohai14" android:id="@+id/myimg" android:focusable="true" android:clickable="true" />

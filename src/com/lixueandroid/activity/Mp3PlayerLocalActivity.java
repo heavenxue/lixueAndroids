@@ -10,8 +10,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.adapter.Mp3PlayerAdapter;
-import com.lixueandroid.activity.domain.Mp3Info;
+import com.lixueandroid.adapter.Mp3PlayerAdapter;
+import com.lixueandroid.domain.Mp3Info;
 import com.lixueandroid.util.Utils;
 
 /**

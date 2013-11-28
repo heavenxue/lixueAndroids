@@ -43,16 +43,16 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17" />
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="18" />
       
     <application android:allowBackup="true" android:icon="@drawable/ic_mylauncher" android:label="@string/app_name" android:theme="@style/AppTheme" android:name="com.lixueandroid.activity.MyApplication">
         
         <!-- 相关Activity -->
         <activity android:name="com.lixueandroid.activity.MainActivity" android:label="@string/app_name" >
-             <intent-filter>
+           <intent-filter>
               <action android:name="android.intent.action.MAIN" />
               <category android:name="android.intent.category.LAUNCHER" />
-           	 </intent-filter>
+           	 </intent-filter>  
         </activity>
         <activity android:name="com.lixueandroid.activity.MyCustomerImgButtonActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.MyTouchTabActivity" android:label="@string/app_name"></activity>
@@ -86,9 +86,14 @@
 		<activity android:name="com.lixueandroid.activity.myAnimationActivity" android:label="@string/app_name"></activity>
 		<activity android:name="com.lixueandroid.activity.LiuBianXingActivity" android:label="@string/app_name"></activity>
 		<activity android:name="com.lixueandroid.activity.GuidActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.ClearEditTextActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.TestActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.MyCustomListView" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.PullToRefreshActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.ShowView" android:label="@string/app_name"></activity>
 		
         <!-- NFC相关 -->
-        <activity android:name="com.lixueandroid.activity.nfc.NfcMainActivity" android:label="@string/app_name">
+        <activity android:name="com.lixueandroid.nfc.NfcMainActivity" android:label="@string/app_name">
 			 <intent-filter>
 				<action android:name="android.nfc.action.NDEF_DISCOVERED"/>
 				<data android:mimeType="text/plain" />
@@ -109,9 +114,9 @@
         </activity>
         
         <!-- 相关服务 -->
-        <service android:name="com.lixueandroid.activity.service.DownLoadService"></service>
-        <service android:name="com.lixueandroid.activity.service.TcpClientService"></service>
- 		<receiver android:name="com.lixueandroid.activity.broadcast.DemoReceiver">
+        <service android:name="com.lixueandroid.service.DownLoadService"></service>
+        <service android:name="com.lixueandroid.service.TcpClientService"></service>
+ 		<receiver android:name="com.lixueandroid.broadcast.DemoReceiver">
 	      	<intent-filter >
 	        <!-- com.neter.broadcast.receiver.DEMO_ACTION为自定义广播标记
 	           	当MainActivtiy中发出com.neter.broadcast.receiver.DEMO_ACTION　Intent时

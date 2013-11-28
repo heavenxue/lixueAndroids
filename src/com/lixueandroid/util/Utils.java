@@ -7,7 +7,8 @@ import java.util.List;
 import android.os.Environment;
 import android.util.Log;
 
-import com.lixueandroid.activity.domain.Mp3Info;
+import com.lixueandroid.domain.Mp3Info;
+
 
 
 public class Utils {
@@ -47,11 +48,13 @@ public class Utils {
 		String totalPath= Environment.getExternalStorageDirectory()+File.separator+path;
 		File file=new File(totalPath);
 		File[] files=file.listFiles();
-		for (int i = 0; i < files.length; i++) {
-			Mp3Info mp3Info=new Mp3Info();
-			mp3Info.setMp3Name(files[i].getName());
-			mp3Info.setMp3Size(files[i].length()+"");
-			mp3Files.add(mp3Info);
+		if(files!=null&&files.length>0){
+			for (int i = 0; i < files.length; i++) {
+				Mp3Info mp3Info=new Mp3Info();
+				mp3Info.setMp3Name(files[i].getName());
+				mp3Info.setMp3Size(files[i].length()+"");
+				mp3Files.add(mp3Info);
+			}
 		}
 		return mp3Files;
 	}

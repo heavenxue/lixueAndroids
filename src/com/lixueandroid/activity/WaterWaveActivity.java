@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.lixueandroid.activity.view.WaterWaveView;
+import com.lixueandroid.view.WaterWaveView;
 
 /**
  * 水波动纹的效果

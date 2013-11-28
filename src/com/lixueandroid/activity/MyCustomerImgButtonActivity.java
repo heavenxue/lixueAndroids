@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.view.MyCustomImgButton;
 import com.lixueandroid.util.Utils;
+import com.lixueandroid.view.MyCustomImgButton;
 
 /**
  * 自定义图片按钮

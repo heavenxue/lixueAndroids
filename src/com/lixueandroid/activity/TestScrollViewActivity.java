@@ -5,9 +5,9 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.view.PullToRefreshView;
-import com.lixueandroid.activity.view.PullToRefreshView.OnFooterRefreshListener;
-import com.lixueandroid.activity.view.PullToRefreshView.OnHeaderRefreshListener;
+import com.lixueandroid.view.PullToRefreshView;
+import com.lixueandroid.view.PullToRefreshView.OnFooterRefreshListener;
+import com.lixueandroid.view.PullToRefreshView.OnHeaderRefreshListener;
 
 
 public class TestScrollViewActivity extends Activity implements OnHeaderRefreshListener, OnFooterRefreshListener {

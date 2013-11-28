@@ -4,7 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import me.xiaopan.easyandroid.app.BaseActivity;
-import android.annotation.SuppressLint;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -44,7 +43,6 @@ public class YaoyiyaoActivity extends BaseActivity implements SensorEventListene
 
 	}
 
-	@SuppressLint("SimpleDateFormat")
 	@Override
 	public void onSensorChanged(SensorEvent event) {
 		int sensorType = event.sensor.getType();

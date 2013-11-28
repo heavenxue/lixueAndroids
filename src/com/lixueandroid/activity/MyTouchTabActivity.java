@@ -13,8 +13,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.fragment.MyTabFragment;
-import com.lixueandroid.activity.view.TouchTabScrollView;
+import com.lixueandroid.fragment.MyTabFragment;
+import com.lixueandroid.view.TouchTabScrollView;
 
 /**
  *实现tab与viewpager的结合

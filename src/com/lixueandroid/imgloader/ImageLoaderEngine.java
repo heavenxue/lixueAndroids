@@ -10,7 +10,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
 
-import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -29,7 +28,6 @@ class ImageLoaderEngine {
 	private Executor taskExecutorForCachedImages;
 	private ExecutorService taskDistributor;
 
-	@SuppressLint("UseSparseArrays")
 	private final Map<Integer, String> cacheKeysForImageViews = Collections.synchronizedMap(new HashMap<Integer, String>());
 	private final Map<String, ReentrantLock> uriLocks = new WeakHashMap<String, ReentrantLock>();
 
