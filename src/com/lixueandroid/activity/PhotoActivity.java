@@ -14,6 +14,7 @@ import me.xiaopan.easyandroid.util.FileUtils;
 import me.xiaopan.easyandroid.util.ViewAnimationUtils;
 import me.xiaopan.easyjava.util.IOUtils;
 import me.xiaopan.easyjava.util.StringUtils;
+import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
@@ -21,9 +22,12 @@ import android.graphics.Rect;
 import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
+import android.view.WindowManager.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.Button;
@@ -61,6 +65,7 @@ public class PhotoActivity extends MyBaseActivity implements CameraManager.Camer
 	private int businessCardWidth = 648;
 	private int businessCardHeight = 388;
 	private Button showButton;//显示所照的图片
+	private AlertDialog alertDialog;//显示图片的对话框
 	
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
@@ -117,7 +122,7 @@ public class PhotoActivity extends MyBaseActivity implements CameraManager.Camer
 					/* 对裁剪后的图片进行缩小 */
 					sourceBitmap = BitmapFactory.decodeFile(localCacheFile.getPath());
 					finalBitmap = BitmapUtils.scale(sourceBitmap, businessCardWidth, businessCardHeight);	
-					sourceBitmap.recycle();
+					sourceBitmap.recycle();//将原图像进行回收
 					
 					/* 将最终得到的图片输出到本地缓存文件中 */
 					if(!localCacheFile.exists()) localCacheFile.createNewFile();
@@ -181,19 +186,20 @@ public class PhotoActivity extends MyBaseActivity implements CameraManager.Camer
 			
 			@Override
 			public void onClick(View v) {
+				//将照完的照片给显示出来
 				if(localCacheFile!=null){
-//					View spinnerView = LayoutInflater.from(getBaseContext()).inflate(R.layout.spinner_guide, null);
-//					final TextView exhibitors = (TextView) spinnerView.findViewById(R.id.text_spinner_exbitors);
-//					final TextView exhibits = (TextView) spinnerView.findViewById(R.id.text_spinner_exhibits);
-//					AlertDialog alertDialog=new AlertDialog.Builder(getBaseContext()).create();
-//					alertDialog.setView(spinnerView, 0, 0, 0, 0);
+					View dialogView = LayoutInflater.from(getBaseContext()).inflate(R.layout.view_dialog, null);
+					ImageView showImageView=(ImageView) dialogView.findViewById(R.id.imageview_show);
+					showImageView.setImageURI(Uri.fromFile(localCacheFile));
+					alertDialog=new AlertDialog.Builder(PhotoActivity.this).create();
+					alertDialog.setView(dialogView, 0, 0, 0, 0);
 					 //设置大小  
-//			        WindowManager.LayoutParams layoutParams = alertDialog.getWindow().getAttributes();  
-//			        layoutParams.width = 200;  
-//			        layoutParams.height = LayoutParams.WRAP_CONTENT;  
-//			        alertDialog.getWindow().setAttributes(layoutParams);  
-			        
-//					alertDialog.show();
+			        WindowManager.LayoutParams layoutParams = alertDialog.getWindow().getAttributes();  
+			        layoutParams.width = 600;  
+			        layoutParams.height = 800;  
+			        alertDialog.getWindow().setAttributes(layoutParams);  
+			        alertDialog.show();
+			        alertDialog.setCanceledOnTouchOutside(true);
 				}
 			}
 		});
@@ -210,6 +216,7 @@ public class PhotoActivity extends MyBaseActivity implements CameraManager.Camer
 		}
 		if(!localCacheFile.exists()){
 			try {
+				//mkdirs()创建多层目录，mkdir()创建单层目录
 				localCacheFile.getParentFile().mkdirs();
 				localCacheFile.createNewFile();
 			} catch (IOException e) {
@@ -249,6 +256,7 @@ public class PhotoActivity extends MyBaseActivity implements CameraManager.Camer
 	public void onPause() {
 		super.onPause();
 		cameraManager.release();
+//		alertDialog.hide();
 	}
 
 	@Override

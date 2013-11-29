@@ -6,7 +6,7 @@
 	<!-- 主体 -->
 	<LinearLayout style="@style/layout_body">
 	    <LinearLayout style="@style/layout_body_content">
-	        <ListView style="@style/list_match"></ListView>
+	        <Button style="@style/button" android:text="弹出自定义对话框" android:id="@+id/mybutton"/>
 	    </LinearLayout>
 	</LinearLayout>
 </LinearLayout>

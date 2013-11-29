@@ -19,6 +19,10 @@ public class ClearEditText extends EditText{
 	 * 右侧清除按钮
 	 */
 	private Drawable dRight; 
+	/**
+	 * 左侧图标按钮
+	 */
+	private Drawable dLeft;
 	
 	public ClearEditText(Context context) {
 		super(context);
@@ -55,16 +59,27 @@ public class ClearEditText extends EditText{
 	}
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		/*因为我们不能直接给EditText设置点击事件，所以我们用记住我们按下的位置来模拟点击事件 
-		    * 当我们按下的位置 在  EditText的宽度 - 图标到控件右边的间距 - 图标的宽度  和 
-		    * EditText的宽度 - 图标到控件右边的间距之间我们就算点击了图标，竖直方向就没有考虑
+		/*
+		 * 	因为我们不能直接给EditText设置点击事件，所以我们用记住我们按下的位置来模拟点击事件 
+		  * 当我们按下的位置 在  EditText的宽度 - 图标到控件右边的间距 - 图标的宽度  和 
+		  * EditText的宽度 - 图标到控件右边的间距之间我们就算点击了图标，竖直方向就没有考虑
 		 */ 
 		 if ((this.dRight != null) && (event.getAction() == MotionEvent.ACTION_UP)) {
              if(event.getX() >= (getWidth() - getTotalPaddingRight())&& (event.getX() <= ((getWidth() - getPaddingRight())))){
             	 setText("");
+            	 event.setAction(MotionEvent.ACTION_CANCEL);
              }
 		 }
-		event.setAction(MotionEvent.ACTION_CANCEL);
+		 /*
+		  * 如果按下了左侧的图标按钮，我们也让其清除
+		  * 
+		  * */
+		 if(this.dLeft!=null&&(event.getAction()==MotionEvent.ACTION_UP)){
+			 if(event.getX()>=(getPaddingLeft())&&event.getX()<=(getTotalPaddingLeft())){
+				 setText("");
+				 event.setAction(MotionEvent.ACTION_CANCEL);
+			 }
+		 }		 
 		return super.onTouchEvent(event);
 	}
 
@@ -72,6 +87,9 @@ public class ClearEditText extends EditText{
 	public void setCompoundDrawables(Drawable left, Drawable top,Drawable right, Drawable bottom) {
 		if(right!=null){
 			dRight=right;
+		}
+		if(left!=null){
+			dLeft=left;
 		}
 		super.setCompoundDrawables(left, top, right, bottom);
 	}
@@ -99,15 +117,16 @@ public class ClearEditText extends EditText{
      */
     public void setClearIcon(){
     	if(ClearEditText.this.getEditableText().toString().trim().length()==0){
-			ClearEditText.this.setCompoundDrawables(null, null, null, null);
+			ClearEditText.this.setCompoundDrawables(dLeft, null, null, null);
 		}else{
 			if(dRight!=null){
-				ClearEditText.this.setCompoundDrawables(null, null, dRight, null);
+				ClearEditText.this.setCompoundDrawables(dLeft, null, dRight, null);
 			}
 		}
     }
     @Override
 	protected void finalize() throws Throwable {
+    	dRight=null;
 		super.finalize();
 	}
 }

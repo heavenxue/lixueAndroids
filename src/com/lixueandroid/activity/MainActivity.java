@@ -50,6 +50,7 @@ public class MainActivity extends MyBaseActivity {
 	private Button testHeaderButton;
 	private Button showViewButton;
 	private Button mylistviewButton;
+	private Button gesturesButton;
 
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
@@ -87,6 +88,7 @@ public class MainActivity extends MyBaseActivity {
 		testHeaderButton=(Button) findViewById(R.id.button_testheaderview);
 		showViewButton=(Button) findViewById(R.id.button_showView);
 		mylistviewButton=(Button) findViewById(R.id.button_mylistview);
+		gesturesButton=(Button) findViewById(R.id.button_gesturedetector);
 	}
 
 	@Override
@@ -325,6 +327,13 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(MyCustomListView.class);
+			}
+		});
+		gesturesButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(GesturesActivity.class);
 			}
 		});
 	}

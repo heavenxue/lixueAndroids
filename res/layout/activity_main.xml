@@ -34,5 +34,6 @@
 	<Button style="@style/button_match" android:text="测试headerview" android:id="@+id/button_testheaderview"/>  
 	<Button style="@style/button_match" android:text="showView" android:id="@+id/button_showView"/>  
 	<Button style="@style/button_match" android:text="自定义listview" android:id="@+id/button_mylistview"/>  
+	<Button style="@style/button_match" android:text="各种手势识别" android:id="@+id/button_gesturedetector"/>  
 </LinearLayout>   
 </ScrollView>

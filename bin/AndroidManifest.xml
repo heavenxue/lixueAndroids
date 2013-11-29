@@ -91,6 +91,7 @@
 		<activity android:name="com.lixueandroid.activity.MyCustomListView" android:label="@string/app_name"></activity>
 		<activity android:name="com.lixueandroid.activity.PullToRefreshActivity" android:label="@string/app_name"></activity>
 		<activity android:name="com.lixueandroid.activity.ShowView" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.GesturesActivity" android:label="@string/app_name"></activity>
 		
         <!-- NFC相关 -->
         <activity android:name="com.lixueandroid.nfc.NfcMainActivity" android:label="@string/app_name">
