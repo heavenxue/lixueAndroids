@@ -1,19 +1,14 @@
 package com.lixueandroid.activity;
 
-import java.io.File;
-
-import me.xiaopan.easyandroid.util.FileUtils;
-
 import android.app.AlertDialog;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class ShowView extends MyBaseActivity{
 	private Button mybutton;

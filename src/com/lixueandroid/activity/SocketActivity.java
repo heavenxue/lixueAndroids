@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class SocketActivity extends MyBaseActivity implements Runnable {
 	private TextView tv_msg = null;

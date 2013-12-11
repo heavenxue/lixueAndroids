@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class StartScanBarcodeActivity extends MyBaseActivity {
 	private static final int PARAM_SCAN_CODE=100;

@@ -67,14 +67,13 @@ Windows 8是微软围绕扁平化UI设计的一个全新的系统，其中大部
 
 <string name="tab_title">前天 昨天 今天 明天 后天</string>
 
-<!-- <string name="pull_to_refresh_pull_label">下拉刷新</string>
 <string name="pull_to_refresh_release_label">松开后刷新</string>
-<string name="pull_to_refresh_refreshing_label">正在刷新\u2026</string> -->
+<string name="pull_to_refresh_refreshing_label">正在刷新\u2026</string>
 
 <string name="pull_to_refresh_footer_release_label">松开后加载</string>
 <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
 <string name="pull_to_refresh_footer_refreshing_label">正在加载中\u2026</string>
-
+<string name="pull_to_refresh_pull_label">下拉刷新</string>
 <string name="action_search">搜索</string>
 <string name="action_settings">设置</string>
 

@@ -16,6 +16,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class GesturesActivity extends MyBaseActivity{
 	private Button showimgButton;

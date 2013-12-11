@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 import com.lixueandroid.adapter.imgAdapter;
 import com.lixueandroid.mydata.ImageUrls;
 import com.lixueandroid.view.OnDownFlingListener;

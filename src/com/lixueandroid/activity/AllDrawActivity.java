@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.WindowManager;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class AllDrawActivity extends MyBaseActivity{
 //	private Button drawCircleButton;

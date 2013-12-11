@@ -21,6 +21,7 @@ import android.widget.ListView;
 
 import com.fileuplaod.unity.DownLoadUnity;
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 import com.lixueandroid.adapter.Mp3PlayerAdapter;
 import com.lixueandroid.domain.Mp3Info;
 import com.lixueandroid.service.DownLoadService;

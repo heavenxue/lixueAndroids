@@ -1,7 +1,7 @@
 package com.lixueandroid.net.request;
 
 
-import me.xiaopan.easynetwork.android.http.Path;
+import me.xiaopan.easy.network.android.http.Path;
 
 import com.lixueandroid.net.BaseRequest;
 

@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.os.Bundle;
 
+import com.lixueandroid.MyBaseActivity;
 import com.lixueandroid.adapter.BookAdapter;
 import com.lixueandroid.view.BookLayout;
 

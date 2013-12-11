@@ -5,6 +5,7 @@ import android.view.KeyEvent;
 import android.view.WindowManager;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class LiuBianXingActivity extends MyBaseActivity{
 	private Boolean flag=true;

@@ -2,6 +2,8 @@ package com.lixueandroid.activity;
 
 import android.os.Bundle;
 
+import com.lixueandroid.MyBaseActivity;
+
 /**
  * 我的测试git的文件，在这里可以开始尝试
  * @author lixue

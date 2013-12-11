@@ -2,6 +2,8 @@ package com.lixueandroid.activity;
 
 import android.os.Bundle;
 
+import com.lixueandroid.MyBaseActivity;
+
 public class ChatWindowActivity extends MyBaseActivity{
 
 	@Override

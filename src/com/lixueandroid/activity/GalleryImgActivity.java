@@ -7,6 +7,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Gallery;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 import com.lixueandroid.adapter.galleryImgAdapter;
 import com.lixueandroid.imgloader.DisplayImageOptions;
 import com.lixueandroid.imgloader.RoundedBitmapDisplayer;

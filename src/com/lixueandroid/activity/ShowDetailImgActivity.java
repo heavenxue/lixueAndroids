@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class ShowDetailImgActivity extends MyBaseActivity{
 	public static final String PRAM_REQUESTED_STRING_URL="PRAM_REQUESTED_STRING_URL";

@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class DownLoadActivity extends MyBaseActivity{
 	private ImageView liduohaiImageView;

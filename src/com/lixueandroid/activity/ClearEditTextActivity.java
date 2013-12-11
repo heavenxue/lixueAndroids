@@ -3,6 +3,7 @@ package com.lixueandroid.activity;
 import android.os.Bundle;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 
 public class ClearEditTextActivity extends MyBaseActivity{
 

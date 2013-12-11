@@ -12,7 +12,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.lixue.lixueandroid.R;
-import com.lixueandroid.activity.MyBaseActivity;
+import com.lixueandroid.MyBaseActivity;
 
 /**
  * NFC功能首页

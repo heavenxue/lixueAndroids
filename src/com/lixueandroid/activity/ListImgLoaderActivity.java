@@ -7,6 +7,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 import com.lixueandroid.adapter.imgAdapter;
 import com.lixueandroid.mydata.ImageUrls;
 

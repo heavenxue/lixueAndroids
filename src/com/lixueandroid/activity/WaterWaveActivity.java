@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.lixueandroid.MyBaseActivity;
 import com.lixueandroid.view.WaterWaveView;
 
 /**

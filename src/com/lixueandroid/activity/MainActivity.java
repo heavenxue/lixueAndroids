@@ -6,6 +6,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 import com.lixueandroid.nfc.NfcMainActivity;
 import com.lixueandroid.util.ScreenLightManager;
 
@@ -51,6 +52,7 @@ public class MainActivity extends MyBaseActivity {
 	private Button showViewButton;
 	private Button mylistviewButton;
 	private Button gesturesButton;
+	private Button mapButton;
 
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
@@ -89,6 +91,7 @@ public class MainActivity extends MyBaseActivity {
 		showViewButton=(Button) findViewById(R.id.button_showView);
 		mylistviewButton=(Button) findViewById(R.id.button_mylistview);
 		gesturesButton=(Button) findViewById(R.id.button_gesturedetector);
+		mapButton=(Button) findViewById(R.id.button_map);
 	}
 
 	@Override
@@ -334,6 +337,13 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(GesturesActivity.class);
+			}
+		});
+		mapButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(MyMapActivity.class);	
 			}
 		});
 	}

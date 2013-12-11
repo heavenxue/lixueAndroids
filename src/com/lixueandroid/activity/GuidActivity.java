@@ -19,6 +19,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.lixue.lixueandroid.R;
+import com.lixueandroid.MyBaseActivity;
 import com.lixueandroid.view.ScaleImageView;
 
 public class GuidActivity extends MyBaseActivity{

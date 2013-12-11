@@ -2,9 +2,9 @@ package com.lixueandroid.net;
 
 import java.lang.reflect.Type;
 
-import me.xiaopan.easynetwork.android.EasyNetworkUtils;
-import me.xiaopan.easynetwork.android.http.EasyHttpClient;
-import me.xiaopan.easynetwork.android.http.HttpResponseHandler;
+import me.xiaopan.easy.network.android.EasyNetworkUtils;
+import me.xiaopan.easy.network.android.http.EasyHttpClient;
+import me.xiaopan.easy.network.android.http.HttpResponseHandler;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

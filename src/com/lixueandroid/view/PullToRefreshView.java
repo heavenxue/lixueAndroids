@@ -83,10 +83,6 @@ public class PullToRefreshView  extends LinearLayout{
 	 * header refresh time
 	 */
 	private TextView mHeaderUpdateTextView;
-//	/**
-//	 * footer refresh time
-//	 */
-	// private TextView mFooterUpdateTextView;
 	/**
 	 * header progress bar
 	 */
@@ -127,7 +123,7 @@ public class PullToRefreshView  extends LinearLayout{
 	 * footer refresh listener
 	 */
 	private OnHeaderRefreshListener mOnHeaderRefreshListener;
-
+	
 	/**
 	 * last update time
 	 */
@@ -179,7 +175,6 @@ public class PullToRefreshView  extends LinearLayout{
 		params.topMargin = -(mHeaderViewHeight);
 		// mHeaderView.setLayoutParams(params1);
 		addView(mHeaderView, params);
-
 	}
 
 	private void addFooterView() {
@@ -235,6 +230,7 @@ public class PullToRefreshView  extends LinearLayout{
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private void measureView(View child) {
 		ViewGroup.LayoutParams p = child.getLayoutParams();
 		if (p == null) {
@@ -400,7 +396,7 @@ public class PullToRefreshView  extends LinearLayout{
 	 * header 准备刷新,手指移动过程,还没有释放
 	 * 
 	 * @param deltaY
-	 *            ,手指滑动的距离
+	 *  手指滑动的距离
 	 */
 	private void headerPrepareToRefresh(int deltaY) {
 		int newTopMargin = changingHeaderViewTopMargin(deltaY);
@@ -511,8 +507,8 @@ public class PullToRefreshView  extends LinearLayout{
 	 * 
 	 * @description
 	 * @param topMargin
-	 *            ，为0时，说明header view 刚好完全显示出来； 为-mHeaderViewHeight时，说明完全隐藏了
-	 *            hylin 2012-7-31上午11:24:06
+	 * 为0时，说明header view 刚好完全显示出来； 为-mHeaderViewHeight时，说明完全隐藏了
+	 * 2013-8-2
 	 */
 	private void setHeaderTopMargin(int topMargin) {
 		LayoutParams params = (LayoutParams) mHeaderView.getLayoutParams();
@@ -526,6 +522,7 @@ public class PullToRefreshView  extends LinearLayout{
 	 * 
 	 * @description hylin 2012-7-31上午11:54:23
 	 */
+	@SuppressWarnings("deprecation")
 	public void onHeaderRefreshComplete() {
 		setHeaderTopMargin(-mHeaderViewHeight);
 		mHeaderImageView.setVisibility(View.VISIBLE);
@@ -540,7 +537,6 @@ public class PullToRefreshView  extends LinearLayout{
 	 * Resets the list to a normal state after a refresh.
 	 * 
 	 * @param lastUpdated
-	 *            Last updated at.
 	 */
 	public void onHeaderRefreshComplete(CharSequence lastUpdated) {
 		setLastUpdated(lastUpdated);
@@ -574,7 +570,6 @@ public class PullToRefreshView  extends LinearLayout{
 		mFooterImageView.setImageResource(R.drawable.ic_pulltorefresh_arrow_up);
 		mFooterTextView.setText(R.string.pull_to_refresh_footer_pull_label);
 		mFooterProgressBar.setVisibility(View.GONE);
-		// mHeaderUpdateTextView.setText("");
 		mFooterState = PULL_TO_REFRESH;
 	}
 
@@ -582,7 +577,6 @@ public class PullToRefreshView  extends LinearLayout{
 	 * Set a text to represent when the list was last updated.
 	 * 
 	 * @param lastUpdated
-	 *            Last updated at.
 	 */
 	public void setLastUpdated(CharSequence lastUpdated) {
 		if (lastUpdated != null) {
@@ -604,23 +598,6 @@ public class PullToRefreshView  extends LinearLayout{
 		return params.topMargin;
 	}
 
-	// /**
-	// * lock
-	// *
-	// * @description hylin 2012-7-27下午6:52:25
-	// */
-	// private void lock() {
-	// mLock = true;
-	// }
-	//
-	// /**
-	// * unlock
-	// *
-	// * @description hylin 2012-7-27下午6:53:18
-	// */
-	// private void unlock() {
-	// mLock = false;
-	// }
 
 	/**
 	 * set headerRefreshListener

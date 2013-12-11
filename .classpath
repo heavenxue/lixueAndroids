@@ -6,5 +6,6 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="libs/crittercism_v3_0_3_sdkonly.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="E:/android/LixueAndroids/libs/baidumapapi_v2_3_1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

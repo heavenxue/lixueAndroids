@@ -1,8 +1,8 @@
 package com.lixueandroid.net;
 
 
-import me.xiaopan.easynetwork.android.http.Host;
-import me.xiaopan.easynetwork.android.http.Request;
+import me.xiaopan.easy.network.android.http.Host;
+import me.xiaopan.easy.network.android.http.Request;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
