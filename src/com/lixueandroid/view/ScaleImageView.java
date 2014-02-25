@@ -1,24 +1,24 @@
 package com.lixueandroid.view;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Paint;
-import android.graphics.Path;
 import android.os.AsyncTask;
 import android.util.AttributeSet;
 import android.util.FloatMath;
 import android.view.MotionEvent;
-import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
-public class ScaleImageView extends ImageView{
+import com.lixueandroid.myinterface.MySimpleGestureListener;
+
+public class ScaleImageView extends ImageView {
 	private Activity mActivity;
 
 	private int screen_W, screen_H;// 屏幕宽，屏幕高
 
-	private int bitmap_W, bitmap_H;//图像宽，图像高
+	private int bitmap_W,bitmap_H;//图像宽
 
-	private int MAX_W, MAX_H, MIN_W, MIN_H;//最大宽，最大高，最小宽，最小高
+	private int MAX_W, MIN_W;//最大宽，最小宽
 
 	private int current_Top, current_Right, current_Bottom, current_Left;//当前图像距顶部的距离，当前图像距右方屏幕的距离，当前图像距底部的距离，当前图像距左部的距离
 
@@ -29,6 +29,12 @@ public class ScaleImageView extends ImageView{
 	private float beforeLenght, afterLenght;//缩放前的长度，缩放后的长度
 
 	private float scale_temp;//暂时缩放比例
+	
+	public MySimpleGestureListener mySimpleGestureListener;
+	/**
+	 * 当前缩放比率
+	 */
+	public float currentScale;
 	/**
 	 * 拖放模式
 	 * 
@@ -47,14 +53,11 @@ public class ScaleImageView extends ImageView{
 
 	private boolean isControl_H = false;//是否水平方向
 
-	private ScaleAnimation scaleAnimation;//缩放动画
 
 	private boolean isScaleAnim = false;//是否是缩放动画
 
 	private MyAsyncTask myAsyncTask;//异步线程
 	
-	private Path path;
-	private Paint paints;
 	
 	public ScaleImageView(Context context) {
 		super(context);
@@ -78,22 +81,17 @@ public class ScaleImageView extends ImageView{
 	
 	/*
 	 * 设置图像显示的图片
-	 *  (non-Javadoc)
-	 * @see android.widget.ImageView#setImageBitmap(android.graphics.Bitmap)
 	 */
 	@Override
 	public void setImageBitmap(Bitmap bm) {
 		super.setImageBitmap(bm);
 		bitmap_W = bm.getWidth();
-		bitmap_H = bm.getHeight();
+		bitmap_H=bm.getHeight();
 		
 		//放大的最大尺寸是原图像的3倍
 		MAX_W = bitmap_W * 3;
-		MAX_H = bitmap_H * 3;
-		
 		//缩小的最小尺寸是原图像的一半
 		MIN_W = bitmap_W / 2;
-		MIN_H = bitmap_H / 2;
 	}
 
 	@Override
@@ -109,8 +107,6 @@ public class ScaleImageView extends ImageView{
 	/*
 	 * 单手指操作：ACTION_DOWN---ACTION_MOVE----ACTION_UP
 		多手指操作：ACTION_DOWN---ACTION_POINTER_DOWN---ACTION_MOVE--ACTION_POINTER_UP---ACTION_UP.
-	 *  (non-Javadoc)
-	 * @see android.view.View#onTouchEvent(android.view.MotionEvent)
 	 */
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -130,11 +126,17 @@ public class ScaleImageView extends ImageView{
 		//第一个手指抬起	
 		case MotionEvent.ACTION_UP:
 			mode = MODE.NONE;
+			if(mySimpleGestureListener!=null){
+				mySimpleGestureListener.onSingleUp(event);
+			}
 			break;
 
 		//第二个手指抬起
 		case MotionEvent.ACTION_POINTER_UP:
 			mode = MODE.NONE;
+			if(mySimpleGestureListener!=null){
+				mySimpleGestureListener.onUp(event);
+			}
 			/** 如果是缩放，便显示缩放动画 **/
 			if (isScaleAnim) {
 				doScaleAnim();
@@ -147,13 +149,13 @@ public class ScaleImageView extends ImageView{
 	//当手指按下
 	public void onTouchDown(MotionEvent event) {
 		mode = MODE.DRAG;
-		
 		current_x = (int) event.getRawX();
 		current_y = (int) event.getRawY();
-
 		start_x = (int) event.getX();
 		start_y = current_y - this.getTop();
-
+		if(mySimpleGestureListener!=null){
+			mySimpleGestureListener.onDown(event);
+		}
 	}
 	
 	//多个手指按下的时候
@@ -224,6 +226,7 @@ public class ScaleImageView extends ImageView{
 				this.setScale(scale_temp);
 
 				beforeLenght = afterLenght;
+				this.currentScale=scale_temp;
 			}
 		}
 	}
@@ -233,6 +236,7 @@ public class ScaleImageView extends ImageView{
 	 * @param event
 	 * @return
 	 */
+	@SuppressLint("FloatMath")
 	public float getDistance(MotionEvent event) {
 		float x = event.getX(0) - event.getX(1);
 		float y = event.getY(0) - event.getY(1);
@@ -255,7 +259,7 @@ public class ScaleImageView extends ImageView{
 	}
 
 	/**设置缩放 **/
-	void setScale(float scale) {
+	public void setScale(float scale) {
 		int disX = (int) (this.getWidth() * Math.abs(1 - scale)) / 4;// 获取缩放水平距离
 		int disY = (int) (this.getHeight() * Math.abs(1 - scale)) / 4;//获取缩放垂直距离
 
@@ -356,7 +360,7 @@ public class ScaleImageView extends ImageView{
 	 *
 	 */
 	class MyAsyncTask extends AsyncTask<Void, Integer, Void>{
-		 	private int screen_W, current_Width, current_Height;  
+		 	private int screen_W, current_Width;  
 	        private int left, top, right, bottom;  
 	        private float scale_WH;// 宽高的比例  
 	  
@@ -376,7 +380,6 @@ public class ScaleImageView extends ImageView{
 	            super();  
 	            this.screen_W = screen_W;  
 	            this.current_Width = current_Width;  
-	            this.current_Height = current_Height;  
 	            scale_WH = (float) current_Height / current_Width;  
 	            step_H = STEP;  
 	            step_V = scale_WH * STEP;  
@@ -418,5 +421,5 @@ public class ScaleImageView extends ImageView{
 	                }  
 	            });  
 	        }  
-	}	
+	}
 }

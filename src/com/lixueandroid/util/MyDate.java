@@ -21,4 +21,9 @@ public class MyDate {
 		String date = format.format(new Date(System.currentTimeMillis()));
 		return date;
 	}
+	//将字符串转换为时间戳
+	public static String getTime(String timeStr){
+		SimpleDateFormat sdf=new SimpleDateFormat("");
+		return "";
+	}
 }

@@ -36,5 +36,7 @@
 	<Button style="@style/button_match" android:text="自定义listview" android:id="@+id/button_mylistview"/>  
 	<Button style="@style/button_match" android:text="各种手势识别" android:id="@+id/button_gesturedetector"/>  
 	<Button style="@style/button_match" android:text="百度地图" android:id="@+id/button_map"/>  
+	<Button style="@style/button_match" android:text="ListView的A-Z的排序和过滤搜索功能" android:id="@+id/button_lettersListview"/>  
+	<Button style="@style/button_match" android:text="自定义滑屏view" android:id="@+id/button_slidScreen"/>  
 </LinearLayout>   
 </ScrollView>

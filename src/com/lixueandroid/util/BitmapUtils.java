@@ -28,6 +28,36 @@ public class BitmapUtils {
 	/**
 	 * 缩放处理
 	 * @param bitmap 原图
+	 * @param scaling 缩放比例
+	 * @return 缩放后的图片
+	 */
+	public static Bitmap scale(Bitmap bitmap, float scaling) {
+		Matrix matrix = new Matrix();
+		matrix.postScale(scaling, scaling);
+		return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+	}
+	/**
+	 * 缩放处理
+	 * @param bitmap 原图
+	 * @param newWidth 新的宽度
+	 * @return
+	 */
+	public static Bitmap scaleByWidth(Bitmap bitmap, int newWidth) {
+		return scale(bitmap, (float) newWidth / bitmap.getWidth());
+	}
+	/**
+	 * 缩放处理
+	 * @param bitmap 原图
+	 * @param newHeight 新的高度
+	 * @return
+	 */
+	public static Bitmap scaleByHeight(Bitmap bitmap, int newHeight) {
+		return scale(bitmap, (float) newHeight / bitmap.getHeight());
+	}
+	
+	/**
+	 * 缩放处理
+	 * @param bitmap 原图
 	 * @param newWidth 新的宽度
 	 * @param newHeight 新的高度
 	 * @return 缩放后的图片

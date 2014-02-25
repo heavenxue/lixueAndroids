@@ -53,7 +53,6 @@ public class GesturesActivity extends MyBaseActivity{
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
 		surfaceHolder=surfaceView.getHolder();
-		Matrix matrix=new Matrix();
 		scaleGestureDetector=new ScaleGestureDetector(this, new myScaleGestureListener());
 	}
 	
@@ -73,19 +72,10 @@ public class GesturesActivity extends MyBaseActivity{
 		public boolean onScale(ScaleGestureDetector detector) {
 			Matrix matrix=new Matrix();
 			float factor=detector.getScaleFactor()/3;
-//			matrix.setScale(factor, factor);
-			//如果缩放系数比1.0f还小，就让其为0.5f
-//			if(currentFactor * newScaleFactor < factors[0]/2){
-//				newScaleFactor = factors[0]/2/currentFactor;
-//				currentFactor = factors[0]/2;
-//			}else if(currentFactor * newScaleFactor > factors[factors.length - 1]){//如果缩放系统比3.0f还大，那么就就让其为3.0f
-//				newScaleFactor = factors[factors.length - 1]/currentFactor;
-//				currentFactor = factors[factors.length - 1];
-//			}else{//否则主为它本身自己的缩放系数
-//				currentFactor *= newScaleFactor;
-//			}
-			matrix.postScale(factor,factor, detector.getFocusX(), detector.getFocusY());
+//			matrix.postScale(factor,factor, detector.getFocusX(), detector.getFocusY());
 			Canvas mCanvas=surfaceHolder.lockCanvas();
+			matrix.postScale(factor,factor, detector.getFocusX(), detector.getFocusY()); 
+			matrix.postTranslate( (mCanvas.getWidth()-bitmap.getWidth()) / 2, (mCanvas.getHeight()-bitmap.getHeight()) / 2); 
 			//清屏
 			mCanvas.drawColor(Color.BLACK);
 			//画缩放后的图

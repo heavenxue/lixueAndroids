@@ -27,12 +27,11 @@ public class ViewFilpperActivity extends MyBaseActivity {
 	private ImageView myimg;
 	private String[] imageUrls;
 	private ListView mylist;
+	
+	private slidingEventsView myview;
 	/**
 	 * 手势识别
 	 */
-	private GestureDetector detector; 
-	
-	private slidingEventsView myview;
 	private GestureDetector myDetector;
 
 	@Override

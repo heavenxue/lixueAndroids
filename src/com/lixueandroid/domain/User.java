@@ -21,6 +21,7 @@ public class User implements Serializable {
 	private String ip;
 	private int port;
 	private int group;
+	public int myname;
 
 	public int getId() {
 		return id;

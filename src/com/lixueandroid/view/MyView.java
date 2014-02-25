@@ -89,8 +89,7 @@ public MyView(Context context) {
 		canvas.drawText("Slide to Unlock", 120, 422, mPaint);
 		
 		if(first){
-		    this.DrawImage(canvas, mFrame_demo, 0, (SgreenHeight*(200-31)/200)+1, 
-		            mFrame_demo.getWidth(), mFrame_demo.getHeight(), SgreenWidth, SgreenHeight*31/200);
+		    this.DrawImage(canvas, mFrame_demo, 0, (SgreenHeight*(200-31)/200)+1, mFrame_demo.getWidth(), mFrame_demo.getHeight(), SgreenWidth, SgreenHeight*31/200);
 				
 		    this.DrawImage(canvas, mSlide_demo, movex_demo_1, SgreenHeight*(400-37)/400, 
 		            mSlide_demo.getWidth(), mSlide_demo.getHeight(), SgreenWidth*11/60, SgreenHeight*29/400);    

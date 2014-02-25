@@ -1,6 +1,8 @@
 package com.lixueandroid.util;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.os.Build;
 import android.text.Editable;
 import android.text.Selection;
 import android.text.Spannable;
@@ -10,6 +12,7 @@ import android.view.View.OnLongClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.MarginLayoutParams;
+import android.view.ViewTreeObserver;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -382,5 +385,20 @@ public class ViewUtils {
 	public static final void setSelectionToEnd(EditText editText){
 		Editable editable = editText.getEditableText();
 		Selection.setSelection((Spannable) editable, editable.toString().length());
+	}
+
+	/**
+	 * 删除监听器
+	 * @param viewTreeObserver
+	 * @param onGlobalLayoutListener
+	 */
+	@SuppressWarnings("deprecation")
+	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+	public static final void removeOnGlobalLayoutListener(ViewTreeObserver viewTreeObserver, ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener){
+		if(Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN){
+			viewTreeObserver.removeGlobalOnLayoutListener(onGlobalLayoutListener);
+		}else{
+			viewTreeObserver.removeOnGlobalLayoutListener(onGlobalLayoutListener);
+		}
 	}
 }

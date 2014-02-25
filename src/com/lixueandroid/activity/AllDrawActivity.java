@@ -7,6 +7,11 @@ import android.view.WindowManager;
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.MyBaseActivity;
 
+/**
+ * 各种画
+ * @author LIXUE
+ *
+ */
 public class AllDrawActivity extends MyBaseActivity{
 //	private Button drawCircleButton;
 	private int windowWidth;

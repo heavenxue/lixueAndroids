@@ -53,6 +53,8 @@ public class MainActivity extends MyBaseActivity {
 	private Button mylistviewButton;
 	private Button gesturesButton;
 	private Button mapButton;
+	private Button lettersListviewButton;
+	private Button slidScreenButton;
 
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
@@ -92,6 +94,8 @@ public class MainActivity extends MyBaseActivity {
 		mylistviewButton=(Button) findViewById(R.id.button_mylistview);
 		gesturesButton=(Button) findViewById(R.id.button_gesturedetector);
 		mapButton=(Button) findViewById(R.id.button_map);
+		lettersListviewButton=(Button) findViewById(R.id.button_lettersListview);
+		slidScreenButton=(Button) findViewById(R.id.button_slidScreen);
 	}
 
 	@Override
@@ -344,6 +348,20 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(MyMapActivity.class);	
+			}
+		});
+		lettersListviewButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(LettersOrderListViewActivity.class);
+			}
+		});
+		slidScreenButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(MultiScreenActivity.class);
 			}
 		});
 	}

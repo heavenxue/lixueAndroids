@@ -44,25 +44,35 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
 public class HttpApacheFac {
+
+	public static int DEFAULT_MAX_CONNECTIONS = 10;	//最大连接数
+	public static int DEFAULT_SOCKET_TIMEOUT = 20 * 1000;	//连接超时时间
+	public static int DEFAULT_MAX_RETRIES = 5;	//最大重试次数
+	public static int DEFAULT_SOCKET_BUFFER_SIZE = 8192;	//Socket缓存大小
 	private static String CharSet = HTTP.UTF_8;
     private static HttpClient client = null;
-    public static synchronized HttpClient getHttpClient(){
-    	if(client==null){
-    		HttpParams params = new BasicHttpParams();
-    		HttpProtocolParams.setVersion(params,HttpVersion.HTTP_1_1);//版本
-    		HttpProtocolParams.setContentCharset(params,CharSet);//编码
-    		HttpProtocolParams.setUseExpectContinue(params,true);
-    		//HttpProtocolParams.setUserAgent(params,"Mozilla/5.0(Linux;U;Android 2.2.1;en-us;Nexus One Build.FRG83) "
-            //+"AppleWebKit/553.1(KHTML,like Gecko) Version/4.0 Mobile Safari/533.1");
-    		ConnManagerParams.setMaxConnectionsPerRoute(params,new ConnPerRouteBean(100));
-    		ConnManagerParams.setTimeout(params,10000);
-    		HttpConnectionParams.setConnectionTimeout(params,15000);
-    		HttpConnectionParams.setSoTimeout(params,15000);
-    		SchemeRegistry shm = new SchemeRegistry();
-    		shm.register(new Scheme("http",PlainSocketFactory.getSocketFactory(),80));
+    
+    public static HttpClient getHttpClient(){
+    	 /* 初始化HttpClient */
+     	if(client==null){
+     		HttpParams params = new BasicHttpParams();
+     		ConnManagerParams.setTimeout(params,10000);//设置超时时间
+     		ConnManagerParams.setMaxConnectionsPerRoute(params,new ConnPerRouteBean(DEFAULT_MAX_CONNECTIONS));//设置每个route上的最大连接数
+     		ConnManagerParams.setMaxTotalConnections(params, DEFAULT_MAX_CONNECTIONS);//设置最大连接数
+     		
+     		HttpConnectionParams.setSoTimeout(params,DEFAULT_SOCKET_TIMEOUT);//设置socket超时时间
+     		HttpConnectionParams.setConnectionTimeout(params,DEFAULT_SOCKET_TIMEOUT);//设置连接超时时间
+     		HttpConnectionParams.setTcpNoDelay(params, true);
+     		HttpConnectionParams.setSocketBufferSize(params, DEFAULT_SOCKET_BUFFER_SIZE);//设置socket的缓存大小
+     		HttpProtocolParams.setVersion(params,HttpVersion.HTTP_1_1);//版本
+     		HttpProtocolParams.setContentCharset(params,CharSet);//编码
+     		HttpProtocolParams.setUseExpectContinue(params,true);//如果发现异常也继续进行
+     		SchemeRegistry shm = new SchemeRegistry();
+     		shm.register(new Scheme("http",PlainSocketFactory.getSocketFactory(),80));
             shm.register(new Scheme("https",SSLSocketFactory.getSocketFactory(),443));
+             // 为请求头使用Interceptor
             client = new DefaultHttpClient(new ThreadSafeClientConnManager(params,shm),params);
-    	}
+     	}
 		return client;
     }
     public static void closeHttpClient(){

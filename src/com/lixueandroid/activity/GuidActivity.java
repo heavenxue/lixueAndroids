@@ -37,6 +37,14 @@ public class GuidActivity extends MyBaseActivity{
 		window_width = manager.getDefaultDisplay().getWidth();
 		window_height = manager.getDefaultDisplay().getHeight();
 		guidImageView=(ScaleImageView) findViewById(R.id.img_myimg);
+	}
+
+	@Override
+	public void onInitListener(Bundle savedInstanceState) {
+	}
+
+	@Override
+	public void onInitData(Bundle savedInstanceState) {
 		Bitmap bmp = ReadBitmapById(this,R.drawable.hall1,window_width, window_height);
 		 Canvas canvas = new Canvas(bmp);
 		  Paint paint = new Paint();
@@ -54,38 +62,21 @@ public class GuidActivity extends MyBaseActivity{
 		guidImageView.setImageBitmap(bmp);
 		guidImageView.setmActivity(GuidActivity.this);//设置activity.
 		/** 测量状态栏高度 **/  
-        viewTreeObserver = guidImageView.getViewTreeObserver();  
-        viewTreeObserver.addOnGlobalLayoutListener(new OnGlobalLayoutListener() {  
-  
-            @Override  
-            public void onGlobalLayout() {  
-                if (state_height == 0) {  
-                    // 获取状态栏高度  
-                    Rect frame = new Rect();  
-                    getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);  
-                    state_height = frame.top;  
-                    guidImageView.setScreen_H(window_height-state_height);  
-                    guidImageView.setScreen_W(window_width);  
-                }  
-            }  
-        });  
-        
-	}
-
-	@Override
-	public void onInitListener(Bundle savedInstanceState) {
-	}
-
-	@Override
-	public void onInitData(Bundle savedInstanceState) {
-//		Canvas canvas=new Canvas();
-//		Paint paint=new Paint();
-//		paint.setColor(Color.BLUE);
-//		paint.setAntiAlias(true);
-//		paint.setStyle(Style.FILL);
-//		canvas.drawCircle(100, 100, 50, paint);
-//		canvas.restore();
-//		guidImageView.draw(canvas);
+       viewTreeObserver = guidImageView.getViewTreeObserver();  
+       viewTreeObserver.addOnGlobalLayoutListener(new OnGlobalLayoutListener() {  
+ 
+           @Override  
+           public void onGlobalLayout() {  
+               if (state_height == 0) {  
+                   // 获取状态栏高度  
+                   Rect frame = new Rect();  
+                   getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);  
+                   state_height = frame.top;  
+                   guidImageView.setScreen_H(window_height-state_height);  
+                   guidImageView.setScreen_W(window_width);  
+               }  
+           }  
+       });  
 	}
 	
 	public static Bitmap ReadBitmapById(Context context, int drawableId,int screenWidth, int screenHight) {

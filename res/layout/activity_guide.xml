@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen">
    <FrameLayout style="@style/layout_body">
-       <com.lixueandroid.view.ScaleImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/img_myimg" android:scaleType="fitXY"/>
+       <!-- <com.lixueandroid.view.ScaleImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/img_myimg" android:scaleType="fitXY"/> -->
        <!-- <com.lixueandroid.activity.view.RectangleView android:layout_width="150dp" android:layout_height="100dp" android:id="@+id/myrectangleview"/> -->
+       <com.lixueandroid.view.GuideView style="@style/base_wrap_wrap" android:id="@+id/img_myimg" android:scaleType="fitXY"/>
    </FrameLayout> 
 </LinearLayout>

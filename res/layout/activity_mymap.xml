@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  style="@style/base_match_match" android:orientation="vertical">
     <Button style="@style/button_match" android:id="@+id/button_search_service" android:text="搜索服务"/>  
+    <TextView android:text="LBS.云检索功能：" style="@style/text"/>
+    <LinearLayout style="@style/base_match_wrap">
+        <Button style="@style/base_wrap_wrap" android:text="本地搜索" android:id="@+id/button_local"/>
+        <Button style="@style/base_wrap_wrap" android:text="周边搜索" android:id="@+id/button_round"/>
+        <Button style="@style/base_wrap_wrap" android:text="矩形搜索" android:id="@+id/button_rectangle"/>
+        <Button style="@style/base_wrap_wrap" android:text="详情搜索" android:id="@+id/button_detail"/>
+    </LinearLayout>
     <com.baidu.mapapi.map.MapView android:id="@+id/bmapsView" style="@style/base_match_match" android:clickable="true" />  
     <ListView style="@style/list_match" android:id="@+id/mylist" android:visibility="gone"></ListView>
         

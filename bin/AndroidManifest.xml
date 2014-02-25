@@ -62,7 +62,7 @@
            <intent-filter>
               <action android:name="android.intent.action.MAIN" />
               <category android:name="android.intent.category.LAUNCHER" />
-           	 </intent-filter>  
+           </intent-filter>  
         </activity>
         <activity android:name="com.lixueandroid.activity.MyCustomerImgButtonActivity" android:label="@string/app_name"></activity>
         <activity android:name="com.lixueandroid.activity.MyTouchTabActivity" android:label="@string/app_name"></activity>
@@ -102,7 +102,9 @@
 		<activity android:name="com.lixueandroid.activity.PullToRefreshActivity" android:label="@string/app_name"></activity>
 		<activity android:name="com.lixueandroid.activity.ShowView" android:label="@string/app_name"></activity>
 		<activity android:name="com.lixueandroid.activity.GesturesActivity" android:label="@string/app_name"></activity>
-		
+		<activity android:name="com.lixueandroid.activity.LettersOrderListViewActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.MultiScreenActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.CaptureActivity" android:label="@string/app_name"></activity>
         <!-- NFC相关 -->
         <activity android:name="com.lixueandroid.nfc.NfcMainActivity" android:label="@string/app_name">
 			 <intent-filter>
@@ -183,6 +185,10 @@
         <!-- 百度地图 -->
         <!-- <activity android:name=".MapDemo" android:screenOrientation="sensor" android:configChanges="orientation|keyboardHidden"></activity> --> 
 		<activity android:name="com.lixueandroid.activity.MyMapActivity" android:label="@string/app_name" android:screenOrientation="sensor" android:configChanges="orientation|keyboardHidden"></activity>
+		<activity android:name="com.baidu.mapapi.search.PlaceCaterActivity" android:configChanges="orientation|keyboardHidden" android:theme="@android:style/Theme.NoTitleBar"></activity> 
+		<activity android:name="com.lixueandroid.activity.SearchMapActivity" android:label="@string/app_name" android:screenOrientation="sensor" android:configChanges="orientation|keyboardHidden"></activity>
+		<!-- 52d3536e56240b28431c7c16 统计分析 --> 
+		
     </application>
     <!-- 添加屏幕支持 -->
     <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:resizeable="true" android:anyDensity="true"/>   
