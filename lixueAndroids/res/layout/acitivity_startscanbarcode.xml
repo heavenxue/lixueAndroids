@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen" >
+    <TextView style="@style/text" android:textColor="@color/base_red" android:id="@+id/text_show" android:text=""/>
+    <Button style="@style/button" android:text="@string/button_scanner" android:layout_gravity="right" android:id="@+id/button_start_scan"/>
+</LinearLayout>

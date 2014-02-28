@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lixue.lixueandroid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <!-- 极光推送权限 -->
+    <permission android:name="com.lixue.lixueandroid.permission.JPUSH_MESSAGE" android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.lixue.lixueandroid.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 微信权限 -->
+	
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 相关权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 下载管理权限 -->
+    <permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <!-- NFC相关权限 -->
+    <uses-permission android:name="android.permission.NFC" />
+    
+    <!-- 百度地图相关权限 -->
+    <!--使用网络功能所需权限  -->  
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>  
+	<uses-permission android:name="android.permission.INTERNET"/>  
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>  
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>  
+	<!-- SDK离线地图和cache功能需要读写外部存储器 -->  
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>  
+	<!-- 获取设置信息和详情页直接拨打电话需要以下权限  -->  
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>  
+	<uses-permission android:name="android.permission.CALL_PHONE"/>  
+	<!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->  
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>  
+	<permission android:name="android.permission.BAIDU_LOCATION_SERVICE"/>  
+	<uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE"/>  
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>  
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>  
+	<uses-permission android:name="android.permission.ACCESS_GPS"/>          
+    
+	<!-- 如果需要在Android Market上发布,手机硬件应该支持的 -->    
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="18" />
+      
+    <application android:allowBackup="true" android:icon="@drawable/ic_mylauncher" android:label="@string/app_name" android:theme="@style/AppTheme" android:name="com.lixueandroid.MyApplication">
+        
+        <!-- 相关Activity -->
+        <activity android:name="com.lixueandroid.activity.MainActivity" android:label="@string/app_name" >
+           <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>  
+        </activity>
+        <activity android:name="com.lixueandroid.activity.MyCustomerImgButtonActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.MyTouchTabActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.Mp3PlayerRemoteActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.YaoyiyaoActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.Mp3PlayerMainActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.Mp3PlayerLocalActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.ViewFilpperActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.Mp3PlayerActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.ScreenShotActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.AnimationDrawableActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.AnimationActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.JsonActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.BarcodeScannerActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.StartScanBarcodeActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.TestGridViewActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.TestListViewActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.TestScrollViewActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.ListenerActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.ListImgLoaderActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.GridImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.ShowDetailImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.GalleryImgActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.SocketActivity" android:label="@string/app_name"></activity>
+        <activity android:name="com.lixueandroid.activity.PhotoActivity" android:label="@string/app_name" android:screenOrientation="landscape"></activity>
+		<activity android:name="com.lixueandroid.activity.myActionBarActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.WaterWaveActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.PageTurnActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.AllDrawActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.ShareActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.myAnimationActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.LiuBianXingActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.GuidActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.ClearEditTextActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.TestActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.MyCustomListView" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.PullToRefreshActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.ShowView" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.GesturesActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.LettersOrderListViewActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.MultiScreenActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.CaptureActivity" android:label="@string/app_name"></activity>
+		<activity android:name="com.lixueandroid.activity.CountDownActivity" android:label="@string/app_name"></activity>
+        <!-- NFC相关 -->
+        <activity android:name="com.lixueandroid.nfc.NfcMainActivity" android:label="@string/app_name">
+			 <intent-filter>
+				<action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+				<data android:mimeType="text/plain" />
+			</intent-filter>
+			
+			<intent-filter>
+			<action android:name="android.nfc.action.TAG_DISCOVERED" />
+			<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+			
+			<!-- Add a technology filter -->
+			<intent-filter>
+			<action android:name="android.nfc.action.TECH_DISCOVERED" />
+			</intent-filter>
+ 
+			<meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/filter_nfc"/>
+            
+        </activity>
+        
+        <!-- 相关服务 -->
+        <service android:name="com.lixueandroid.service.DownLoadService"></service>
+        <service android:name="com.lixueandroid.service.TcpClientService"></service>
+ 		<receiver android:name="com.lixueandroid.broadcast.DemoReceiver">
+	      	<intent-filter >
+	        <!-- com.neter.broadcast.receiver.DEMO_ACTION为自定义广播标记
+	           	当MainActivtiy中发出com.neter.broadcast.receiver.DEMO_ACTION　Intent时
+	           DemoRecevicer会起相应　执行DemoRecevicer类的onReceive方法
+	          -->
+	        	<action android:name="com.lixueandroid.broadcast.receiver.DEMO_ACTION"></action>
+	      	</intent-filter>
+    	</receiver>
+        
+        <!-- 极光推送需要模块 - 开始 -->
+        <activity android:name="cn.jpush.android.ui.PushActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|keyboardHidden" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="cn.com.intertextilehome" />
+            </intent-filter>
+        </activity>
+        
+        <service android:name="cn.jpush.android.service.PushService" android:enabled="true" android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        
+        <service android:name="cn.jpush.android.service.DownloadService" android:enabled="true" android:exported="false"/>
+        
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+          	<intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <category android:name="cn.com.intertextilehome" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        
+        <meta-data android:name="JPUSH_APPKEY" android:value="e0f08f310158070a06081c56"/>
+        <!-- 极光推送需要模块 - 结束 -->
+        
+        <!-- 百度地图 -->
+        <!-- <activity android:name=".MapDemo" android:screenOrientation="sensor" android:configChanges="orientation|keyboardHidden"></activity> --> 
+		<activity android:name="com.lixueandroid.activity.MyMapActivity" android:label="@string/app_name" android:screenOrientation="sensor" android:configChanges="orientation|keyboardHidden"></activity>
+		<activity android:name="com.baidu.mapapi.search.PlaceCaterActivity" android:configChanges="orientation|keyboardHidden" android:theme="@android:style/Theme.NoTitleBar"></activity> 
+		<activity android:name="com.lixueandroid.activity.SearchMapActivity" android:label="@string/app_name" android:screenOrientation="sensor" android:configChanges="orientation|keyboardHidden"></activity>
+		<!-- 52d3536e56240b28431c7c16 统计分析 --> 
+		
+    </application>
+    <!-- 添加屏幕支持 -->
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:resizeable="true" android:anyDensity="true"/>   
+</manifest>

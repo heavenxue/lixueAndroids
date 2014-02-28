@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 公共的样式 -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ******************************************************************************** 布局 ************************************************************************************ -->
+    <!-- 布局 - 屏幕 -->
+    <style name="layout_screen" parent="@style/base_match_match_vertical">
+        <item name="android:background">@color/base_white</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <!-- 布局 - 正文 -->
+    <style name="layout_body" parent="@style/base_match_match">
+        <item name="android:id">@id/layout_body</item>
+    </style>
+
+    <!-- 布局 - 正文  - 内容 - 四边有内边距 -->
+    <style name="layout_body_content" parent="@style/base_match_match_vertical">
+        <item name="android:id">@id/layout_bodyContent</item>
+    </style>
+
+    <!-- 布局 - 正文  - 内容 - 四边有内边距 -->
+    <style name="layout_body_content_padding" parent="@style/layout_body_content">
+        <item name="android:padding">@dimen/base_padding_littleLarge</item>
+    </style>
+
+    <!-- 布局 - 正文  - 内容 - 左右有内边距 -->
+    <style name="layout_body_content_leftPadding" parent="@style/layout_body_content">
+        <item name="android:paddingLeft">@dimen/base_padding_littleLarge</item>
+        <item name="android:paddingRight">@dimen/base_padding_littleLarge</item>
+    </style>
+
+    <!-- 布局 - 正文  - 内容 - 上下有内边距 -->
+    <style name="layout_body_content_topPadding" parent="@style/layout_body_content">
+        <item name="android:paddingTop">@dimen/base_padding_littleLarge</item>
+        <item name="android:paddingBottom">@dimen/base_padding_littleLarge</item>
+    </style>
+
+    <!-- 布局 - 标题栏 -->
+    <style name="layout_titlebar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/layout_titlebar_height</item>
+        <item name="android:background">@drawable/titlebar</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- 布局 - 列表项 -->
+    <style name="layout_listItem" parent="@style/base_match_wrap">
+        <item name="android:id">@id/layout_listItem</item>
+        <item name="android:paddingLeft">@dimen/base_padding_specialLarge</item>
+        <item name="android:paddingTop">@dimen/base_padding_default</item>
+        <item name="android:paddingRight">@dimen/base_padding_specialLarge</item>
+        <item name="android:paddingBottom">@dimen/base_padding_default</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">@dimen/layout_listItem_minHeight</item>
+        <item name="android:background">@drawable/selector_list_selector</item>
+    </style>
+
+    <!-- 布局 - 列表头和尾 -->
+    <style name="layout_listHeaderAndFooter" parent="@style/layout_listItem">
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- 布局 - 首页 - 功能入口 -->
+	<style name="layout_home_entry" parent="@style/base_weight_match">
+	    <item name="android:paddingLeft">@dimen/base_padding_small</item>
+	    <item name="android:paddingRight">@dimen/base_padding_small</item>
+	    <item name="android:clickable">true</item>
+	</style>
+    
+	<!-- 布局 - 首页 - 入口 -->
+    <style name="layout_index_entry" parent="@style/base_weight_match_vertical">
+        <item name="android:layout_margin">@dimen/base_margin_littleSmall</item>
+        <item name="android:padding">@dimen/base_padding_default</item>
+    </style>
+    
+	<!-- 布局 - 首页 - 入口 - 图标 -->
+    <style name="layout_index_entry_icon" parent="@style/base_match_weight">
+        <item name="android:layout_marginBottom">@dimen/base_margin_littleSmall</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+	<!-- 布局 - 面板 -->
+    <style name="layout_panel" parent="@style/base_match_wrap">
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:padding">@dimen/base_padding_large</item>
+    </style>
+
+    <!-- 布局 - 四边有内边距 -->
+    <style name="layout_match_wrap_vertical_padding" parent="@style/base_match_wrap_vertical">
+        <item name="android:padding">@dimen/base_padding_littleLarge</item>
+    </style>
+	
+	
+	
+	
+
+    <!-- ******************************************************************************** 文字 ************************************************************************************ -->
+    <!-- 文本 -->
+    <style name="text" parent="@style/base_wrap_wrap">
+        <item name="android:textSize">@dimen/base_textSize_default</item>
+        <item name="android:textColor">@color/base_black</item>
+        <item name="android:layout_marginLeft">@dimen/base_margin_littleSmall</item>
+        <item name="android:layout_marginTop">@dimen/base_margin_specialSmall</item>
+        <item name="android:layout_marginRight">@dimen/base_margin_littleSmall</item>
+        <item name="android:layout_marginBottom">@dimen/base_margin_specialSmall</item>
+    </style>
+
+    <!-- 文本 - 充满 -->
+    <style name="text_match" parent="@style/text">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- 文本 - 权重 -->
+    <style name="text_weight" parent="@style/text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- 文本 - 小的 -->
+    <style name="text_small" parent="@style/text">
+        <item name="android:textSize">@dimen/base_textSize_small</item>
+    </style>
+
+    <!-- 文本 - 小的 - 充满 -->
+    <style name="text_small_match" parent="@style/text_small">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- 文本 - 小的 - 权重 -->
+    <style name="text_small_weight" parent="@style/text_small">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- 文本 - 标题 -->
+    <style name="text_item" parent="@style/base_wrap_wrap">
+        <item name="android:textSize">@dimen/base_textSize_large</item>
+        <item name="android:textColor">@color/selector_text_item</item>
+    </style>
+
+    <!-- 文本 - 副标题 -->
+    <style name="text_item_sub" parent="@style/base_wrap_wrap">
+        <item name="android:textSize">@dimen/base_textSize_littleSmall</item>
+        <item name="android:textColor">@color/selector_text_item_sub</item>
+    </style>
+    
+    <!-- 文本 - 标题 - Activity -->
+    <style name="text_title_activity" parent="@style/base_weight_match">
+        <item name="android:id">@id/text_activityTitle</item>
+        <item name="android:textSize">@dimen/base_textSize_specialLarge</item>
+        <item name="android:textColor">@color/base_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">center</item>
+	    <item name="android:padding">@dimen/base_padding_littleSmall</item>
+	    <item name="android:shadowColor">@color/base_black</item>
+	    <item name="android:shadowRadius">1</item>
+	    <item name="android:shadowDx">2</item>
+	    <item name="android:shadowDy">2</item>
+    </style>
+
+    <!-- 文本 - 表单键 -->
+    <style name="text_formKey" parent="@style/text">
+        <item name="android:layout_marginRight">@dimen/base_margin_default</item>
+        <item name="android:gravity">right</item>
+    </style>
+    
+   	<!-- 文本 - 主页 - 入口 -->
+    <style name="text_home_entry" parent="@style/base_match_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/base_textSize_littleSmall</item>
+        <item name="android:textColor">@color/selector_text_theme</item>
+        <item name="android:drawablePadding">@dimen/base_padding_default</item>
+    </style>
+    
+    
+    <!-- 文本 - 首页 - 入口 -->
+    <style name="text_index_entry" parent="@style/text">
+        <item name="android:textColor">@color/base_white</item>
+        <item name="android:textSize">@dimen/base_textSize_large</item>
+    </style>
+    
+    
+	
+	
+    
+    <!-- ******************************************************************************** 按钮 ************************************************************************************ -->
+    <!-- 按钮 -->
+    <style name="button" parent="@style/base_wrap_wrap">
+        <item name="android:minWidth">@dimen/button_minWidth</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_margin">@dimen/base_margin_littleSmall</item>
+        <item name="android:padding">@dimen/base_padding_default</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@drawable/selector_button</item>
+        <item name="android:textColor">@color/base_white</item>
+        <item name="android:textSize">@dimen/base_textSize_default</item>
+    </style>
+
+    <!-- 按钮 - 宽度充满 -->
+    <style name="button_match" parent="@style/button">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <!-- 按钮 - 宽度权重 -->
+    <style name="button_weight" parent="@style/button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    
+    <!-- 按钮 - 小的 -->
+    <style name="button_small" parent="@style/button">
+        <item name="android:minWidth">@dimen/button_small_minWidth</item>
+        <item name="android:layout_height">@dimen/button_small_height</item>
+        <item name="android:textSize">@dimen/base_textSize_small</item>
+    </style>
+    
+    <!-- 按钮 - 标题栏 -->
+    <style name="button_titlebar">
+	    <item name="android:layout_width">@dimen/button_titleBar_width</item>
+	    <item name="android:layout_height">@dimen/button_titleBar_height</item>
+	    <item name="android:layout_marginLeft">@dimen/base_margin_littleLarge</item>
+	    <item name="android:layout_marginRight">@dimen/base_margin_littleLarge</item>
+	    <item name="android:background">@drawable/selector_button_titlebar</item>
+	    <item name="android:textSize">@dimen/base_textSize_littleSmall</item>
+	    <item name="android:textColor">@color/base_white</item>
+    </style>
+    
+    <!-- 按钮 - 标题栏 - 占位符 -->
+    <style name="button_titlebar_placeholder" parent="@style/button_titlebar">
+        <item name="android:visibility">invisible</item>
+    </style>
+	
+    <!-- 按钮 - 首页 - 入口 - 图标 -->
+	<style name="button_home_entry_icon">
+	    <item name="android:layout_width">@dimen/button_home_icon_size</item>
+	    <item name="android:layout_height">@dimen/button_home_icon_size</item>
+	</style>
+
+    <!-- 按钮 - 复选 -->
+    <style name="button_check" parent="@style/base_wrap_wrap">
+        <item name="android:button">@drawable/selector_button_check</item>
+        <item name="android:layout_margin">@dimen/base_margin_littleSmall</item>
+        <item name="android:textColor">@color/base_black</item>
+    </style>
+
+    <!-- 按钮 - 单选 -->
+    <style name="button_radio" parent="@style/base_wrap_wrap">
+        <item name="android:button">@drawable/selector_button_radio</item>
+        <item name="android:layout_margin">@dimen/base_margin_littleSmall</item>
+        <item name="android:textColor">@color/base_black</item>
+    </style>
+
+    
+    <!-- 按钮 - 开关 -->
+    <style name="button_toggle" parent="@style/base_wrap_wrap">
+        <item name="android:button">@drawable/selector_button_toggle</item>
+        <item name="android:background">@color/base_transparent</item>
+        <item name="android:textOff"></item>
+        <item name="android:textOn"></item>
+    </style>
+
+    
+    
+    
+    
+    <!-- ******************************************************************************** 编辑器 ************************************************************************************ -->
+    <!-- 编辑器 -->
+    <style name="edit">
+        <item name="android:textSize">@dimen/base_textSize_default</item>
+        <item name="android:textColor">@color/base_black</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/selector_edit</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/edit_height</item>
+        <item name="android:layout_margin">@dimen/base_margin_littleSmall</item>
+        <item name="android:paddingLeft">@dimen/base_padding_large</item>
+        <item name="android:paddingTop">@dimen/base_padding_default</item>
+        <item name="android:paddingRight">@dimen/base_padding_large</item>
+        <item name="android:paddingBottom">@dimen/base_padding_default</item>
+    </style>
+    
+    <!-- 编辑器 - 宽度充满 -->
+    <style name="edit_match" parent="@style/edit">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    
+    
+    
+    
+    <!-- ******************************************************************************** 列表 ************************************************************************************ -->
+    <!-- 列表 -->
+    <style name="list" parent="@style/base_match_wrap">
+        <item name="android:id">@android:id/list</item>
+        <item name="android:divider">@drawable/list_divider</item>
+        <item name="android:listSelector">@drawable/selector_list_selector</item>
+        <item name="android:cacheColorHint">@color/base_transparent</item>
+        <item name="android:fastScrollEnabled">true</item>
+    </style>
+
+    <!-- 列表 - 充满的 -->
+    <style name="list_match" parent="@style/list">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 列表 - 高度权重1 -->
+    <style name="list_weight" parent="@style/list">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    
+    
+    <!-- ******************************************************************************** 其它 ************************************************************************************ -->
+    <style name="radioGroup_indicators" parent="@style/base_wrap_wrap">
+	    <item name="android:orientation">horizontal</item>
+	    <item name="android:id">@id/radioGroup_indicators</item>
+	    <item name="android:paddingLeft">@dimen/base_padding_littleSmall</item>
+	    <item name="android:paddingRight">@dimen/base_padding_littleSmall</item>
+    </style>
+    
+</resources>

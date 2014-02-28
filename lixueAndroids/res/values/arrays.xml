@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sortData">
+        <item>阿白</item>
+        <item>阿妹</item>
+        <item>白冰水</item>
+        <item>BOBO</item>
+        <item>陈龙</item>
+        <item>成龙</item>
+        <item>大胖</item>
+        <item>大姐</item>
+        <item>恶心</item>
+        <item>房东</item>
+        <item>刚子</item>
+        <item>哥哥</item>
+        <item>给力</item>
+        <item>黄小曼</item>
+        <item>和平</item>
+        <item>哈哈</item>
+        <item>Jobs</item>
+        <item>可小玉</item>
+        <item>李德华</item>
+        <item>那英</item>
+        <item>品冠</item>
+        <item>戚魏</item>
+        <item>齐天大圣</item>
+        <item>齐友</item>
+        <item>阮今天</item>
+        <item>斯大林</item>
+        <item>唐笑笑</item>
+        <item>王小贱</item>
+        <item>小明</item>
+        <item>小华</item>
+        <item>小德</item>
+        <item>园明</item>
+        <item>张国荣</item>
+    </string-array>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen">
+    <LinearLayout style="@style/layout_titlebar" android:gravity="center">
+        <TextView style="@style/text_title_activity" android:text="@string/activityTitle_myshare" android:id="@+id/text_share"/>
+    </LinearLayout>
+	<FrameLayout style="@style/layout_body">
+	    <LinearLayout style="@style/layout_body_content">
+	    	<Button style="@style/button" android:text="分享" android:id="@+id/button_share"/>    
+	    </LinearLayout>
+	</FrameLayout>
+</LinearLayout>

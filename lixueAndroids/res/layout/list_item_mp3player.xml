@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_wrap">
+    <TextView style="@style/text" android:id="@+id/text_mp3player_filename" android:layout_weight="1"/>
+    <TextView style="@style/text" android:id="@+id/text_mp3player_size"/>
+</LinearLayout>
