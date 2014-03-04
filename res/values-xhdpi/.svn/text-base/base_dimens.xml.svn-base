@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 常用的尺寸 -->
+<resources>
+    <dimen name="base_layout_highLight_height">1dp</dimen><!-- 布局 - 高光 - 高度 -->
+    <dimen name="base_layout_lowLight_height">1dp</dimen><!-- 布局 - 低光 - 高度 -->
+    <dimen name="base_layout_blackLine_height">0.8dp</dimen><!-- 布局 - 黑色分割线 - 高度 -->
+    <dimen name="base_layout_space_height">10dp</dimen><!-- 布局 - 空格线 - 高度 -->
+    <dimen name="base_layout_space_small_height">5dp</dimen><!-- 布局 - 空格线 - 小的 - 高度 -->
+    <dimen name="base_layout_space_large_height">20dp</dimen><!-- 布局 - 空格线 - 大的 - 高度 -->
+    <dimen name="base_layout_shadow_height">2dp</dimen><!-- 布局 - 阴影 - 高度 -->
+
+	<dimen name="base_textSize_specialSmall">8sp</dimen><!-- 文字大小 - 特别小 -->
+	<dimen name="base_textSize_verySmall">10sp</dimen><!-- 文字大小 - 非常小 -->
+	<dimen name="base_textSize_littleSmall">12sp</dimen><!-- 文字大小 - 有点小 -->
+	<dimen name="base_textSize_small">14sp</dimen><!-- 文字大小 - 小的 -->
+	<dimen name="base_textSize_default">16sp</dimen><!-- 文字 -大小 -  默认 -->
+	<dimen name="base_textSize_large">18sp</dimen><!-- 文字大小 - 大的 -->
+	<dimen name="base_textSize_littleLarge">20sp</dimen><!-- 文字大小 - 有点大 -->
+	<dimen name="base_textSize_veryLarge">22sp</dimen><!-- 文字大小 - 非常大 -->
+	<dimen name="base_textSize_specialLarge">24sp</dimen><!-- 文字大小 - 特别大 -->
+	
+	<dimen name="base_padding_specialSmall">1dp</dimen><!-- 内边距 - 特别小 -->
+	<dimen name="base_padding_verySmall">2dp</dimen><!-- 内边距 - 非常小 -->
+	<dimen name="base_padding_littleSmall">4dp</dimen><!-- 内边距 - 有点小 -->
+	<dimen name="base_padding_small">6dp</dimen><!-- 内边距 - 小的 -->
+    <dimen name="base_padding_default">8dp</dimen><!-- 内边距 - 默认 -->
+    <dimen name="base_padding_large">10dp</dimen><!-- 内边距 - 大的 -->
+    <dimen name="base_padding_littleLarge">12dp</dimen><!-- 内边距 - 有点大 -->
+    <dimen name="base_padding_veryLarge">14dp</dimen><!-- 内边距 - 非常大 -->
+    <dimen name="base_padding_specialLarge">16dp</dimen><!-- 内边距 - 特别大 -->
+	
+	<dimen name="base_margin_specialSmall">1dp</dimen><!-- 外边距 - 特别小 -->
+	<dimen name="base_margin_verySmall">2dp</dimen><!-- 外边距 - 非常小 -->
+	<dimen name="base_margin_littleSmall">4dp</dimen><!-- 外边距 - 有点小 -->
+	<dimen name="base_margin_small">6dp</dimen><!-- 外边距 - 小的 -->
+    <dimen name="base_margin_default">8dp</dimen><!-- 外边距 - 默认 -->
+    <dimen name="base_margin_large">10dp</dimen><!-- 外边距 - 大的 -->
+    <dimen name="base_margin_littleLarge">12dp</dimen><!-- 外边距 - 有点大 -->
+    <dimen name="base_margin_veryLarge">14dp</dimen><!-- 外边距 - 非常大 -->
+    <dimen name="base_margin_specialLarge">16dp</dimen><!-- 外边距 - 特别大 -->
+	
+	<dimen name="base_radius_specialSmall">1dp</dimen><!-- 圆角半径 - 特别小 -->
+	<dimen name="base_radius_verySmall">2dp</dimen><!-- 圆角半径 - 非常小 -->
+	<dimen name="base_radius_littleSmall">3dp</dimen><!-- 圆角半径 - 有点小 -->
+    <dimen name="base_radius_small">4dp</dimen><!-- 圆角半径 - 小的 -->
+    <dimen name="base_radius_default">5dp</dimen><!-- 圆角半径 - 默认 -->
+    <dimen name="base_radius_large">6dp</dimen><!-- 圆角半径 - 小大的 -->
+    <dimen name="base_radius_littleLarge">7dp</dimen><!-- 圆角半径 - 有点大 -->
+    <dimen name="base_radius_veryLarge">8dp</dimen><!-- 圆角半径 - 非常大 -->
+    <dimen name="base_radius_specialLarge">9dp</dimen><!-- 圆角半径 - 特别大 -->
+    
+    <dimen name="base_strokeWidth_small">0.5dp</dimen><!-- 描边宽度 - 小的 -->
+    <dimen name="base_strokeWidth_default">1dp</dimen><!-- 描边宽度 - 默认 -->
+    <dimen name="base_strokeWidth_large">2dp</dimen><!-- 描边宽度 - 大的 -->
+</resources>

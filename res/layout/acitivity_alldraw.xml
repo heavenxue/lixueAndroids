@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen" >
+   <LinearLayout style="@style/layout_body">
+      <LinearLayout style="@style/base_match_match">
+          <!-- <Button style="@style/base_wrap_wrap" android:text="画圆" android:id="@+id/draw_button"/> -->
+          <com.lixueandroid.view.CanvasView style="@style/base_match_match" android:id="@+id/canvasView"/>
+      </LinearLayout> 
+   </LinearLayout> 
+</LinearLayout>

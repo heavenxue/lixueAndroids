@@ -1,0 +1,5 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match_vertical">
+    <Button  android:id="@+id/btn_screenshot" style="@style/base_match_wrap" android:text="@string/button_screenshot" />
+    <TextView style="@style/text_match" android:textColor="@color/base_red" android:text="说明：当您点击截屏按钮后，在屏幕上用手指划出一块区域后，再双击所画区域便可以截屏成功。" android:padding="@dimen/base_padding_specialLarge"/>
+    <TextView style="@style/text" android:text="@string/button_screenshotContent" />
+</LinearLayout>

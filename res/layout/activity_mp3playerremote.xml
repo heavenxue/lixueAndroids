@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match_vertical">
+<ListView style="@style/list_match" android:id="@+id/list_Mp3Player"></ListView>
+</LinearLayout>

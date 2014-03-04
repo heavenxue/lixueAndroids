@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match_vertical">
+    <LinearLayout style="@style/layout_titlebar" android:gravity="center">
+        <TextView style="@style/text_title_activity" android:text="相关json解析知识"/>
+    </LinearLayout>
+    <LinearLayout style="@style/layout_body_content">
+	    <TextView android:id="@+id/text_json" style="@style/base_match_wrap" android:textColor="@color/base_blue" android:text=""/>
+	    <TextView android:id="@+id/text_resolve_json" style="@style/base_match_wrap" android:textColor="@color/base_red" android:text=""></TextView>
+	    <Button style="@style/button" android:id="@+id/button_simple_request" android:text="structs2简单请求"/>
+	    <Button style="@style/button" android:id="@+id/button_fengzhuang_request" android:text="structs2封装请求"/>
+	    <Button style="@style/button" android:id="@+id/button_json_request" android:text="structs2请求json"/>
+	    <Button style="@style/button" android:id="@+id/button_cookies_request" android:text="structs2得到cookies"/>
+	    <Button style="@style/button" android:id="@+id/button_ip_request" android:text="structs2得到手机ip"/>
+	    
+	    <Button style="@style/button" android:id="@+id/button_servlet_request" android:text="servlet简单请求"/>
+	    <Button style="@style/button" android:id="@+id/button_servletarray_request" android:text="servlet json数组"/>
+	    
+	    
+    </LinearLayout>
+</LinearLayout>

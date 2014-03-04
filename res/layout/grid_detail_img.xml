@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen">
+    <ImageView style="@style/base_wrap_wrap" android:id="@+id/img_detail" android:contentDescription="@string/base_image_contentDescription"/>
+</LinearLayout>
