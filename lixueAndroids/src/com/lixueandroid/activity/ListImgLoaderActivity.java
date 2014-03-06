@@ -1,10 +1,12 @@
 package com.lixueandroid.activity;
 
+import me.xiaopan.easyandroid.util.AnimationUtils;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.MyBaseActivity;
@@ -20,6 +22,8 @@ public class ListImgLoaderActivity extends MyBaseActivity{
 	private String[] imageUrls;
 	
 	private ListView imgListView;
+	private imgAdapter adapter;
+	
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
 		setContentView(R.layout.activity_listimgloader);
@@ -42,7 +46,15 @@ public class ListImgLoaderActivity extends MyBaseActivity{
 	@Override
 	public void onInitData(Bundle savedInstanceState) {
 		imageUrls=ImageUrls.getImageUrls();
-		imgListView.setAdapter(new imgAdapter(getBaseContext(),imageUrls,getMyApplication().getOptions(),getMyApplication().getImageLoader()));
+		imgListView.setAdapter(adapter=new imgAdapter(getBaseContext(),imageUrls,getMyApplication().getOptions(),getMyApplication().getImageLoader()));
+		adapter.setOnRightItemClickListener(new imgAdapter.onRightItemClickListener() {
+        	
+            @Override
+            public void onRightItemClick(View v, int position) {
+            	
+                Toast.makeText(ListImgLoaderActivity.this, "删除第  " + (position+1)+" 对话记录",Toast.LENGTH_SHORT).show();
+            }
+        });
 	}
 
 }

@@ -5,6 +5,7 @@
 	    <TextView style="@style/text_title_activity" android:text="@string/activityTitle_listview_imgloader"/>
 	</LinearLayout>
 	<FrameLayout style="@style/layout_body">
-	    <ListView style="@style/list_match" android:id="@+id/list_imageLoader"></ListView>
+	    <com.lixueandroid.view.SwipeListView style="@style/list_match" android:id="@+id/list_imageLoader" />
+	    <!-- <ListView style="@style/list_match" android:id="@+id/list_imageLoader"></ListView> -->
 	</FrameLayout>
 </LinearLayout>
