@@ -1,6 +1,5 @@
 package com.lixueandroid.activity;
 
-import me.xiaopan.easyandroid.util.AnimationUtils;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;

@@ -56,6 +56,7 @@ public class MainActivity extends MyBaseActivity {
 	private Button lettersListviewButton;
 	private Button slidScreenButton;
 	private Button countDownButton;
+	private Button waterFallsButton;
 	
 
 	@Override
@@ -99,6 +100,7 @@ public class MainActivity extends MyBaseActivity {
 		lettersListviewButton=(Button) findViewById(R.id.button_lettersListview);
 		slidScreenButton=(Button) findViewById(R.id.button_slidScreen);
 		countDownButton=(Button) findViewById(R.id.button_countdown);
+		waterFallsButton=(Button) findViewById(R.id.button_waterfalls);
 	}
 
 	@Override
@@ -372,6 +374,13 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(CountDownActivity.class);
+			}
+		});
+		waterFallsButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(WaterFallsActivity.class);
 			}
 		});
 	}
