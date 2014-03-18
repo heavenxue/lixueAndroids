@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match" android:orientation="vertical" >
+    <ImageView  style="@style/base_match_match" android:scaleType="fitXY" android:id="@+id/image_screenprotect"/>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 拍照界面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match">
+    <!-- 预览层 -->
+    <SurfaceView style="@style/base_match_match" android:id="@+id/surface_takeBusinessCard"/>
+
+    <!-- 取景、功能层 -->
+    <LinearLayout style="@style/base_match_match">
+	    <!-- 取景框 -->
+	    <LinearLayout style="@style/base_weight_match_vertical" android:gravity="center">
+	        <LinearLayout style="@style/base_match_weight_vertical" android:background="@drawable/backg_balack_translucent" android:gravity="center_vertical">
+	            <Button 
+	                style="@style/base_wrap_wrap"
+	                android:id="@+id/button_takeBusinessCard_flashMode" 
+			        android:background="@drawable/button_flash"
+			        android:drawableLeft="@drawable/icon_flash_off" 
+			        android:textColor="@color/base_black"
+			        android:text="@string/base_close"
+			        android:layout_gravity="right"
+			        android:layout_marginRight="@dimen/base_margin_specialLarge"
+			        android:drawablePadding="@dimen/base_padding_small"
+			        android:textSize="@dimen/base_textSize_littleSmall"/>
+	        </LinearLayout>
+	        <LinearLayout style="@style/base_match_wrap">
+	        	<View style="@style/base_weight_match" android:background="@color/base_black_translucent"/>
+		        <FrameLayout android:layout_width="@dimen/view_cameraAperture_width" android:layout_height="@dimen/view_cameraAperture_height" android:id="@+id/view_takeBusinessCard_cameraAperture" android:background="@drawable/camera_aperture">
+		            <ImageView style="@style/base_match_match" android:src="@drawable/image_business_card" android:scaleType="fitXY" android:contentDescription="@string/base_image_contentDescription"/>
+		            <ImageView style="@style/base_match_match" android:id="@+id/image_takeBusinessCard_preview" android:scaleType="fitXY" android:contentDescription="@string/base_image_contentDescription"/>
+		        </FrameLayout>
+	        	<View style="@style/base_weight_match" android:background="@color/base_black_translucent"/>
+	        </LinearLayout>
+	        <LinearLayout style="@style/base_match_weight" android:background="@drawable/backg_balack_translucent" android:gravity="bottom">
+		        <TextView 
+		            style="@style/base_weight_wrap"
+		            android:padding="@dimen/base_padding_default"
+		            android:background="#80000000" 
+		            android:text="名片尽量充满取景框，避免反光和阴影"
+		            android:textColor="@color/base_white"
+		            android:gravity="center"
+		            android:textSize="@dimen/base_textSize_default"/>
+		        <Button style="@style/button" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="预览" android:id="@+id/button_show" android:layout_gravity="bottom"/>
+	        </LinearLayout>
+	    </LinearLayout>
+	    
+	    <!-- 拍照操作栏 -->
+	    <LinearLayout style="@style/base_wrap_match_vertical" android:background="@drawable/backg_balack_translucent">
+	  	    <LinearLayout style="@style/base_wrap_match_vertical" android:paddingLeft="@dimen/base_margin_small" android:gravity="center" android:layout_width="60dp" android:background="@drawable/backg_bottom" android:paddingTop="@dimen/base_padding_specialLarge" android:paddingBottom="@dimen/base_padding_specialLarge">
+	          	<Button android:layout_width="40dp" android:layout_height="85dp" android:id="@+id/button_takeBusinessCard_use" android:visibility="invisible" android:ems="1" android:text="使       用" android:background="@drawable/selector_button_shutter" android:textColor="@color/base_white"/>
+	          	<LinearLayout style="@style/base_wrap_weight" android:gravity="center" >
+		          	<ImageButton android:layout_width="40dp" android:layout_height="85dp" android:id="@+id/button_takeBusinessCard_shutter" android:src="@drawable/icon_camera2" android:background="@drawable/selector_button_shutter" android:contentDescription="@string/base_image_contentDescription"/>
+	          	</LinearLayout>
+	          	<Button android:layout_width="40dp" android:layout_height="85dp" android:id="@+id/button_takeBusinessCard_remake" android:visibility="invisible" android:ems="1" android:text="重       拍" android:background="@drawable/selector_button_shutter" android:textColor="@color/base_white"/>
+	       	</LinearLayout>
+       	</LinearLayout>
+    </LinearLayout>
+</FrameLayout>

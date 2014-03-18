@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen" >
+   <LinearLayout style="@style/layout_body">
+      <LinearLayout style="@style/base_match_match" android:orientation="vertical">
+          <LinearLayout style="@style/base_match_wrap">
+	          <TextView style="@style/text_weight" android:id="@+id/text_gestures_show" android:text=""/>
+    	      <Button style="@style/button" android:id="@+id/button_gestures_showimg" android:text="显示图像"/>
+          </LinearLayout>
+          <SurfaceView style="@style/base_match_match" android:id="@+id/surfaceview_gestures"/>
+      </LinearLayout> 
+   </LinearLayout> 
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activityTitle_nfc">NFC功能测试</string>
+    <string name="activityTitle_listview_imgloader">ListView加载图片</string>
+    <string name="activityTitle_gridview_imgloader">GridView加载图片</string>
+    <string name="activityTitle_gallery_imgloader">Gallery加载图片</string>
+    <string name="activityTitle_Socket">Socket编程</string>
+    <string name="activityTitle_listener">view事件不被覆盖</string>
+    <string name="activityTitle_setlight">设置屏幕亮度</string>
+    <string name="activityTitle_photo">相机相关</string>
+    <string name="activityTitle_actionbar">ActionBar相关</string>
+    <string name="activityTitle_share">水波纹效果</string>
+    <string name="activityTitle_pageturn">翻页效果</string>
+    <string name="activityTitle_draw">各种画</string>
+    <string name="activityTitle_myshare">各种分享</string>
+    <string name="activityTitle_animation">activity动画</string>
+    <string name="activityTitle_liubianxing">画正六边形海报</string>
+    <string name="activityTitle_exibitionGuid">展会导览</string>
+    <string name="activityTitle_clearEditText">自定义清除按钮</string>
+    <string name="activityTitle_showView">自定义视图</string>
+    
+    <string name="app_name">LixueAndroid</string>
+    <string name="toast_network_connectionTimeout">网络超时</string>
+    <string name="toast_network_connectException">网络连接异常</string>
+    <string name="toast_network_fileNotFoundException">网络文件异常</string>
+    <string name="toast_network_unknownException">未发现网络</string>
+    <string name="toast_barcodeScanner_notSupport">抱歉，您的设备不支持此功能！</string>
+    <string name="toast_cameraOpenFailed">打开摄像头失败，请确保其他程序没有占用您的摄像头！</string>
+    
+    <string name="button_mycustombutton">自定义按钮</string>
+    <string name="button_mytouchtab">自定义Tab与ViewPager的融合</string>
+    <string name="button_mp3player">MP3播放器</string>
+    <string name="button_yaoyiyao">摇一摇</string>
+    <string name="button_viewflipper">屏幕切换动画效果</string>
+    <string name="button_mediaplayer_start">播放</string>
+    <string name="button_mediaplayer_pause">暂停</string>
+    <string name="button_mediaplayer_end">停止</string>
+    <string name="button_screenshot">截屏喽</string>
+    <string name="button_screenshotContent">在过去的一年里，移动成主流也让众多的移动应用如雨后春笋般层出不穷，在众多开发者从中获利的同时竞争也愈演愈烈，如何才能保证自己立于不败之地接下来介绍移动App设计的13大精髓感兴趣的朋友可以了解下啊
+导读 ：在过去的一年里，移动成主流也让众多的移动应用如雨后春笋般层出不穷，在众多开发者从中获利的同时竞争也愈演愈烈，如何才能保证自己立于不败之地?用户是上帝，一切还得从应用说起。
+对于刚刚过去的2012年，你最想说什么?2012年的移动开发领域足以用“风起云涌，瞬息万变”来形容，移动应用市场蓬勃发展也让众多的移动应用开发者获利匪浅，也由此涌现出了许多优秀的应用设计，随着用户的品质需求的上升，App界面设计也被提升到了全新的高度。移动应用实现了从互联网到移动设备的成功蜕变，从用户角度出发，对视觉、风格、操作方式、架构、内容呈现等各个方面进行设计挖掘，从而打造出最为精致的应用。为此，国外著名的应用设计师Gannon Burgett结合自身实战经验总结了2013年App设计发展的13大趋势。
+1. 扁平化设计
+扁平化设计本质上只是设计美学中的一种，与仿古、高光及金属质感等视觉效果相同。在过去的2012年，无论是单就界面设计而言还是整体的App设计，扁平化设计都在逐渐盛行，这似乎也成了2013年最为显著的趋势。
+图：典型的Skeumorphism风格
+在如今的App设计领域，提到扁平化设计自然少不了典型的苹果style之一——Skeumorphism。何谓Skeumorphism?根据维基百科的解释，Skeumorphism指的是一个产品的设计元素模仿了某个原创产品的设计元素，只不过这个设计元素在原创产品那里具有某种功能，而在模仿者这里却只是个装饰摆设而已。尽管就连乔布斯都非常热衷于Skeumorphism设计风格，但即使对物理实体的视觉渲染做得再出色，也只不过是画皮式的视觉自慰。在用户体验至高无上的App设计领域，滥用形式模仿主义势必会对用户造成困惑，这就是为什么主打极简主义的扁平化设计风格会风行的原因之一。
+扁平化设计由来已久，使用扁平化设计的开发者也不在少数，但对于大多数开发者而言，扁平化一定不会是设计首选，在2012年微软Windows 8的推动下，扁平化设计进入了一个全新的境界。 　
+图：Windows 8
+Windows 8是微软围绕扁平化UI设计的一个全新的系统，其中大部分是围绕着Windows UI(即之前的Metro UI)和实时图块(Live Tiles)。通过XBOX控制面板进行启动，然后围绕其扁平化设计进行系统加载，尽管Windows 8并不能说是完美无缺的，但无可否认的是主打扁平化设计界面的Windows UI彻底征服了世界。 　
+图：Rise
+这是扁平化设计在界面设计中的运用，那在应用中呢?利用扁平化设计最为充分的应用是一个名为Rise的闹钟应用。Rise的整个UI设计没有运用任何形式的三维元素，界面从头至尾都非常清爽美观。当你合理运用应用中所设置的梯度进行闹钟设定时，你一定会得到一个最让人期待的完美闹钟。当然，实用的闹钟不会太过深奥，而Rise的导航和UX就很有力地证明了扁平化设计的好处，让一款应用变得更加简单，而在视觉上却非常具有吸引力。
+扁平化设计并非适用于所有的应用程序，无论风格如何，界面形式都取决于其实际功能，但无可否认的是，如果想要让应用的UI实现突破，对于设计师及开发者而言，扁平化设计可谓是一个最好的方法。</string>
+<string name="button_animationdrawable">动画图片效果</string>
+<string name="button_animation">动画效果</string>
+<string name="button_json">json解析实例</string>
+<string name="button_barcodescanner">扫描二维码</string>
+<string name="button_scanner">开始扫描</string>
+<string name="button_refresh_listview">ListView上拉下拉演示</string>
+<string name="button_refresh_gridview">GridView上拉下拉演示</string>
+<string name="button_refresh_scrollview">ScrollView上拉下拉演示</string>
+<string name="button_Nfc">NFC实例</string>
+<string name="button_listImageLoader">listview加载图片</string>
+<string name="button_listImageLoaderp">潘的listview加载图片</string>
+
+
+<string name="hint_barcodeScanner">将观众胸卡二维码对准红线处调整条码和镜头距离，软件将自动扫描观众胸卡二维码</string>
+
+
+<string name="tab_title">前天 昨天 今天 明天 后天</string>
+
+<string name="pull_to_refresh_release_label">松开后刷新</string>
+<string name="pull_to_refresh_refreshing_label">正在刷新\u2026</string>
+
+<string name="pull_to_refresh_footer_release_label">松开后加载</string>
+<string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+<string name="pull_to_refresh_footer_refreshing_label">正在加载中\u2026</string>
+<string name="pull_to_refresh_pull_label">下拉刷新</string>
+<string name="action_search">搜索</string>
+<string name="action_settings">设置</string>
+
+<string name="p2refresh_head_load_more">加载更多</string>
+<string name="p2refresh_end_load_more">更    多</string>
+<string name="p2refresh_end_click_load_more">点击加载</string>
+<string name="p2refresh_release_refresh">松开刷新</string>
+<string name="p2refresh_pull_to_refresh">下拉刷新</string>
+<string name="p2refresh_doing_head_refresh">正在刷新&#8230;</string>
+<string name="p2refresh_doing_end_refresh">加载中&#8230;</string>
+<string name="p2refresh_refresh_lasttime">最近更新&#160;&#058;&#160;</string>
+
+<string name="isAutoFocus">true</string>
+<string name="isUserAutoFocus">true</string>
+<string name="isContinuedFocus">false</string>
+<string name="isInvertScan">false</string>
+
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match_vertical" >
+<LinearLayout style="@style/base_match_match_vertical">
+	<Button style="@style/button_match" android:text="@string/button_mycustombutton" android:id="@+id/button_mycoustom_button"/>   
+	<Button style="@style/button_match" android:text="@string/button_mytouchtab" android:id="@+id/button_mytouch_tab"/>    
+	<Button style="@style/button_match" android:text="@string/button_mp3player" android:id="@+id/button_mp3_player"/>
+	<Button style="@style/button_match" android:text="@string/button_yaoyiyao" android:id="@+id/button_yaoyiyao"/>
+	<Button style="@style/button_match" android:text="@string/button_viewflipper" android:id="@+id/button_viewflipper"/>
+	<Button style="@style/button_match" android:text="@string/button_screenshot" android:id="@+id/button_screenshot"/>
+	<Button style="@style/button_match" android:text="@string/button_animationdrawable" android:id="@+id/button_animationdrawable"/>
+	<Button style="@style/button_match" android:text="@string/button_animation" android:id="@+id/button_animation"/>
+	<Button style="@style/button_match" android:text="@string/button_json" android:id="@+id/button_json"/>
+	<Button style="@style/button_match" android:text="@string/button_barcodescanner" android:id="@+id/button_barcodescanner"/>
+	<Button style="@style/button_match" android:text="@string/button_refresh_listview" android:id="@+id/button_refresh_listview"/>
+	<Button style="@style/button_match" android:text="@string/button_refresh_gridview" android:id="@+id/button_refresh_gridview"/>
+	<Button style="@style/button_match" android:text="@string/button_refresh_scrollview" android:id="@+id/button_refresh_scrollview"/>
+	<Button style="@style/button_match" android:text="@string/button_Nfc" android:id="@+id/button_Nfc"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_listview_imgloader" android:id="@+id/button_listImageLoader"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_gridview_imgloader" android:id="@+id/button_gridImageLoader"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_gallery_imgloader" android:id="@+id/button_galleryimgloader"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_Socket" android:id="@+id/button_Socket"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_listener" android:id="@+id/button_listener"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_setlight" android:id="@+id/button_setlight"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_photo" android:id="@+id/button_photo"/> 
+	<Button style="@style/button_match" android:text="@string/activityTitle_actionbar" android:id="@+id/button_actionbar"/>
+	<Button style="@style/button_match" android:text="@string/activityTitle_share" android:id="@+id/button_share"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_draw" android:id="@+id/button_draw"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_pageturn" android:id="@+id/button_pageturn"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_myshare" android:id="@+id/button_toshare"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_animation" android:id="@+id/button_myanimation"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_liubianxing" android:id="@+id/button_liubianxing"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_exibitionGuid" android:id="@+id/button_exibitionGuid"/>  
+	<Button style="@style/button_match" android:text="@string/activityTitle_clearEditText" android:id="@+id/button_clearEditText"/>  
+	<Button style="@style/button_match" android:text="测试headerview" android:id="@+id/button_testheaderview"/>  
+	<Button style="@style/button_match" android:text="showView" android:id="@+id/button_showView"/>  
+	<Button style="@style/button_match" android:text="自定义listview" android:id="@+id/button_mylistview"/>  
+	<Button style="@style/button_match" android:text="各种手势识别" android:id="@+id/button_gesturedetector"/>  
+	<Button style="@style/button_match" android:text="百度地图" android:id="@+id/button_map"/>  
+	<Button style="@style/button_match" android:text="ListView的A-Z的排序和过滤搜索功能" android:id="@+id/button_lettersListview"/>  
+	<Button style="@style/button_match" android:text="自定义滑屏view" android:id="@+id/button_slidScreen"/>  
+	<Button style="@style/button_match" android:text="倒计时" android:id="@+id/button_countdown"/>  
+	<Button style="@style/button_match" android:text="瀑布流" android:id="@+id/button_waterfalls"/>  
+</LinearLayout>   
+</ScrollView>
