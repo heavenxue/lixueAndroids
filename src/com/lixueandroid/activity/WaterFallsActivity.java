@@ -65,47 +65,13 @@ public class WaterFallsActivity extends MyBaseActivity{
 	
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
+		setContentView(R.layout.activity_waterfalls);
+		lazyScrollView=(LazyScrollView) findViewById(R.id.lazyscrollview);
+		linearlayout_container=(LinearLayout) findViewById(R.id.lazyscrollview_container);
 	}
 
 	@Override
 	public void onInitListener(Bundle savedInstanceState) {
-		
-	}
-
-	@Override
-	public void onInitData(Bundle savedInstanceState) {
-		display=getWindowManager().getDefaultDisplay();
-		itemWidth=display.getWidth()/columnCount;
-		itemHeight=new int[itemWidth];
-		
-		context=this;
-		assetManager=this.getAssets();
-		
-		iviews=new HashMap<Integer, FlowView>();
-		pins=new HashMap<Integer, String>();
-		pinMarks=new HashMap[columnCount];
-		
-		lineIndex=new int[columnCount];
-		topIndex=new int[columnCount];
-		bottomIndex=new int[columnCount];
-		for (int i = 0; i < columnCount; i++) {
-			lineIndex[i]=-1;
-			bottomIndex[i]=-1;
-			pinMarks[i]=new HashMap();
-		}
-		setContentView(R.layout.activity_waterfalls);
-		//初始化布局
-		InitLayout();
-	}
-	
-	/**
-	 * 初始化布局
-	 */
-	@SuppressLint("HandlerLeak")
-	private void InitLayout(){
-		lazyScrollView=(LazyScrollView) findViewById(R.id.lazyscrollview);
-		linearlayout_container=(LinearLayout) findViewById(R.id.lazyscrollview_container);
-		lazyScrollView.getView();
 		lazyScrollView.setOnScrollListener(new OnScrollListener() {
 			
 			@Override
@@ -163,6 +129,36 @@ public class WaterFallsActivity extends MyBaseActivity{
 				}
 			}
 		});
+	}
+
+	@Override
+	public void onInitData(Bundle savedInstanceState) {
+		display=getWindowManager().getDefaultDisplay();
+		itemWidth=display.getWidth()/columnCount;
+		itemHeight=new int[columnCount];
+		context=this;
+		assetManager=this.getAssets();
+		iviews=new HashMap<Integer, FlowView>();
+		pins=new HashMap<Integer, String>();
+		pinMarks=new HashMap[columnCount];
+		lineIndex=new int[columnCount];
+		topIndex=new int[columnCount];
+		bottomIndex=new int[columnCount];
+		for (int i = 0; i < columnCount; i++) {
+			lineIndex[i]=-1;
+			bottomIndex[i]=-1;
+			pinMarks[i]=new HashMap();
+		}
+		//初始化布局
+		InitLayout();
+	}
+	
+	/**
+	 * 初始化布局
+	 */
+	@SuppressLint("HandlerLeak")
+	private void InitLayout(){
+		lazyScrollView.getView();
 		handler = new Handler() {
 			@Override
 			public void dispatchMessage(Message msg) {
@@ -184,6 +180,7 @@ public class WaterFallsActivity extends MyBaseActivity{
 					String f = flowView.getFlowTag().getFileName();
 					// 此处计算列值
 					int columnIndex = GetMinValue(itemHeight);
+					Log.d(TAG, "columnIndex:"+columnIndex);
 					flowView.setColumnIndex(columnIndex);
 					itemHeight[columnIndex] += h;
 					pins.put(flowView.getId(), f);
@@ -273,7 +270,7 @@ public class WaterFallsActivity extends MyBaseActivity{
 	private int GetMinValue(int[] array) {
 		int m = 0;
 		int length = array.length;
-		for (int i = 0; i < length; ++i) {
+		for (int i = 0; i < length; i++) {
 			if (array[i] < array[m]) {
 				m = i;
 			}

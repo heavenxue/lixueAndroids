@@ -22,7 +22,7 @@ import android.widget.Toast;
  * @author lixue
  *
  */
-public class FlowView extends ImageView implements View.OnClickListener,View.OnLongClickListener {
+public class FlowView extends ImageView implements View.OnClickListener{
 
 	private FlowTag flowTag;
 	private Context context;
@@ -51,18 +51,18 @@ public class FlowView extends ImageView implements View.OnClickListener,View.OnL
 
 	private void Init() {
 		setOnClickListener(this);
-		this.setOnLongClickListener(this);
+//		this.setOnLongClickListener(this);
 		setAdjustViewBounds(true);
 
 	}
 
-	@Override
-	public boolean onLongClick(View v) {
-		Log.d("FlowView", "LongClick");
-		Toast.makeText(context, "长按：" + this.flowTag.getFlowId(),Toast.LENGTH_SHORT).show();
-		return true;
-	}
-
+//	@Override
+//	public boolean onLongClick(View v) {
+//		Log.d("FlowView", "LongClick");
+//		Toast.makeText(context, "长按：" + this.flowTag.getFlowId(),Toast.LENGTH_SHORT).show();
+//		return true;
+//	}
+//
 	@Override
 	public void onClick(View v) {
 		Log.d("FlowView", "Click");
