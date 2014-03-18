@@ -9,8 +9,10 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.lixue.lixueandroid.R;
@@ -34,7 +36,8 @@ public class imgAdapter extends BaseAdapter {
 		this.imageLoader=imageLoader;
 	}
 	private class ViewHolder {
-		public ImageView image;
+		private ImageView image;
+		private Button deleteButton;
 	}
 	@Override
 	public int getCount() {
@@ -52,18 +55,26 @@ public class imgAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 		View view = convertView;
 		final ViewHolder holder;
 		if (convertView == null) {
 			view=LayoutInflater.from(context).inflate(R.layout.item_list_image, null);
 			holder = new ViewHolder();
 			holder.image = (ImageView) view.findViewById(R.id.image);
+			holder.deleteButton=(Button) view.findViewById(R.id.button_item_delete);
 			view.setTag(holder);
 		} else {
 			holder = (ViewHolder) view.getTag();
 		}
-
+		holder.deleteButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null) {
+                    mListener.onRightItemClick(v, position);
+                }
+            }
+        });
 		imageLoader.displayImage(imgurls[position], holder.image, options, animateFirstListener);
 
 		return view;
@@ -85,5 +96,17 @@ public class imgAdapter extends BaseAdapter {
 			}
 		}
 	}
+	/**
+     * 单击事件监听器
+     */
+    private onRightItemClickListener mListener = null;
+    
+    public void setOnRightItemClickListener(onRightItemClickListener listener){
+    	mListener = listener;
+    }
+
+    public interface onRightItemClickListener {
+        void onRightItemClick(View v, int position);
+    }
 }
 

@@ -1,5 +1,7 @@
 package com.lixueandroid.camera;
 
+import java.io.IOException;
+
 import android.content.Context;
 import android.graphics.Point;
 import android.graphics.Rect;
@@ -7,8 +9,8 @@ import android.hardware.Camera;
 import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
+
 import com.google.zxing.PlanarYUVLuminanceSource;
-import java.io.IOException;
 
 /**
  *这个对象封装了相机的服务对象，并期望成为唯一一个对话对象。

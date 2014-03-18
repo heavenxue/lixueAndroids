@@ -55,6 +55,9 @@ public class MainActivity extends MyBaseActivity {
 	private Button mapButton;
 	private Button lettersListviewButton;
 	private Button slidScreenButton;
+	private Button countDownButton;
+	private Button waterFallsButton;
+	
 
 	@Override
 	public void onInitLayout(Bundle savedInstanceState) {
@@ -96,6 +99,8 @@ public class MainActivity extends MyBaseActivity {
 		mapButton=(Button) findViewById(R.id.button_map);
 		lettersListviewButton=(Button) findViewById(R.id.button_lettersListview);
 		slidScreenButton=(Button) findViewById(R.id.button_slidScreen);
+		countDownButton=(Button) findViewById(R.id.button_countdown);
+		waterFallsButton=(Button) findViewById(R.id.button_waterfalls);
 	}
 
 	@Override
@@ -362,6 +367,20 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(MultiScreenActivity.class);
+			}
+		});
+		countDownButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(CountDownActivity.class);
+			}
+		});
+		waterFallsButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(WaterFallsActivity.class);
 			}
 		});
 	}

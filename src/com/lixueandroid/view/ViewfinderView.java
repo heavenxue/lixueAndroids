@@ -1,8 +1,7 @@
 package com.lixueandroid.view;
 
-import com.google.zxing.ResultPoint;
-import com.lixue.lixueandroid.R;
-import com.lixueandroid.camera.CameraManager;
+import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -13,8 +12,9 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.zxing.ResultPoint;
+import com.lixue.lixueandroid.R;
+import com.lixueandroid.camera.CameraManager;
 
 /**
  * 这个view被覆盖在相机预览的顶部。它增加了取景器矩形和部分外面它的透明性，以及激光扫描器动画和结果。

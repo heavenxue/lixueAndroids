@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match" android:orientation="vertical" >
+	<com.lixueandroid.view.LazyScrollView style="@style/base_match_match" android:id="@+id/lazyscrollview">
+	    <LinearLayout style="@style/base_match_match" android:id="@+id/lazyscrollview_container" android:orientation="horizontal">
+	    </LinearLayout>
+	</com.lixueandroid.view.LazyScrollView>
+</LinearLayout>

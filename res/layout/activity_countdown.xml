@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_body">
+    <Button style="@style/button_match" android:id="@+id/button_countdown_countdown"/>
+	<View android:layout_height="20dp" android:layout_width="match_parent"></View>
+	<Button style="@style/button" android:id="@+id/button_run" android:text="运行线程"></Button>
+	<TextView style="@style/text" android:id="@+id/text_show"></TextView>
+</LinearLayout>

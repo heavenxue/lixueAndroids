@@ -38,5 +38,7 @@
 	<Button style="@style/button_match" android:text="百度地图" android:id="@+id/button_map"/>  
 	<Button style="@style/button_match" android:text="ListView的A-Z的排序和过滤搜索功能" android:id="@+id/button_lettersListview"/>  
 	<Button style="@style/button_match" android:text="自定义滑屏view" android:id="@+id/button_slidScreen"/>  
+	<Button style="@style/button_match" android:text="倒计时" android:id="@+id/button_countdown"/>  
+	<Button style="@style/button_match" android:text="瀑布流" android:id="@+id/button_waterfalls"/>  
 </LinearLayout>   
 </ScrollView>

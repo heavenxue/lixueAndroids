@@ -3,14 +3,14 @@ package com.lixueandroid.camera;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import com.lixue.lixueandroid.R;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.hardware.Camera;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
 import android.util.Log;
+
+import com.lixue.lixueandroid.R;
 
 /**
  * 自动对焦管理器
