@@ -57,6 +57,8 @@ public class MainActivity extends MyBaseActivity {
 	private Button slidScreenButton;
 	private Button countDownButton;
 	private Button waterFallsButton;
+	private Button nightButton;
+	private Button bluetoothButton;
 	
 
 	@Override
@@ -101,6 +103,8 @@ public class MainActivity extends MyBaseActivity {
 		slidScreenButton=(Button) findViewById(R.id.button_slidScreen);
 		countDownButton=(Button) findViewById(R.id.button_countdown);
 		waterFallsButton=(Button) findViewById(R.id.button_waterfalls);
+		nightButton=(Button) findViewById(R.id.button_nightMode);
+		bluetoothButton=(Button) findViewById(R.id.button_bluetooth);
 	}
 
 	@Override
@@ -381,6 +385,20 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(WaterFallsActivity.class);
+			}
+		});
+		nightButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(NightModeActivity.class);
+			}
+		});
+		bluetoothButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(BlueToothActivity.class);
 			}
 		});
 	}

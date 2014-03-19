@@ -40,5 +40,7 @@
 	<Button style="@style/button_match" android:text="自定义滑屏view" android:id="@+id/button_slidScreen"/>  
 	<Button style="@style/button_match" android:text="倒计时" android:id="@+id/button_countdown"/>  
 	<Button style="@style/button_match" android:text="瀑布流" android:id="@+id/button_waterfalls"/>  
+	<Button style="@style/button_match" android:text="夜间模式切换" android:id="@+id/button_nightMode"/>  
+	<Button style="@style/button_match" android:text="蓝牙开发" android:id="@+id/button_bluetooth"/>  
 </LinearLayout>   
 </ScrollView>
