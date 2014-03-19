@@ -398,7 +398,7 @@ public class MainActivity extends MyBaseActivity {
 			
 			@Override
 			public void onClick(View v) {
-				startActivity(BlueToothActivity.class);
+				startActivity(DeviceScanActivity.class);
 			}
 		});
 	}

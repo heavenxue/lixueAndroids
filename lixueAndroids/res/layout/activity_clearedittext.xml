@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen">
-   <FrameLayout style="@style/layout_body">
-       <LinearLayout style="@style/layout_body">
-	       <com.lixueandroid.view.ClearEditText style="@style/edit_match" android:drawableRight="@drawable/icon_clear" android:drawableLeft="@drawable/icon_search"/>
-       </LinearLayout>
-   </FrameLayout> 
-</LinearLayout>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen" >
-    <Button style="@style/button_match" android:text="微信分享" android:id="@+id/button_weixin_share"></Button> 
-</LinearLayout>

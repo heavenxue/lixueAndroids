@@ -1,8 +1,0 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen">
-    <LinearLayout style="@style/layout_titlebar">
-        <TextView style="@style/text_title_activity" android:text="@string/activityTitle_nfc"/>
-    </LinearLayout>
-    <FrameLayout style="@style/layout_body">
-            <TextView style="@style/text_match" android:id="@+id/text_nfc_show" android:text=""/>
-    </FrameLayout>
-</LinearLayout>

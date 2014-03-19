@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match_vertical">
-    <TextView style="@style/text" android:text="摇一摇界面" android:layout_gravity="center_horizontal"/>
-    <TextView style="@style/text_match" android:text="摇一摇界面" android:gravity="center" android:id="@+id/text_yaoyiyao" android:textColor="@color/base_blue"/>
-</LinearLayout>

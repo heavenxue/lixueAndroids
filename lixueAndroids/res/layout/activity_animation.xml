@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/layout_screen"
-    android:layout_height="wrap_content"
-    android:baselineAligned="false"
-    android:orientation="horizontal" >
-	<ImageView android:id="@+id/img_animation_show" style="@style/base_wrap_wrap" android:contentDescription="@string/base_image_contentDescription" android:src="@drawable/liduohai18"/>    
-</LinearLayout>

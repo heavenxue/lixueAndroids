@@ -90,6 +90,34 @@ Windows 8是微软围绕扁平化UI设计的一个全新的系统，其中大部
 <string name="isUserAutoFocus">true</string>
 <string name="isContinuedFocus">false</string>
 <string name="isInvertScan">false</string>
-
+<string name="intro_message">
+        <![CDATA[
+         
+             
+            This sample demonstrates how to use the Bluetooth LE Generic Attribute Profile (GATT)
+            to transmit arbitrary data between devices.
+             
+         
+        ]]>
+    </string>
+     <string name="ble_not_supported">BLE is not supported</string>
+    <string name="label_data">Data:</string>
+    <string name="label_device_address">Device address:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">无数据</string>
+    <string name="connected">已连接</string>
+    <string name="disconnected">未连接</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+ 
+    <string name="unknown_device">Unknown device</string>
+    <string name="unknown_characteristic">Unknown characteristic</string>
+    <string name="unknown_service">Unknown service</string>
+ 
+    <!-- Menu items -->
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
 
 </resources>

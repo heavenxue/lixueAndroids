@@ -474,6 +474,9 @@ public final class R {
          */
         public static final int comm_layout_titlebar_height=0x7f09002f;
         public static final int edit_height=0x7f090045;
+        /**  Semantic definitions 
+         */
+        public static final int horizontal_page_margin=0x7f09005c;
         /**  订单- 项 - 圆角角度 
  订单- 项 - 圆角角度 
          */
@@ -491,6 +494,11 @@ public final class R {
         public static final int list_item_icon_length=0x7f090055;
         public static final int list_item_name_size=0x7f090053;
         public static final int list_item_order_number_size=0x7f090050;
+        public static final int margin_huge=0x7f09005b;
+        public static final int margin_large=0x7f09005a;
+        public static final int margin_medium=0x7f090059;
+        public static final int margin_small=0x7f090058;
+        public static final int margin_tiny=0x7f090057;
         /**  下拉刷新头的高度 
  下拉刷新头的高度 
          */
@@ -510,6 +518,7 @@ public final class R {
         /**  空格线 - 高度 
          */
         public static final int spacing_small_height=0x7f090039;
+        public static final int vertical_page_margin=0x7f09005d;
         public static final int view_cameraAperture_height=0x7f090048;
         public static final int view_cameraAperture_width=0x7f090047;
     }
@@ -634,11 +643,11 @@ public final class R {
         public static final int MyImageView1=0x7f0c0097;
         public static final int MyTextView1=0x7f0c0098;
         public static final int TextView=0x7f0c002d;
-        public static final int action_search=0x7f0c00df;
-        public static final int action_settings=0x7f0c00e0;
+        public static final int action_search=0x7f0c00e5;
+        public static final int action_settings=0x7f0c00e6;
         public static final int base_layout_toolbar=0x7f0c0006;
         public static final int bmapsView=0x7f0c008b;
-        public static final int btn_jiesuo=0x7f0c00cc;
+        public static final int btn_jiesuo=0x7f0c00d1;
         public static final int btn_screenshot=0x7f0c009a;
         public static final int button1=0x7f0c007f;
         public static final int button2=0x7f0c0080;
@@ -665,7 +674,7 @@ public final class R {
         public static final int button_gestures_showimg=0x7f0c0029;
         public static final int button_gridImageLoader=0x7f0c005e;
         public static final int button_ip_request=0x7f0c0049;
-        public static final int button_item_delete=0x7f0c00b3;
+        public static final int button_item_delete=0x7f0c00b7;
         public static final int button_json=0x7f0c0057;
         public static final int button_json_request=0x7f0c0047;
         public static final int button_lettersListview=0x7f0c0072;
@@ -753,42 +762,43 @@ public final class R {
         /**  文本 
          */
         public static final int comm_text_activityTitle=0x7f0c001c;
+        public static final int connection_state=0x7f0c00a9;
+        public static final int data_value=0x7f0c00aa;
+        public static final int device_address=0x7f0c00a8;
+        public static final int device_name=0x7f0c00c2;
         public static final int edit_content=0x7f0c002e;
-        public static final int expandablelistview=0x7f0c00cf;
+        public static final int expandablelistview=0x7f0c00d4;
         public static final int flipper=0x7f0c00a2;
         public static final int gallery_img=0x7f0c0040;
+        public static final int gatt_services_list=0x7f0c00ab;
         public static final int grid_list_img=0x7f0c0041;
-        public static final int gridview=0x7f0c00d1;
-        public static final int head_arrowImageView=0x7f0c00ad;
-        public static final int head_contentLayout=0x7f0c00ac;
-        public static final int head_lastUpdatedTextView=0x7f0c00b0;
-        public static final int head_progressBar=0x7f0c00ae;
-        public static final int head_tipsTextView=0x7f0c00af;
+        public static final int gridview=0x7f0c00d6;
+        public static final int head_arrowImageView=0x7f0c00b1;
+        public static final int head_contentLayout=0x7f0c00b0;
+        public static final int head_lastUpdatedTextView=0x7f0c00b4;
+        public static final int head_progressBar=0x7f0c00b2;
+        public static final int head_tipsTextView=0x7f0c00b3;
         public static final int image=0x7f0c0038;
         public static final int image1=0x7f0c00a4;
         public static final int image2=0x7f0c00a6;
-        public static final int imageView1=0x7f0c00b1;
+        public static final int imageView1=0x7f0c00b5;
         public static final int image_gallery=0x7f0c00a7;
-        public static final int image_screenprotect=0x7f0c00b7;
+        public static final int image_screenprotect=0x7f0c00bb;
         public static final int image_takeBusinessCard_preview=0x7f0c0092;
-        public static final int imageview_show=0x7f0c00da;
+        public static final int imageview_show=0x7f0c00df;
         public static final int imgLinearlayout=0x7f0c009d;
         public static final int img_animation_show=0x7f0c0033;
         public static final int img_animationdrawable=0x7f0c0034;
-        public static final int img_detail=0x7f0c00a8;
-        public static final int img_header=0x7f0c00ce;
+        public static final int img_detail=0x7f0c00ac;
+        public static final int img_header=0x7f0c00d3;
         public static final int img_liduohai=0x7f0c003f;
         public static final int img_myimg=0x7f0c0042;
         public static final int imgbutton_mediaplayer_end=0x7f0c007a;
         public static final int imgbutton_mediaplayer_pause=0x7f0c0079;
         public static final int imgbutton_mediaplayer_start=0x7f0c0078;
-        public static final int item_clear_disc_cache=0x7f0c00dc;
-        public static final int item_clear_memory_cache=0x7f0c00db;
-        public static final int item_pause_on_fling=0x7f0c00de;
-        public static final int item_pause_on_scroll=0x7f0c00dd;
-        public static final int item_right=0x7f0c00b4;
-        public static final int iv_gridview_item=0x7f0c00a9;
-        public static final int iv_nav_indicator=0x7f0c00d8;
+        public static final int item_right=0x7f0c00b8;
+        public static final int iv_gridview_item=0x7f0c00ad;
+        public static final int iv_nav_indicator=0x7f0c00dd;
         /**  布局 
          */
         public static final int layout_body=0x7f0c0022;
@@ -800,13 +810,18 @@ public final class R {
         public static final int list_Mp3Player=0x7f0c007b;
         public static final int list_imageLoader=0x7f0c004e;
         public static final int list_letters_order=0x7f0c004c;
-        public static final int load_more=0x7f0c00bc;
+        public static final int load_more=0x7f0c00c0;
         public static final int login_btn=0x7f0c003b;
         public static final int login_counts=0x7f0c0039;
         public static final int login_password=0x7f0c003a;
-        public static final int mHsv=0x7f0c00d5;
-        public static final int mViewPager=0x7f0c00d9;
-        public static final int main_pull_refresh_view=0x7f0c00d0;
+        public static final int mHsv=0x7f0c00da;
+        public static final int mViewPager=0x7f0c00de;
+        public static final int main_pull_refresh_view=0x7f0c00d5;
+        public static final int menu_connect=0x7f0c00e3;
+        public static final int menu_disconnect=0x7f0c00e4;
+        public static final int menu_refresh=0x7f0c00e0;
+        public static final int menu_scan=0x7f0c00e1;
+        public static final int menu_stop=0x7f0c00e2;
         public static final int mybutton=0x7f0c009c;
         public static final int mycustomer_imgbutton1=0x7f0c0084;
         public static final int mycustomer_imgbutton2=0x7f0c0085;
@@ -814,55 +829,55 @@ public final class R {
         public static final int mylist=0x7f0c008c;
         public static final int myscrollview=0x7f0c002b;
         public static final int myview=0x7f0c0032;
-        public static final int notify_imageLog=0x7f0c00c1;
-        public static final int notify_msg=0x7f0c00c3;
-        public static final int notify_name=0x7f0c00c2;
-        public static final int notify_time=0x7f0c00c4;
-        public static final int pull_to_load_image=0x7f0c00c7;
-        public static final int pull_to_load_progress=0x7f0c00c6;
-        public static final int pull_to_load_text=0x7f0c00c8;
-        public static final int pull_to_refresh_header=0x7f0c00c5;
-        public static final int pull_to_refresh_image=0x7f0c00c9;
-        public static final int pull_to_refresh_progress=0x7f0c00bb;
-        public static final int pull_to_refresh_text=0x7f0c00ca;
-        public static final int pull_to_refresh_updated_at=0x7f0c00cb;
+        public static final int notify_imageLog=0x7f0c00c6;
+        public static final int notify_msg=0x7f0c00c8;
+        public static final int notify_name=0x7f0c00c7;
+        public static final int notify_time=0x7f0c00c9;
+        public static final int pull_to_load_image=0x7f0c00cc;
+        public static final int pull_to_load_progress=0x7f0c00cb;
+        public static final int pull_to_load_text=0x7f0c00cd;
+        public static final int pull_to_refresh_header=0x7f0c00ca;
+        public static final int pull_to_refresh_image=0x7f0c00ce;
+        public static final int pull_to_refresh_progress=0x7f0c00bf;
+        public static final int pull_to_refresh_text=0x7f0c00cf;
+        public static final int pull_to_refresh_updated_at=0x7f0c00d0;
         public static final int radioGroup_indicators=0x7f0c0025;
-        public static final int rg_nav_content=0x7f0c00d7;
-        public static final int rl_nav=0x7f0c00d6;
-        public static final int rl_tab=0x7f0c00d4;
+        public static final int rg_nav_content=0x7f0c00dc;
+        public static final int rl_nav=0x7f0c00db;
+        public static final int rl_tab=0x7f0c00d9;
         public static final int scanningFrame_barcodeScanner=0x7f0c0037;
-        public static final int scrollview=0x7f0c00d2;
+        public static final int scrollview=0x7f0c00d7;
         public static final int sidebar=0x7f0c004d;
         public static final int surface_barcodeScanner=0x7f0c0035;
         public static final int surface_takeBusinessCard=0x7f0c008f;
         public static final int surfaceview_gestures=0x7f0c002a;
-        public static final int test_gridview_btn=0x7f0c00bf;
-        public static final int test_listview_btn=0x7f0c00be;
-        public static final int test_scrollview_btn=0x7f0c00c0;
-        public static final int text=0x7f0c00bd;
-        public static final int textView1=0x7f0c00b2;
+        public static final int test_gridview_btn=0x7f0c00c4;
+        public static final int test_listview_btn=0x7f0c00c3;
+        public static final int test_scrollview_btn=0x7f0c00c5;
+        public static final int text=0x7f0c00c1;
+        public static final int textView1=0x7f0c00b6;
         public static final int text_activityTitle=0x7f0c0024;
         public static final int text_gestures_show=0x7f0c0028;
-        public static final int text_item_list_sort_letter=0x7f0c00b5;
-        public static final int text_item_list_sort_name=0x7f0c00b6;
+        public static final int text_item_list_sort_letter=0x7f0c00b9;
+        public static final int text_item_list_sort_name=0x7f0c00ba;
         public static final int text_json=0x7f0c0043;
-        public static final int text_mp3player_filename=0x7f0c00b8;
-        public static final int text_mp3player_size=0x7f0c00b9;
-        public static final int text_mytab=0x7f0c00ba;
+        public static final int text_mp3player_filename=0x7f0c00bc;
+        public static final int text_mp3player_size=0x7f0c00bd;
+        public static final int text_mytab=0x7f0c00be;
         public static final int text_nfc_show=0x7f0c008d;
         public static final int text_resolve_json=0x7f0c0044;
         public static final int text_share=0x7f0c009b;
         public static final int text_show=0x7f0c0030;
         public static final int text_yaoyiyao=0x7f0c00a1;
-        public static final int textview=0x7f0c00d3;
+        public static final int textview=0x7f0c00d8;
         public static final int titlebar_myanimation=0x7f0c007d;
-        public static final int tv_gridview_item=0x7f0c00aa;
-        public static final int tv_gridview_item_name=0x7f0c00ab;
+        public static final int tv_gridview_item=0x7f0c00ae;
+        public static final int tv_gridview_item_name=0x7f0c00af;
         public static final int view_takeBusinessCard_cameraAperture=0x7f0c0091;
         public static final int viewflow=0x7f0c0008;
         public static final int viewflowindic=0x7f0c0009;
         public static final int viewgroup=0x7f0c007c;
-        public static final int viewpager=0x7f0c00cd;
+        public static final int viewpager=0x7f0c00d2;
     }
     public static final class layout {
         public static final int acitivity_alldraw=0x7f030000;
@@ -872,73 +887,78 @@ public final class R {
         public static final int acitivity_socket=0x7f030004;
         public static final int acitivity_startscanbarcode=0x7f030005;
         public static final int acitivity_viewlistener=0x7f030006;
-        public static final int activity_animation=0x7f030007;
-        public static final int activity_animationdrawable=0x7f030008;
-        public static final int activity_barcodescanner=0x7f030009;
-        public static final int activity_capture=0x7f03000a;
-        public static final int activity_chatlogin=0x7f03000b;
-        public static final int activity_clearedittext=0x7f03000c;
-        public static final int activity_countdown=0x7f03000d;
-        public static final int activity_download=0x7f03000e;
-        public static final int activity_galleryimg=0x7f03000f;
-        public static final int activity_gridimg=0x7f030010;
-        public static final int activity_guide=0x7f030011;
-        public static final int activity_json=0x7f030012;
-        public static final int activity_lettersorderlist=0x7f030013;
-        public static final int activity_listimgloader=0x7f030014;
-        public static final int activity_liubianxing=0x7f030015;
-        public static final int activity_main=0x7f030016;
-        public static final int activity_mp3player=0x7f030017;
-        public static final int activity_mp3playermain=0x7f030018;
-        public static final int activity_mp3playerremote=0x7f030019;
-        public static final int activity_multiscreen=0x7f03001a;
-        public static final int activity_myanimation=0x7f03001b;
-        public static final int activity_mycustomelistview=0x7f03001c;
-        public static final int activity_mycustormimgbutton=0x7f03001d;
-        public static final int activity_mymap=0x7f03001e;
-        public static final int activity_nfcmain=0x7f03001f;
-        public static final int activity_nightmode=0x7f030020;
-        public static final int activity_photo=0x7f030021;
-        public static final int activity_screenprotect=0x7f030022;
-        public static final int activity_screenshot=0x7f030023;
-        public static final int activity_share=0x7f030024;
-        public static final int activity_showview=0x7f030025;
-        public static final int activity_test=0x7f030026;
-        public static final int activity_viewflipper=0x7f030027;
-        public static final int activity_waterfalls=0x7f030028;
-        public static final int activity_yaoyiyao=0x7f030029;
-        public static final int flipper=0x7f03002a;
-        public static final int gallery_item_list_image=0x7f03002b;
-        public static final int grid_detail_img=0x7f03002c;
-        public static final int grid_item=0x7f03002d;
-        public static final int head=0x7f03002e;
-        public static final int imagebtn=0x7f03002f;
-        public static final int item_list_image=0x7f030030;
-        public static final int item_list_sort=0x7f030031;
-        public static final int item_viewpager_screenprotect=0x7f030032;
-        public static final int list_item_mp3player=0x7f030033;
-        public static final int list_item_mytab=0x7f030034;
-        public static final int listfooter_more=0x7f030035;
-        public static final int listitem=0x7f030036;
-        public static final int listview_mytab=0x7f030037;
-        public static final int main=0x7f030038;
-        public static final int notify_view=0x7f030039;
-        public static final int refresh_footer=0x7f03003a;
-        public static final int refresh_header=0x7f03003b;
-        public static final int screenshow=0x7f03003c;
-        public static final int showview=0x7f03003d;
-        public static final int table_title=0x7f03003e;
-        public static final int test_expandablelistview=0x7f03003f;
-        public static final int test_gridview=0x7f030040;
-        public static final int test_listview=0x7f030041;
-        public static final int test_scrollview=0x7f030042;
-        public static final int touchtab=0x7f030043;
-        public static final int touchtab_nav_radiogroup_item=0x7f030044;
-        public static final int view_dialog=0x7f030045;
+        public static final int actionbar_indeterminate_progress=0x7f030007;
+        public static final int activity_animation=0x7f030008;
+        public static final int activity_animationdrawable=0x7f030009;
+        public static final int activity_barcodescanner=0x7f03000a;
+        public static final int activity_capture=0x7f03000b;
+        public static final int activity_chatlogin=0x7f03000c;
+        public static final int activity_clearedittext=0x7f03000d;
+        public static final int activity_countdown=0x7f03000e;
+        public static final int activity_download=0x7f03000f;
+        public static final int activity_galleryimg=0x7f030010;
+        public static final int activity_gridimg=0x7f030011;
+        public static final int activity_guide=0x7f030012;
+        public static final int activity_json=0x7f030013;
+        public static final int activity_lettersorderlist=0x7f030014;
+        public static final int activity_listimgloader=0x7f030015;
+        public static final int activity_liubianxing=0x7f030016;
+        public static final int activity_main=0x7f030017;
+        public static final int activity_mains=0x7f030018;
+        public static final int activity_mp3player=0x7f030019;
+        public static final int activity_mp3playermain=0x7f03001a;
+        public static final int activity_mp3playerremote=0x7f03001b;
+        public static final int activity_multiscreen=0x7f03001c;
+        public static final int activity_myanimation=0x7f03001d;
+        public static final int activity_mycustomelistview=0x7f03001e;
+        public static final int activity_mycustormimgbutton=0x7f03001f;
+        public static final int activity_mymap=0x7f030020;
+        public static final int activity_nfcmain=0x7f030021;
+        public static final int activity_nightmode=0x7f030022;
+        public static final int activity_photo=0x7f030023;
+        public static final int activity_screenprotect=0x7f030024;
+        public static final int activity_screenshot=0x7f030025;
+        public static final int activity_share=0x7f030026;
+        public static final int activity_showview=0x7f030027;
+        public static final int activity_test=0x7f030028;
+        public static final int activity_viewflipper=0x7f030029;
+        public static final int activity_waterfalls=0x7f03002a;
+        public static final int activity_yaoyiyao=0x7f03002b;
+        public static final int flipper=0x7f03002c;
+        public static final int gallery_item_list_image=0x7f03002d;
+        public static final int gatt_services_characteristics=0x7f03002e;
+        public static final int grid_detail_img=0x7f03002f;
+        public static final int grid_item=0x7f030030;
+        public static final int head=0x7f030031;
+        public static final int imagebtn=0x7f030032;
+        public static final int item_list_image=0x7f030033;
+        public static final int item_list_sort=0x7f030034;
+        public static final int item_viewpager_screenprotect=0x7f030035;
+        public static final int list_item_mp3player=0x7f030036;
+        public static final int list_item_mytab=0x7f030037;
+        public static final int listfooter_more=0x7f030038;
+        public static final int listitem=0x7f030039;
+        public static final int listitem_device=0x7f03003a;
+        public static final int listview_mytab=0x7f03003b;
+        public static final int main=0x7f03003c;
+        public static final int notify_view=0x7f03003d;
+        public static final int refresh_footer=0x7f03003e;
+        public static final int refresh_header=0x7f03003f;
+        public static final int screenshow=0x7f030040;
+        public static final int showview=0x7f030041;
+        public static final int table_title=0x7f030042;
+        public static final int test_expandablelistview=0x7f030043;
+        public static final int test_gridview=0x7f030044;
+        public static final int test_listview=0x7f030045;
+        public static final int test_scrollview=0x7f030046;
+        public static final int touchtab=0x7f030047;
+        public static final int touchtab_nav_radiogroup_item=0x7f030048;
+        public static final int view_dialog=0x7f030049;
     }
     public static final class menu {
         public static final int activity_main=0x7f0d0000;
-        public static final int main_activity_actions=0x7f0d0001;
+        public static final int gatt_services=0x7f0d0001;
+        public static final int main_activity_actions=0x7f0d0002;
     }
     public static final class raw {
         public static final int beep=0x7f060000;
@@ -1224,6 +1244,7 @@ public final class R {
         /**  日期、时间 
          */
         public static final int base_year=0x7f0a0017;
+        public static final int ble_not_supported=0x7f0a01a6;
         public static final int button_Nfc=0x7f0a018c;
         public static final int button_animation=0x7f0a0185;
         public static final int button_animationdrawable=0x7f0a0184;
@@ -1360,11 +1381,25 @@ public final class R {
         public static final int comm_pullUpLoadMore=0x7f0a0156;
         public static final int comm_space=0x7f0a0160;
         public static final int comm_verifyingLater=0x7f0a015f;
+        public static final int connected=0x7f0a01ab;
+        public static final int disconnected=0x7f0a01ac;
+        public static final int error_bluetooth_not_supported=0x7f0a01ae;
         public static final int hint_barcodeScanner=0x7f0a018f;
+        public static final int intro_message=0x7f0a01a5;
         public static final int isAutoFocus=0x7f0a01a1;
         public static final int isContinuedFocus=0x7f0a01a3;
         public static final int isInvertScan=0x7f0a01a4;
         public static final int isUserAutoFocus=0x7f0a01a2;
+        public static final int label_data=0x7f0a01a7;
+        public static final int label_device_address=0x7f0a01a8;
+        public static final int label_state=0x7f0a01a9;
+        /**  Menu items 
+         */
+        public static final int menu_connect=0x7f0a01b2;
+        public static final int menu_disconnect=0x7f0a01b3;
+        public static final int menu_scan=0x7f0a01b4;
+        public static final int menu_stop=0x7f0a01b5;
+        public static final int no_data=0x7f0a01aa;
         public static final int p2refresh_doing_end_refresh=0x7f0a019f;
         public static final int p2refresh_doing_head_refresh=0x7f0a019e;
         public static final int p2refresh_end_click_load_more=0x7f0a019b;
@@ -1380,12 +1415,16 @@ public final class R {
         public static final int pull_to_refresh_refreshing_label=0x7f0a0192;
         public static final int pull_to_refresh_release_label=0x7f0a0191;
         public static final int tab_title=0x7f0a0190;
+        public static final int title_devices=0x7f0a01ad;
         public static final int toast_barcodeScanner_notSupport=0x7f0a0178;
         public static final int toast_cameraOpenFailed=0x7f0a0179;
         public static final int toast_network_connectException=0x7f0a0175;
         public static final int toast_network_connectionTimeout=0x7f0a0174;
         public static final int toast_network_fileNotFoundException=0x7f0a0176;
         public static final int toast_network_unknownException=0x7f0a0177;
+        public static final int unknown_characteristic=0x7f0a01b0;
+        public static final int unknown_device=0x7f0a01af;
+        public static final int unknown_service=0x7f0a01b1;
     }
     public static final class style {
         /** 
@@ -1398,12 +1437,19 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f0b003a;
+        public static final int AppBaseTheme=0x7f0b0040;
         /**  <style name="AppBaseThemeNight" parent="android:Theme.Night"></style> 
  日间模式主题 
  应用主题 
          */
-        public static final int AppTheme=0x7f0b003b;
+        public static final int AppTheme=0x7f0b003c;
+        public static final int Theme_Base=0x7f0b003a;
+        public static final int Theme_Sample=0x7f0b003b;
+        /**  Widget styling 
+         */
+        public static final int Widget=0x7f0b003d;
+        public static final int Widget_SampleMessage=0x7f0b003e;
+        public static final int Widget_SampleMessageTile=0x7f0b003f;
         /**  宽充满 - 高充满 
          */
         public static final int base_match_match=0x7f0b0000;
@@ -1485,15 +1531,15 @@ public final class R {
         public static final int button_weight=0x7f0b002c;
         /**  对话框 - 透明的（没有标题，没有边框） 
          */
-        public static final int dialog_top=0x7f0b003d;
+        public static final int dialog_top=0x7f0b0042;
         /**  夜间模式 
  <style name="AppNightTheme" parent="">
         
     </style> 
  对话框 - 透明的（没有标题，没有边框） 
          */
-        public static final int dialog_transparent=0x7f0b003c;
-        public static final int dilaog_top_animation=0x7f0b003e;
+        public static final int dialog_transparent=0x7f0b0041;
+        public static final int dilaog_top_animation=0x7f0b0043;
         /**  ******************************************************************************** 编辑器 ************************************************************************************ 
  编辑器 
          */

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match" android:orientation="vertical" >
-    <ImageView android:layout_width="300dp" android:layout_height="600dp" android:id="@+id/MyImageView1" android:contentDescription="@string/base_none" android:scaleType="fitCenter" android:layout_gravity="center"/>
-    <TextView style="@style/base_match_wrap" android:id="@+id/MyTextView1" android:visibility="visible" android:textColor="@color/base_blue" android:text="设置密码"/>
-    <EditText style="@style/base_wrap_wrap" android:id="@+id/MyEditText1" android:text=""/>
-
-</LinearLayout>

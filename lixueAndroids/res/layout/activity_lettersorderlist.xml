@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/layout_screen" android:orientation="horizontal">
-	<ListView android:divider="@drawable/list_divider" android:listSelector="@drawable/selector_list_selector" android:cacheColorHint="@color/base_transparent" 
-	    android:fastScrollEnabled="true" android:layout_width="match_parent" android:layout_height="match_parent" 
-	    android:id="@+id/list_letters_order" android:layout_weight="1"></ListView>
-	<com.lixueandroid.view.SideBar android:layout_width="40dp" android:layout_height="match_parent" android:id="@+id/sidebar"></com.lixueandroid.view.SideBar>
-</LinearLayout>

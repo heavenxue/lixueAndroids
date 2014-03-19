@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/base_match_match" android:orientation="vertical" android:padding="@dimen/base_padding_default">
-    <TextView style="@style/base_match_wrap" android:id="@+id/text_item_list_sort_letter" android:text="A" android:background="@color/base_gray_light"/>
-    <TextView style="@style/base_wrap_wrap" android:id="@+id/text_item_list_sort_name" android:text="阿妹"/>
-</LinearLayout>

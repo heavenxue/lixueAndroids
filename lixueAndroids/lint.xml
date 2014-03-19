@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<lint>
-    <issue id="SuspiciousImport">
-        <ignore path="src\com\lixueandroid\activity\service\DownLoadService.java" />
-    </issue>
-</lint>
