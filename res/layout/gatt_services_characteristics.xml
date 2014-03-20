@@ -4,6 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
+    <ListView style="@style/list" android:layout_height="260dp"></ListView>
     <LinearLayout android:orientation="horizontal"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -51,7 +52,6 @@
                   android:text="@string/no_data"
                   android:textSize="18sp"/>
     </LinearLayout>
-    <ExpandableListView android:id="@+id/gatt_services_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <Button style="@style/button" android:id="@+id/button_recieve" android:text="开始接收BLE设备数据"/>
+    <Button style="@style/button" android:id="@+id/button_send" android:text="开始向BLE设备写数据"/>
 </LinearLayout>

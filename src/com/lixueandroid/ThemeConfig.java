@@ -1,6 +1,5 @@
 package com.lixueandroid;
 
-import com.lixueandroid.ThemeConfig;
 import android.app.Activity;
 import android.content.Intent;
 

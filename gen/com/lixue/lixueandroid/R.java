@@ -691,6 +691,7 @@ public final class R {
         public static final int button_nightMode=0x7f0c0076;
         public static final int button_pageturn=0x7f0c0067;
         public static final int button_photo=0x7f0c0063;
+        public static final int button_recieve=0x7f0c00ab;
         public static final int button_rectangle=0x7f0c0089;
         public static final int button_refresh_gridview=0x7f0c005a;
         public static final int button_refresh_listview=0x7f0c0059;
@@ -770,7 +771,6 @@ public final class R {
         public static final int expandablelistview=0x7f0c00d4;
         public static final int flipper=0x7f0c00a2;
         public static final int gallery_img=0x7f0c0040;
-        public static final int gatt_services_list=0x7f0c00ab;
         public static final int grid_list_img=0x7f0c0041;
         public static final int gridview=0x7f0c00d6;
         public static final int head_arrowImageView=0x7f0c00b1;

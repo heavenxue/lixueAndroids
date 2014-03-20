@@ -1,10 +1,9 @@
 package com.lixueandroid.service;
 
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
-import com.lixueandroid.domain.GattAttributes;
 
 import android.app.Service;
 import android.bluetooth.BluetoothAdapter;
@@ -22,14 +21,16 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
+import com.lixueandroid.domain.GattAttributes;
+
 public class BluetoothLeService extends Service{
-	 private final static String TAG = BluetoothLeService.class.getSimpleName();
+	private final static String TAG = BluetoothLeService.class.getSimpleName();
 	 
     private BluetoothManager mBluetoothManager;
     private BluetoothAdapter mBluetoothAdapter;
     private String mBluetoothDeviceAddress;
     private BluetoothGatt mBluetoothGatt;
-    private int mConnectionState = STATE_DISCONNECTED;//默认未连接
+    public int mConnectionState = STATE_DISCONNECTED;//默认未连接
  
     /**
      * 未连接
@@ -54,6 +55,10 @@ public class BluetoothLeService extends Service{
      * 这是用来唯一标识信息的字符串ID的标准化128-bit格式,心率计算
      */
     public final static UUID UUID_HEART_RATE_MEASUREMENT =UUID.fromString(GattAttributes.CLIENT_CHARACTERISTIC_CONFIG);
+    private onReceivedMsgListener onReceivedMsgListener;
+    public BluetoothLeService(onReceivedMsgListener onListener){
+    	this.onReceivedMsgListener=onListener;
+    }
 	
     /**
      * Gatt回调
@@ -98,7 +103,28 @@ public class BluetoothLeService extends Service{
 		@Override
 		public void onCharacteristicChanged(BluetoothGatt gatt,BluetoothGattCharacteristic characteristic) {
 			broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
+			if (characteristic.getValue() != null) {
+				if(onReceivedMsgListener!=null){
+					onReceivedMsgListener.onReceived();
+				}
+				System.out.println(characteristic.getStringValue(0));
+//				String.format("%02X ", byteChar)
+			}
+			System.out.println("--------onCharacteristicChanged-----");
 		}
+		@Override
+		public void onReadRemoteRssi(BluetoothGatt gatt, int rssi, int status) {
+			System.out.println("rssi = " + rssi);
+		}
+		@Override
+		public void onDescriptorWrite(BluetoothGatt gatt,BluetoothGattDescriptor descriptor, int status) {
+			System.out.println("onDescriptorWriteonDescriptorWrite = " + status+ ", descriptor =" + descriptor.getUuid().toString());
+		}
+		@Override
+		public void onCharacteristicWrite(BluetoothGatt gatt,BluetoothGattCharacteristic characteristic, int status) {
+			System.out.println("--------write success----- status:" + status);
+		}
+
 	};
 	
 	/**
@@ -140,7 +166,7 @@ public class BluetoothLeService extends Service{
                 final StringBuilder stringBuilder = new StringBuilder(data.length);
                 for(byte byteChar : data)
                     stringBuilder.append(String.format("%02X ", byteChar));
-                intent.putExtra(EXTRA_DATA, new String(data) + "\n" + stringBuilder.toString());
+                intent.putExtra(EXTRA_DATA, new String(data,Charset.forName("GB2312")) + "\n" + stringBuilder.toString());
             }
         }
         sendBroadcast(intent);
@@ -255,7 +281,16 @@ public class BluetoothLeService extends Service{
         }
         mBluetoothGatt.readCharacteristic(characteristic);
     }
- 
+	public void wirteCharacteristic(BluetoothGattCharacteristic characteristic) {
+
+		if (mBluetoothAdapter == null || mBluetoothGatt == null) {
+			Log.w(TAG, "BluetoothAdapter not initialized");
+			return;
+		}
+
+		mBluetoothGatt.writeCharacteristic(characteristic);
+
+	}
     /**
      * 是否可以通知被给出的设备类型
      * Enables or disables notification on a give characteristic.
@@ -265,17 +300,28 @@ public class BluetoothLeService extends Service{
      */
     public void setCharacteristicNotification(BluetoothGattCharacteristic characteristic, boolean enabled) {
         if (mBluetoothAdapter == null || mBluetoothGatt == null) {
-            Log.w(TAG, "BluetoothAdapter not initialized");
-            return;
-        }
-        mBluetoothGatt.setCharacteristicNotification(characteristic, enabled);
- 
-        // This is specific to Heart Rate Measurement.
-        if (UUID.fromString(GattAttributes.CLIENT_CHARACTERISTIC_CONFIG2).equals(characteristic.getUuid())) {
-            BluetoothGattDescriptor descriptor = characteristic.getDescriptor(UUID.fromString(GattAttributes.CLIENT_CHARACTERISTIC_CONFIG2));
-            descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
-            mBluetoothGatt.writeDescriptor(descriptor);
-        }
+			Log.w(TAG, "BluetoothAdapter not initialized");
+			return;
+		}
+		mBluetoothGatt.setCharacteristicNotification(characteristic, enabled);
+		BluetoothGattDescriptor descriptor = characteristic.getDescriptor(UUID.fromString(GattAttributes.CLIENT_CHARACTERISTIC_CONFIG));
+		if (descriptor != null) {
+			System.out.println("write descriptor");
+			descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+			mBluetoothGatt.writeDescriptor(descriptor);
+		}
+		/*
+		 * // This is specific to Heart Rate Measurement. if
+		 * (UUID_HEART_RATE_MEASUREMENT.equals(characteristic.getUuid())) {
+		 * System
+		 * .out.println("characteristic.getUuid() == "+characteristic.getUuid
+		 * ()+", "); BluetoothGattDescriptor descriptor =
+		 * characteristic.getDescriptor
+		 * (UUID.fromString(SampleGattAttributes.CLIENT_CHARACTERISTIC_CONFIG));
+		 * descriptor
+		 * .setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+		 * mBluetoothGatt.writeDescriptor(descriptor); }
+		 */
     }
  
     /**
@@ -283,14 +329,14 @@ public class BluetoothLeService extends Service{
      *
      * @return A {@code List} of supported services.
      */
-    public List<BluetoothGattService> getSupportedGattServices() {
+    public BluetoothGattService getSupportedGattServices() {
     	List<BluetoothGattService> ss=new ArrayList<BluetoothGattService>();
         if (mBluetoothGatt == null) return null;
-        BluetoothGattService s= mBluetoothGatt.getService(UUID_HEART_RATE_MEASUREMENT);
-        if (s!=null) {
-			ss.add(s);
-		}
+        BluetoothGattService s= mBluetoothGatt.getService(UUID.fromString("d3e60000-8f36-40d6-b2d5-c5d9f5e81869"));
 //        return mBluetoothGatt.getServices();
-        return ss;
+        return s;
+    }
+    public interface onReceivedMsgListener{
+    	void onReceived();
     }
 }
