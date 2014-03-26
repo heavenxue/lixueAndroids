@@ -192,10 +192,23 @@ public class DeviceControlActivity extends Activity implements OnClickListener{
         }
     }
  
-    //加载服务,得出已知的服务
+    //加载服务,得出已知的服务,并从服务中打开相应uuid下的服务，接收ble设备服务端消息
     private void displayGattServices(BluetoothGattService gattServices) {
         if (gattServices == null) return;
         mGattCharacteristics = gattServices.getCharacteristics();
+        if (mGattCharacteristics != null) {
+			for (BluetoothGattCharacteristic characteristic : mGattCharacteristics) {
+				final int charaProp = characteristic.getProperties();
+				System.out.println("charaProp = " + charaProp + ",UUID = "+ characteristic.getUuid().toString());
+				if ((charaProp | BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
+					if (characteristic.getUuid().toString().equals("d3e60004-8f36-40d6-b2d5-c5d9f5e81869")) {
+						System.out.println("enable notification");
+//						mNotifyCharacteristic = characteristic;
+						mBluetoothLeService.setCharacteristicNotification(characteristic, true);
+					}
+				}
+			}
+		}
  
     }
  

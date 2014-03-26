@@ -56,9 +56,9 @@ public class BluetoothLeService extends Service{
      */
     public final static UUID UUID_HEART_RATE_MEASUREMENT =UUID.fromString(GattAttributes.CLIENT_CHARACTERISTIC_CONFIG);
     private onReceivedMsgListener onReceivedMsgListener;
-    public BluetoothLeService(onReceivedMsgListener onListener){
-    	this.onReceivedMsgListener=onListener;
-    }
+//    public BluetoothLeService(onReceivedMsgListener onListener){
+//    	this.onReceivedMsgListener=onListener;
+//    }
 	
     /**
      * Gatt回调
@@ -104,9 +104,7 @@ public class BluetoothLeService extends Service{
 		public void onCharacteristicChanged(BluetoothGatt gatt,BluetoothGattCharacteristic characteristic) {
 			broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
 			if (characteristic.getValue() != null) {
-				if(onReceivedMsgListener!=null){
-					onReceivedMsgListener.onReceived();
-				}
+				//------在这里可以处理消息--------
 				System.out.println(characteristic.getStringValue(0));
 //				String.format("%02X ", byteChar)
 			}

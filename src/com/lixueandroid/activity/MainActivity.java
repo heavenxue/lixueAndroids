@@ -59,6 +59,7 @@ public class MainActivity extends MyBaseActivity {
 	private Button waterFallsButton;
 	private Button nightButton;
 	private Button bluetoothButton;
+	private Button contentButton;
 	
 
 	@Override
@@ -105,6 +106,7 @@ public class MainActivity extends MyBaseActivity {
 		waterFallsButton=(Button) findViewById(R.id.button_waterfalls);
 		nightButton=(Button) findViewById(R.id.button_nightMode);
 		bluetoothButton=(Button) findViewById(R.id.button_bluetooth);
+		contentButton=(Button) findViewById(R.id.button_contentprovider);
 	}
 
 	@Override
@@ -399,6 +401,13 @@ public class MainActivity extends MyBaseActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(DeviceScanActivity.class);
+			}
+		});
+		contentButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(UseContentProvider.class);
 			}
 		});
 	}

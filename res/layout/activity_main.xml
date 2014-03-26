@@ -42,5 +42,6 @@
 	<Button style="@style/button_match" android:text="瀑布流" android:id="@+id/button_waterfalls"/>  
 	<Button style="@style/button_match" android:text="夜间模式切换" android:id="@+id/button_nightMode"/>  
 	<Button style="@style/button_match" android:text="蓝牙开发" android:id="@+id/button_bluetooth"/>  
+	<Button style="@style/button_match" android:text="contentProvider的应用" android:id="@+id/button_contentprovider"/>  
 </LinearLayout>   
 </ScrollView>

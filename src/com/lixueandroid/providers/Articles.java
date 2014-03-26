@@ -26,7 +26,7 @@ public class Articles {
         public static final String KEY_ITEM_COUNT = "KEY_ITEM_COUNT";
 
         /*Authority*/
-        public static final String AUTHORITY = "com.lixueandroid.providers.articles";
+        public static final String AUTHORITY = "com.lixue.lixueandroid.articles";
 
         /*Match Code*/
         public static final int ITEM = 1;

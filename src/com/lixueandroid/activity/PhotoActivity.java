@@ -35,7 +35,7 @@ import android.widget.ImageView;
 import com.lixue.lixueandroid.R;
 import com.lixueandroid.MyBaseActivity;
 /**
- * 拍名片
+ * 拍照
  */
 public class PhotoActivity extends MyBaseActivity implements CameraManager.CameraCallback, Camera.PictureCallback{
 	/**
